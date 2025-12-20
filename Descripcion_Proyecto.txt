@@ -22,6 +22,19 @@ Wildfire/ -> directorio que contiene los codigos referentes al entrenamiento y p
   applyWildfireNet4B.py -> codigo para probar el modelo entrenado, recibe como argumentos --input <imagen de 4 bandas.tif> y --output <nombre imagen salida.tif>
   datasetAugmentationWildFire4B.py -> codigo para realizar las aumentaciones con las rotaciones y obtencion de mean y std, geenera el archivo dataset_statistics.txt con el reporte de salida
   f1score_trace y f1score_max_trace -> archivos de texto con los logs de accuracity al entrenar
-  mainTrainEvalWildFireModelResidual4B128.py -> codigo para realizar el entrenamiento del modelo, genera los archivos f1score y trace_epoch para logs de loss y accuracity y los archivos .pth
+  mainTrainEvalWildFireModelResidual4B128.py -> codigo para realizar el entrenamiento del modelo, genera los archivos f1score y trace_epoch para logs de loss y accuracity y los archivos .pth, toma como argumentos de entrada --mode train -b 256 --epochs 1000
   wildfire_model.py -> codigo que contiene el modelo de la red adaptado para 4 bandas
+
+
+iNSTRUCCIONES DE USO
+
+1. Descargar la carpeta con las imagenes satelitales con deteccion de incendios forestales de Google Drive (Wildfire sites), o bien, descargar las carpetas Crops* con los datasets ya generados para evitar el punto 2
+2. Ejecutar el codigo 'generate_wildfire_dataset.py' modificando la ruta de entrada y salida para los recortes, ademas del umbral de deteccion de incendio
+3. Ejecutar el codigo 'mover.py' modificando la ruta de entrada y salida para copiar el dataset a la ubicacion donde se va a guardar los archivos de entrenamiento.
+4. Ejecutar el codigo 'datasetAugmentationWildfire4B.py' para obtener mean y std y cambiarlos en el codigo 'applyWildfireNet4B.py'
+5. Ejecutar el codigo 'mainTrainEvalWildFireModelResidual4B128.py' para realizar el entrenamiento
+6. Tomar imagenes satelitales (.zip) de prueba diferentes a las usadas para entrenamiento y moverlas a un directorio de prueba
+7. Ejecutar el codigo 'Generar4bands.py' para obtener las imagenes de 4 bandas para prueba
+8. Ejecutar el codigo 'applyWildfireNet4B.py' para cada una de las imagenes de prueba de 4 bandas
+9. Comparar las imagenes obtenidas con las imagenes '*_Burned_Area_Detection.tiff' para visualizar que tan bien detecta fuego el modelo
   
