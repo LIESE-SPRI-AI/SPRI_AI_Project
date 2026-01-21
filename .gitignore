@@ -17,6 +17,9 @@ __pycache__/
 models/
 data/
 Raw/
+Images/
+SegmentationClass/
+Crop_folders/
 
 # Ignorar configuraciones del editor
 .vscode/
