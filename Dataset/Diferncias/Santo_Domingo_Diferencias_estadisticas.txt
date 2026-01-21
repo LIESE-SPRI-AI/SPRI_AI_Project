@@ -1,0 +1,32 @@
+============================================================
+REPORTE DE COMPARACIÓN DE DETECCIÓN DE INCENDIOS
+============================================================
+
+ESTADÍSTICAS GENERALES:
+----------------------------------------
+Total de píxeles: 62,132
+Píxeles de incendio (original): 7,659 (12.33%)
+Píxeles de incendio (predicción): 7,553 (12.16%)
+Píxeles errados: 4,374
+Porcentaje de error: 57.11%
+
+MATRIZ DE CONFUSIÓN:
+----------------------------------------
+Verdaderos Positivos (VP): 5,419
+Falsos Positivos (FP): 2,134
+Falsos Negativos (FN): 2,240
+Verdaderos Negativos (VN): 52,339
+
+MÉTRICAS DE PRECISIÓN:
+----------------------------------------
+Precisión (VP/(VP+FP)): 0.7175 (71.75%)
+Recall (VP/(VP+FN)): 0.7075 (70.75%)
+F1-Score: 0.7125
+Exactitud: 0.9296 (92.96%)
+
+LEYENDA DE COLORES EN IMAGEN DE DIFERENCIAS:
+----------------------------------------
+• Rojo (255,0,0): Incendios detectados correctamente
+• Azul oscuro (0,0,100): Falsos Negativos (incendios no detectados)
+• Azul brillante (0,0,255): Falsos Positivos (detectados erróneamente)
+• Escala de grises: Fondo sin cambios

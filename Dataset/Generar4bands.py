@@ -11,7 +11,7 @@ from osgeo import gdal, osr
 import argparse
 
 # --- CONFIGURACIÓN ---
-input_directory = "/home/liese2/SPRI_AI_project/Dataset/Test" 
+input_directory = "/home/liese2/SPRI_AI_project/Dataset/hdf" 
 output_directory = "/home/liese2/SPRI_AI_project/Dataset/Merged_4Band"
 temp_directory = "/home/liese2/SPRI_AI_project/Dataset/Raw" 
 

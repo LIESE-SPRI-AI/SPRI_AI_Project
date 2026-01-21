@@ -1,0 +1,43 @@
+Explicación de los códigos y directorios
+
+Dataset/ -> Directorio con las carpetas que contienen los datasets para imagenes 128x128 con 5, 10 y 20% de fuego por cada bloque. 
+
+	Crops/ -> 20% de fuego 
+	Crops2/ -> 10% de fuego 
+	Crops3/ -> 5% de fuego
+
+	Merged_4Band/ -> Directorio de salida en el que se guardan las imagenes de 4 bandas
+	
+	Raw/ -> Directorio con los sitios de incendios en formato zip para generar el dataset
+	
+	Test/ -> Directorio con los sitios de prueba para probar el modelo entrenado
+	
+	Generar4bands.py -> codigo para generar imagenes de 4 bandas a partir de un directorio con archivos .zip, las rutas se modifican dentro del codigo
+	
+	generate_wildfire_dataset.py -> codigo para generar el dataset a partir de un directorio con archivos zip, busca en cada zip las 4 bandas y la imagen burned area detection para generar los recortes true y mask, dentro del codigo se modifican las rutas, el humbral, tamaño del recorte, tipo de archivo de salida y tipo de dato
+	
+	mover.py -> codigo para copiar el dataset a una nueva ruta en la que crea las imagenes necesarias para la aumentacion y entrenamiento del modelo, dentro del codigo se modifica el directorio del dataset y la carpeta donde se va a crear el directorio Wildfire, ademas toma 80% del dataset para entrenamiento y 20% para validacion y escribe los nombres en train.txt y valid.txt
+	
+	Recortar_true_mask.py -> toma imagenes de 4 bandas y recorta los bloques de 128x128 tanto de la imagen como de la mascara y conserva georeferencia (para prueba)
+	
+	
+	
+Prueba/ -> codigos de prueba para visualizacion del modelo
+
+
+Wildfire/ -> Directorio donde se guardan los codigos referentes al modelo y su entrenamiento
+
+	Images/ -> directorio que contiene las imagenes true del dataset
+	
+	ImageSets/Segmentation/ -> directorios que contiene los archivos de texto train.txt y valid.txt
+	
+	SegmentationClass/ -> directorio que contiene las imagenes mask del dataset
+	
+	applyWildfireNet4B.py -> codigo que prueba el modelo entrenado, para usarlo desde terminal se definen como argumentos la imagen de 4 bandas como --input y el archivo de salida como --output
+	
+	datasetAugmentationWildfire4B.py -> codigo que realiza las aumentaciones del dataset y da a la salida el valor de mean y std, genera un archivo de texto dataset_statistics.txt con un reporte
+	
+	mainTrainEvalWildFireModelResidual4B128.py -> codigo que realiza el entrenamiento del modelo, se definen como argumentos --mode train -b 256 --epochs 1000, tambien genera los archivos de texto f1score con los reportes de accuracity y trace_epoch_segnet.txt con el log de loss, ademas de los archivos pth
+	
+	Wildfire_model.py -> modelo ajustado para usar 4 bandas
+	

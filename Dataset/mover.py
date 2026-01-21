@@ -24,9 +24,9 @@ def procesar_dataset(
     dir_mask = Path(dir_entrada) / "Mask"
     
     # Definir rutas de salida
-    dir_imagenes = Path(dir_salida_base) / "Wildfire" / "Images"
-    dir_segmentacion = Path(dir_salida_base) / "Wildfire" / "SegmentationClass"
-    dir_txts_completo = Path(dir_txts) / "Wildfire" / "ImageSets" / "Segmentation"
+    dir_imagenes = Path(dir_salida_base) / "Wildfire3" / "Images"
+    dir_segmentacion = Path(dir_salida_base) / "Wildfire3" / "SegmentationClass"
+    dir_txts_completo = Path(dir_txts) / "Wildfire3" / "ImageSets" / "Segmentation"
     
     # Crear directorios de salida si no existen
     dir_imagenes.mkdir(parents=True, exist_ok=True)
@@ -140,13 +140,8 @@ def procesar_dataset(
     print(f"  - Validación: {dir_txts_completo / 'valid.txt'} ({len(nombres_validacion)} archivos)")
     print("="*50)
 
-# Ruta del directorio de entrada (contiene carpetas True y Mask)
-DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Crops" 
-
-# Ruta base donde se crearán las carpetas Wildfire/Images y Wildfire/SegmentationClass
+DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Crops3" 
 DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project" 
-
-# Ruta donde se crearán los archivos txt (Wildfire/ImageSets/Segmentation)
 DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project" 
 
 if __name__ == "__main__":
