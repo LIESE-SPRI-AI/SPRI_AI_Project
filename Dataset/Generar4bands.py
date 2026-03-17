@@ -11,12 +11,10 @@ from osgeo import gdal, osr
 import argparse
 
 # --- CONFIGURACIÓN ---
-input_directory = "/home/liese2/SPRI_AI_project/Dataset/hdf" 
-output_directory = "/home/liese2/SPRI_AI_project/Dataset/Merged_4Band"
+input_directory = "/home/liese2/SPRI_AI_project/Dataset/Raw" 
+output_directory = "/home/liese2/SPRI_AI_project/Dataset/Entrada_firmas"
 temp_directory = "/home/liese2/SPRI_AI_project/Dataset/Raw" 
 
-output_dir_img = "/home/liese2/SPRI_AI_project/Dataset/Crops/True"
-output_dir_mask = "/home/liese2/SPRI_AI_project/Dataset/Crops/Mask"
 
 # Configuración del escalado (gdal_translate)
 target_min = 0
@@ -29,8 +27,6 @@ final_format = "GTiff"
 # Crear directorios necesarios
 os.makedirs(output_directory, exist_ok=True)
 os.makedirs(temp_directory, exist_ok=True)
-os.makedirs(output_dir_img, exist_ok=True)
-os.makedirs(output_dir_mask, exist_ok=True)
 
 def find_file_in_zip(zip_ref, pattern):
     for file_name in zip_ref.namelist():
