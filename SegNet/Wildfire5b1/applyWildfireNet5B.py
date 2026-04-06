@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# applyWildfireNet4B.py - Salida RGB GeoTIFF (negro con rojo)
+# applyWildfireNet5B.py - Salida RGB GeoTIFF (negro con rojo)
 
 from __future__ import print_function
 import numpy as np
@@ -14,7 +14,7 @@ import time
 # Importar modelo
 from wildfire_model import WildFireNet2DV3L_3x3_Residual as WildFireNet
 
-def load_image(path=None, channels=4, normalize=False, mean=None, std=None):
+def load_image(path=None, channels=5, normalize=False, mean=None, std=None):
     """Carga imagen TIFF con normalización y georreferenciación"""
     
     ds_img = gdal.Open(path)
@@ -154,9 +154,9 @@ if __name__ == '__main__':
     parser.add_argument('--output', required=True, help='Output RGB mask (.tif)')
     parser.add_argument('--weights', 
         default=os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                            "Wildfire7_N__128__AUG_1_valid_best_3264.pth"))
+                            "Wildfire5b1_N__128__AUG_1_valid_best_3264.pth"))
     
-    parser.add_argument('--channels', type=int, default=4)
+    parser.add_argument('--channels', type=int, default=5)
     parser.add_argument('--cuda', action='store_true', help='use cuda')
     parser.add_argument('--size', default=128, type=int, help='window size')
     parser.add_argument('--dims', type=str, default="(32,64)")
@@ -167,8 +167,8 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
 
-    MEAN = [0.15361482534366308, 0.12232997435385691, 0.11123257208450074, 0.2190846935356341]
-    STD = [0.06177043821482396, 0.0495556622349673, 0.0427310697737392, 0.09108120812021178]
+    MEAN = [0.15361482534366308, 0.12232997435385691, 0.11123257208450074, 0.2190846935356341, 0.5841005401171215]
+    STD = [0.06177043821482396, 0.0495556622349673, 0.0427310697737392, 0.09108120812021178, 0.06600219206727005]
     
     normalize = not args.no_normalize
     

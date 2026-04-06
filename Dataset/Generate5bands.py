@@ -11,9 +11,9 @@ from osgeo import gdal, osr
 import argparse
 
 # --- CONFIGURACIÓN ---
-input_directory = "/home/felix/SPRI_AI_Project/Dataset/Raw" 
-output_directory = "/home/felix/SPRI_AI_Project/Dataset/Merged_5bands"
-temp_directory = "/home/felix/SPRI_AI_Project/Dataset/Raw" 
+input_directory = "/home/liese2/SPRI_AI_project/Dataset/Test" 
+output_directory = "/home/liese2/SPRI_AI_project/Dataset/Test_5bands"
+temp_directory = "/home/liese2/SPRI_AI_project/Dataset/Test" 
 
 
 # Configuración del escalado (gdal_translate)

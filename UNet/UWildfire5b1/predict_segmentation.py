@@ -28,7 +28,7 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
     
     Args:
         model_path: Ruta al modelo entrenado (.pth)
-        image_path: Ruta a la imagen de entrada (TIFF 4 bandas, UInt16)
+        image_path: Ruta a la imagen de entrada (TIFF 5 bandas, UInt16)
         output_path: Ruta para guardar la predicción
         gpu: Usar GPU (True/False/"auto")
         threshold: Umbral de probabilidad para clasificar como incendio (0-1)
@@ -64,7 +64,7 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
     
     # Cargar modelo
     print("Cargando modelo...")
-    model = WildfireNet(in_channels=4, out_channels=2)
+    model = WildfireNet(in_channels=5, out_channels=2)
     device = torch.device('cuda' if gpu else 'cpu')
     
     try:
@@ -88,15 +88,15 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
     
     print(f"✓ Imagen cargada: {bands} bandas, {width}x{height} píxeles")
     
-    if bands != 4:
-        print(f"⚠ ADVERTENCIA: La imagen tiene {bands} bandas, se esperaban 4")
-        print(f"  Se usarán las primeras {min(bands, 4)} bandas")
+    if bands != 5:
+        print(f"⚠ ADVERTENCIA: La imagen tiene {bands} bandas, se esperaban 5")
+        print(f"  Se usarán las primeras {min(bands, 5)} bandas")
     
     # Preparar imagen (normalizar de UInt16 a [0, 1])
     print("\nProcesando imagen...")
-    image = np.zeros((min(bands, 4), height, width), dtype=np.float32)
+    image = np.zeros((min(bands, 5), height, width), dtype=np.float32)
     
-    for b in range(min(bands, 4)):
+    for b in range(min(bands, 5)):
         band_data = ds.GetRasterBand(b+1).ReadAsArray()
         
         # ✅ CORREGIDO: Normalización para UInt16
@@ -143,7 +143,7 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
                 
                 # Si el patch es más pequeño que patch_size, rellenar con ceros
                 if patch.shape[1] < patch_size or patch.shape[2] < patch_size:
-                    temp_patch = np.zeros((min(bands, 4), patch_size, patch_size), dtype=np.float32)
+                    temp_patch = np.zeros((min(bands, 5), patch_size, patch_size), dtype=np.float32)
                     temp_patch[:, :patch.shape[1], :patch.shape[2]] = patch
                     patch = temp_patch
                 
@@ -278,7 +278,7 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predicción de Incendios Forestales')
     parser.add_argument('--model', required=True, help='Ruta al modelo entrenado (.pth)')
-    parser.add_argument('--image', required=True, help='Ruta a la imagen de entrada (TIFF 4 bandas)')
+    parser.add_argument('--image', required=True, help='Ruta a la imagen de entrada (TIFF 5 bandas)')
     parser.add_argument('--output', required=True, help='Ruta para guardar la predicción')
     parser.add_argument('--gpu', type=str, default="auto", 
                        help='Usar GPU: True/False/auto (auto detecta disponibilidad)')
