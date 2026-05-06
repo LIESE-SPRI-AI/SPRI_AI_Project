@@ -14,8 +14,6 @@ __pycache__/
 *.h5
 *.pt
 *.pth
-*.onnx
-*.onnx.data
 models/
 data/
 Raw/
@@ -29,3 +27,5 @@ Crop_folders/
 # Ignorar configuraciones del editor
 .vscode/
 .idea/
+*.onnx.data
+*.onnx
