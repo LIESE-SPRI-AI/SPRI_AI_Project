@@ -30,4 +30,5 @@ Crop_folders/
 *.onnx.data
 *.onnx
 *.png
-
+*.tiff
+*.tif
