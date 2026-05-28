@@ -18,7 +18,7 @@ from PIL import Image
 # Configuración
 parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
 # Ruta fija al dataset
-DATA_PATH = '/home/liese2/SPRI_AI_project/Dataset/Entrada_firmas'
+DATA_PATH = '/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_2/data'
 
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
 parser.add_argument('-b', '--batch-size', default=4, type=int, help='mini-batch size')
@@ -307,9 +307,8 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         losses.update(batch_loss, len(batch))
         ious.update(batch_iou, len(batch))
         
-        if i % args.print_freq == 0:
-            print(f'Epoch: [{epoch}][{i}/{len(train_loader)}]\t'
-                  f'Loss: {losses.avg:.4f}\tIOU: {ious.avg:.4f}')
+        print(f'\r Batch [{i+1}/{len(train_loader)}] '
+              f'Loss: {losses.avg:.4f} IOU: {ious.avg:.4f}', end='', flush=True)
     
     return losses.avg, ious.avg
 
@@ -322,9 +321,6 @@ def validate(val_loader, model, epoch, device, args):
             batch_iou = process_batch_validate(model, batch, device)
             ious.update(batch_iou, len(batch))
             
-            if i % args.print_freq == 0:
-                print(f'Val: [{epoch}][{i}/{len(val_loader)}]\tIOU: {batch_iou:.4f}')
-    
     return ious.avg
 
 class AverageMeter(object):
@@ -346,6 +342,8 @@ class AverageMeter(object):
 def main():
     global best_iou
     args = parser.parse_args()
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     
     print("\n" + "="*60)
     print("VERIFICANDO SISTEMA")
@@ -381,7 +379,7 @@ def main():
     print("="*60)
     
     # Crear directorio de pesos
-    weights_dir = 'weights'
+    weights_dir = os.path.join(script_dir, 'weights')
     if not os.path.exists(weights_dir):
         os.makedirs(weights_dir)
     
@@ -447,14 +445,16 @@ def main():
     
     # Archivos de log
     timestamp = time.strftime("%Y%m%d_%H%M%S")
-    log_file = open(f'training_log_{timestamp}.txt', 'w')
-    iou_file = open(f'iou_metrics_{timestamp}.txt', 'w')
+    log_file = open(os.path.join(script_dir, f'training_log_{timestamp}.txt'), 'w')
+    iou_file = open(os.path.join(script_dir, f'iou_metrics_{timestamp}.txt'), 'w')
     log_file.write("Epoch,Loss,IOU_Train,IOU_Val,Time\n")
     iou_file.write("Epoch,IOU_Train,IOU_Val\n")
     
     print("\n" + "="*60)
     print("INICIANDO ENTRENAMIENTO")
     print("="*60 + "\n")
+
+    training_start_time = time.time()
     
     for epoch in range(args.epochs):
         start_time = time.time()
@@ -469,31 +469,34 @@ def main():
         log_file.flush()
         iou_file.flush()
         
-        print(f'\n{"="*60}')
-        print(f'EPOCH {epoch} COMPLETADA')
-        print(f'Loss: {train_loss:.4f} | IOU Train: {train_iou:.4f} | IOU Val: {val_iou:.4f}')
-        print(f'Tiempo: {epoch_time:.2f}s')
-        print(f'{"="*60}\n')
-        
         is_best = val_iou > best_iou
         best_iou = max(val_iou, best_iou)
+
+        print(f'\rEpoch [{epoch+1}/{args.epochs}]  '
+            f'Loss: {train_loss:.4f}  '
+            f'IOU Train: {train_iou:.4f}  '
+            f'IOU Val: {val_iou:.4f}  '
+            f'Tiempo: {epoch_time:.1f}s'
+            + (' <- mejor\n' if is_best else ''))
         
         if is_best:
             torch.save(model.state_dict(), os.path.join(weights_dir, 'model_best.pth'))
-            print(f"✓ Mejor modelo guardado con IOU: {best_iou:.4f}\n")
-        
-        if epoch % 10 == 0:
-            torch.save(model.state_dict(), os.path.join(weights_dir, f'model_epoch_{epoch}.pth'))
-            print(f"✓ Checkpoint guardado: epoch {epoch}\n")
+            print(f"Mejor modelo guardado - IOU Val: {best_iou:.4f}\n")
     
     log_file.close()
     iou_file.close()
     torch.save(model.state_dict(), os.path.join(weights_dir, 'model_final.pth'))
     
+    total_time = time.time() - training_start_time
+    horas = int(total_time // 3600)
+    minutos = int((total_time % 3600) // 60)
+    segundos = int(total_time % 60)
+
     print("\n" + "="*60)
     print("ENTRENAMIENTO COMPLETADO")
     print(f"Mejor IOU alcanzado: {best_iou:.4f}")
     print(f"Modelos guardados en: {weights_dir}/")
+    print(f"Tiempo total: {horas:02d}h {minutos:02d}m {segundos:02d}s")
     print("="*60)
 
 if __name__ == '__main__':

@@ -98,12 +98,16 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
     
     for b in range(min(bands, 4)):
         band_data = ds.GetRasterBand(b+1).ReadAsArray()
+        
+        # ✅ CORREGIDO: Normalización para UInt16
+        # Dividir por 12500 (como en el entrenamiento) en lugar de 65535
         band_data = band_data.astype(np.float32) / 12500.0
         band_data = np.clip(band_data, 0, 1)
         image[b, :, :] = band_data
     
     print(f"✓ Normalización completada (UInt16 → [0,1])")
     
+    # Configuración para procesamiento por patches
     patch_size = 128  # Tamaño de los patches (mismo que en entrenamiento)
     overlap = 32      # Superposición entre patches para suavizar bordes
     

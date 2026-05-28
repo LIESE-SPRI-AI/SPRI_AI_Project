@@ -3,6 +3,10 @@ import shutil
 import random
 from pathlib import Path
 
+DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/twentyPercent" 
+DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+
 def procesar_dataset(
     dir_entrada,
     dir_salida_base,
@@ -24,9 +28,9 @@ def procesar_dataset(
     dir_mask = Path(dir_entrada) / "Mask"
     
     # Definir rutas de salida
-    dir_imagenes = Path(dir_salida_base) / "Mobile-UNet_1" / "Images"
-    dir_segmentacion = Path(dir_salida_base) / "Mobile-UNet_1" / "SegmentationClass"
-    dir_txts_completo = Path(dir_txts) / "Mobile-UNet_1" / "ImageSets" / "Segmentation"
+    dir_imagenes = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "Images"
+    dir_segmentacion = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "SegmentationClass"
+    dir_txts_completo = Path(dir_txts) / "Mobile-UNet_5" / "data" 
     
     # Crear directorios de salida si no existen
     dir_imagenes.mkdir(parents=True, exist_ok=True)
@@ -139,10 +143,6 @@ def procesar_dataset(
     print(f"  - Entrenamiento: {dir_txts_completo / 'train.txt'} ({len(nombres_entrenamiento)} archivos)")
     print(f"  - Validación: {dir_txts_completo / 'valid.txt'} ({len(nombres_validacion)} archivos)")
     print("="*50)
-
-DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Crops1" 
-DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet/data" 
-DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
 
 if __name__ == "__main__":
     # Configurar semilla para reproducibilidad (opcional)
