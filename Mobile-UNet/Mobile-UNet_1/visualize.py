@@ -6,7 +6,7 @@ import sys
 sys.path.append("/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1")
 from Wildfire_models import UNet2D
 
-PTH_PATH   = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/weights_trained/model_final.pth"
+PTH_PATH   = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/weights/model_final.pth"
 OUTPUT_DIR = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/graphs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
