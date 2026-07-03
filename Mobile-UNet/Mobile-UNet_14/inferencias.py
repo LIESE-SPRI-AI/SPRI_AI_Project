@@ -17,9 +17,9 @@ from pathlib import Path
 #  CONFIGURACIÓN  ← edita estos tres valores
 # ─────────────────────────────────────────────
 DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Inferencias/Input")       # directorio con los .tif de entrada
-DIR_MODELOS  = Path("/home/liese2/SPRI_AI_project/UNet/Red_Neuronal_Wildfire5/weights")        # directorio con los .pth
-DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_52")         # directorio donde se guardan los resultados
-PREDICT_PY   = Path("/home/liese2/SPRI_AI_project/UNet/Red_Neuronal_Wildfire5/predict_segmentation.py")            # ruta al script de inferencia
+DIR_MODELOS  = Path("/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_14/weights")        # directorio con los .pth
+DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_14")         # directorio donde se guardan los resultados
+PREDICT_PY   = Path("/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_14/predict_segmentation.py")            # ruta al script de inferencia
 # ─────────────────────────────────────────────
 
 

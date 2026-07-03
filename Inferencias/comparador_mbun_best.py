@@ -41,7 +41,7 @@ import matplotlib.gridspec as gridspec
 DIR_BURNED      = Path("/home/liese2/SPRI_AI_project/Inferencias/Burned")  # ground truth _burned.tiff
 DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_16_exp2")  # archivos _final.tif del modelo A
 DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_52")  # archivos _final.tif del modelo B
-DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados6_UNvsMbUN_ex1")         # carpeta de salida
+DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados6_UNvsMbUN_ex2")         # carpeta de salida
 
 NOMBRE_MODELO_A = "Mobile-UNet"    # Nombre para mostrar del modelo A
 NOMBRE_MODELO_B = "UNet"    # Nombre para mostrar del modelo B
@@ -262,7 +262,7 @@ def buscar_inferencia(directorio: Path, nombrebase: str) -> Path | None:
     nombrebase es la parte antes de '_burned'.
     """
     patron = re.compile(
-        rf'^{re.escape(nombrebase)}_final\.tif$',
+        rf'^{re.escape(nombrebase)}_best\.tif$',
         re.IGNORECASE
     )
     for f in directorio.iterdir():
@@ -346,9 +346,9 @@ def main():
 
         falta = []
         if ruta_a is None:
-            falta.append(f"  [FALTA] {nombrebase}_final.tif en {dir_inf_a}")
+            falta.append(f"  [FALTA] {nombrebase}_best.tif en {dir_inf_a}")
         if ruta_b is None:
-            falta.append(f"  [FALTA] {nombrebase}_final.tif en {dir_inf_b}")
+            falta.append(f"  [FALTA] {nombrebase}_best.tif en {dir_inf_b}")
 
         if falta:
             print("\n".join(falta))
@@ -380,7 +380,7 @@ def main():
         db = {'rgb': mascara_a_rgb(mascara_b), 'diff': imagen_diferencias(mascara_gt, mascara_b), 'm': mb}
 
         # Figura
-        ruta_fig = dir_salida / f"{nombrebase}_comparacion_mbun_final.png"
+        ruta_fig = dir_salida / f"{nombrebase}_comparacion_mbun_best.png"
         visualizar(
             nombrebase=nombrebase,
             rgb_burned=rgb_burned,

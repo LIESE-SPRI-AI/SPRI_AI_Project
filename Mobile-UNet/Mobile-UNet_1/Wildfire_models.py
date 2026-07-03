@@ -46,9 +46,9 @@ class MobileUp(nn.Module):
     def __init__(self, in_channels, skip_channels, out_channels):
         super().__init__()
         self.up_conv = nn.Sequential(
-            nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU6(inplace=True)
+            nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=False), # con convtransposed
+            nn.BatchNorm2d(out_channels), #quitar
+            nn.ReLU6(inplace=True) # quitar
         )
         self.double_conv = MobileDoubleConv(out_channels + skip_channels, out_channels)
 
