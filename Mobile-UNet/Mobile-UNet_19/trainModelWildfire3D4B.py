@@ -341,9 +341,10 @@ class AverageMeter(object):
         self.count += n
         self.avg = self.sum / self.count
 
-from dotenv import load_dotenv
-load_dotenv()
+# Load Pushbullet token directly from the environment without requiring python-dotenv.
 PUSHBULLET_API_TOKEN = os.getenv("PUSHBULLET_API_TOKEN")
+if not PUSHBULLET_API_TOKEN:
+    print("Warning: PUSHBULLET_API_TOKEN is not set in the environment.")
 
 def enviar_notificacion(mensaje):
     try:
