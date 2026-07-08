@@ -21,7 +21,6 @@ parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
 # Ruta fija al dataset
 DATA_PATH = '/home/felix/SPRI_AI_Project/Mobile-UNet/Mobile-UNet_19/data'
 
-
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
 parser.add_argument('-b', '--batch-size', default=4, type=int, help='mini-batch size')
 parser.add_argument('--lr', '--learning-rate', default=0.001, type=float, help='initial learning rate')
@@ -342,7 +341,9 @@ class AverageMeter(object):
         self.count += n
         self.avg = self.sum / self.count
 
-PUSHBULLET_API_TOKEN = 'o.vQ3mqRkOR7p2ovPWLpgEQGnr2QbcHKi9'
+from dotenv import load_dotenv
+load_dotenv()
+PUSHBULLET_API_TOKEN = os.getenv("PUSHBULLET_API_TOKEN")
 
 def enviar_notificacion(mensaje):
     try:
