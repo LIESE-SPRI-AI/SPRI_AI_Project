@@ -5,11 +5,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class InvertedResidual(nn.Module):
-    def __init__(self, in_channels, out_channels, expand_ratio=2):
+    def __init__(self, in_channels, out_channels, expand_ratio=6, stride=1):
         super().__init__()
 
         expanded_channels = in_channels * expand_ratio
-        self.use_residual = (in_channels == out_channels)
+        self.use_residual = (stride == 1 and in_channels == out_channels)
 
         self.block = nn.Sequential(
             # la pointwise
@@ -17,7 +17,7 @@ class InvertedResidual(nn.Module):
             nn.BatchNorm2d(expanded_channels),
             nn.ReLU6(inplace=True),
             # la depthwise
-            nn.Conv2d(expanded_channels, expanded_channels, kernel_size=3, padding=1, groups=expanded_channels, bias=False),
+            nn.Conv2d(expanded_channels, expanded_channels, kernel_size=3, stride=stride, padding=1, groups=expanded_channels, bias=False),
             nn.BatchNorm2d(expanded_channels),
             nn.ReLU6(inplace=True),
             # la otra pointwise
@@ -30,90 +30,68 @@ class InvertedResidual(nn.Module):
             return x + self.block(x)
         return self.block(x)
 
-class DoubleConv(nn.Module):
-    def __init__(self, in_channels, out_channels, expand_ratio=2):
-        super(DoubleConv, self).__init__()
-
-        self.block1 = InvertedResidual(in_channels, out_channels, expand_ratio)
-        self.block2 = InvertedResidual(out_channels, out_channels, expand_ratio)
-
-    def forward(self, x):
-        x = self.block1(x)
-        x = self.block2(x)
-        return x
-    
+def make_stage(in_channels, out_channels, expand_ratio, n, stride):
+    layers = [InvertedResidual(in_channels, out_channels, expand_ratio, stride)]
+    for _ in range(n - 1):
+        layers.append(InvertedResidual(out_channels, out_channels, expand_ratio, stride=1))
+    return nn.Sequential(*layers)
 
 class UNet2D(nn.Module):
     def __init__(self, in_channels=4, out_channels=2):
         super(UNet2D, self).__init__()
         
-        # Encoder (Downsampling)
-        self.enc1 = DoubleConv(in_channels, 64)
-        self.enc2 = DoubleConv(64, 128)
-        self.enc3 = DoubleConv(128, 256)
-        self.enc4 = DoubleConv(256, 512)
-        
-        self.pool = nn.MaxPool2d(2)
-        
-        # Bottleneck
-        self.bottleneck = DoubleConv(512, 1024)
-        
-        # Decoder (Upsampling)
-        self.upconv4 = nn.ConvTranspose2d(1024, 512, kernel_size=2, stride=2)
-        self.dec4 = DoubleConv(1024, 512)  # 512 + 512 = 1024
-        
-        self.upconv3 = nn.ConvTranspose2d(512, 256, kernel_size=2, stride=2)
-        self.dec3 = DoubleConv(512, 256)   # 256 + 256 = 512
-        
-        self.upconv2 = nn.ConvTranspose2d(256, 128, kernel_size=2, stride=2)
-        self.dec2 = DoubleConv(256, 128)   # 128 + 128 = 256
-        
-        self.upconv1 = nn.ConvTranspose2d(128, 64, kernel_size=2, stride=2)
-        self.dec1 = DoubleConv(128, 64)    # 64 + 64 = 128
-        
-        # Output layer
-        self.out_conv = nn.Conv2d(64, out_channels, kernel_size=1)
+        self.stem = nn.Sequential(
+            nn.Conv2d(in_channels, 32, kernel_size=3, stride=2, padding=1, bias=False),
+            nn.BatchNorm2d(32),
+            nn.ReLU6(inplace=True),
+        )
+        #enconder de chava
+        self.d1 = make_stage(32, 16, expand_ratio=1, n=1, stride=1)
+        self.d2 = make_stage(16, 24, expand_ratio=6, n=2, stride=2)
+        self.d3 = make_stage(24, 32, expand_ratio=6, n=3, stride=2)
+        self.d4a = make_stage(32, 64, expand_ratio=6, n=4, stride=2)
+        self.d4b = make_stage(64, 96, expand_ratio=6, n=3, stride=1)
+        self.d5a = make_stage(96, 160, expand_ratio=6, n=3, stride=2)
+        self.d5b = make_stage(160, 320, expand_ratio=6, n=1, stride=1)
+        #decoder fresquito
+        self.upconv1 = nn.ConvTranspose2d(320, 96, kernel_size=4, stride=2, padding=1)
+        self.ir1 = InvertedResidual(96 + 96, 96, expand_ratio=6, stride=1)
+        self.upconv2 = nn.ConvTranspose2d(96, 32, kernel_size=4, stride=2, padding=1)
+        self.ir2 = InvertedResidual(32 + 32, 32, expand_ratio=6, stride=1)
+        self.upconv3 = nn.ConvTranspose2d(32, 24, kernel_size=4, stride=2, padding=1)
+        self.ir3 = InvertedResidual(24 + 24, 24, expand_ratio=6, stride=1)
+        self.upconv4 = nn.ConvTranspose2d(24, 16, kernel_size=4, stride=2, padding=1)
+        self.ir4 = InvertedResidual(16 + 16, 16, expand_ratio=6, stride=1)
+
+        self.upconv5 = nn.ConvTranspose2d(16, out_channels, kernel_size=4, stride=2, padding=1)
 
     def forward(self, x):
         # Encoder
-        e1 = self.enc1(x)        # [B, 64, H, W]
-        e2 = self.enc2(self.pool(e1))  # [B, 128, H/2, W/2]
-        e3 = self.enc3(self.pool(e2))  # [B, 256, H/4, W/4]
-        e4 = self.enc4(self.pool(e3))  # [B, 512, H/8, W/8]
-        
-        # Bottleneck
-        bottleneck = self.bottleneck(self.pool(e4))  # [B, 1024, H/16, W/16]
-        
-        # Decoder with skip connections
-        d4 = self.upconv4(bottleneck)  # [B, 512, H/8, W/8]
-        # Asegurar que e4 y d4 tengan el mismo tamaño
-        if e4.size()[2:] != d4.size()[2:]:
-            d4 = F.interpolate(d4, size=e4.shape[2:], mode='bilinear', align_corners=True)
-        d4 = torch.cat([e4, d4], dim=1)  # [B, 1024, H/8, W/8]
-        d4 = self.dec4(d4)               # [B, 512, H/8, W/8]
-        
-        d3 = self.upconv3(d4)            # [B, 256, H/4, W/4]
-        if e3.size()[2:] != d3.size()[2:]:
-            d3 = F.interpolate(d3, size=e3.shape[2:], mode='bilinear', align_corners=True)
-        d3 = torch.cat([e3, d3], dim=1)  # [B, 512, H/4, W/4]
-        d3 = self.dec3(d3)               # [B, 256, H/4, W/4]
-        
-        d2 = self.upconv2(d3)            # [B, 128, H/2, W/2]
-        if e2.size()[2:] != d2.size()[2:]:
-            d2 = F.interpolate(d2, size=e2.shape[2:], mode='bilinear', align_corners=True)
-        d2 = torch.cat([e2, d2], dim=1)  # [B, 256, H/2, W/2]
-        d2 = self.dec2(d2)               # [B, 128, H/2, W/2]
-        
-        d1 = self.upconv1(d2)            # [B, 64, H, W]
-        if e1.size()[2:] != d1.size()[2:]:
-            d1 = F.interpolate(d1, size=e1.shape[2:], mode='bilinear', align_corners=True)
-        d1 = torch.cat([e1, d1], dim=1)  # [B, 128, H, W]
-        d1 = self.dec1(d1)               # [B, 64, H, W]
-        
-        # Output - asegurar que tenga el mismo tamaño espacial que la entrada
-        out = self.out_conv(d1)          # [B, 2, H, W]
-        
-        return out
+        x = self.stem(x)
+        x1 = self.d1(x)
+        x2 = self.d2(x1)
+        x3 = self.d3(x2)
+        x4 = self.d4b(self.d4a(x3))
+        x5 = self.d5b(self.d5a(x4))
 
+        l1 = self._match_and_cat(self.upconv1(x5), x4)
+        l2 = self.ir1(l1)
+        l3 = self._match_and_cat(self.upconv2(l2), x3)
+        l4 = self.ir2(l3)
+        l5 = self._match_and_cat(self.upconv3(l4), x2)
+        l6 = self.ir3(l5)
+        l7 = self._match_and_cat(self.upconv4(l6), x1)
+        l8 = self.ir4(l7)
+
+        out = self.upconv5(l8)
+
+        return out
+    
+    @staticmethod # magia negra de claude
+    def _match_and_cat(up, skip):
+        if up.size()[2:] != skip.size()[2:]:
+            up = F.interpolate(up, size=skip.shape[2:], mode='bilinear', align_corners=True)
+        return torch.cat([up, skip], dim=1)
+    
 # Modelo principal a usar
 WildfireNet = UNet2D
