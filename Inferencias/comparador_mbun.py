@@ -39,9 +39,9 @@ import matplotlib.gridspec as gridspec
 #  CONFIGURACIÓN  ← edita estos valores
 # ═══════════════════════════════════════════════════════════════════
 DIR_BURNED      = Path("/home/liese2/SPRI_AI_project/Inferencias/Burned")  # ground truth _burned.tiff
-DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_18_exp2")  # archivos _final.tif del modelo A
+DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_19_exp6")  # archivos _final.tif del modelo A
 DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_52")  # archivos _final.tif del modelo B
-DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados8_UNvsMbUN_ex2")         # carpeta de salida
+DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados9_UNvsMbUN_ex6")         # carpeta de salida
 
 NOMBRE_MODELO_A = "Mobile-UNet"    # Nombre para mostrar del modelo A
 NOMBRE_MODELO_B = "UNet"    # Nombre para mostrar del modelo B
