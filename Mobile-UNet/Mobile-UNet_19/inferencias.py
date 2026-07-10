@@ -18,7 +18,7 @@ from pathlib import Path
 # ─────────────────────────────────────────────
 DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Inferencias/Input")       # directorio con los .tif de entrada
 DIR_MODELOS  = Path("weights")        # directorio con los .pth
-DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_18_exp2")         # directorio donde se guardan los resultados
+DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_19_exp6")         # directorio donde se guardan los resultados
 PREDICT_PY   = Path("predict_segmentation.py")            # ruta al script de inferencia
 # ─────────────────────────────────────────────
 
