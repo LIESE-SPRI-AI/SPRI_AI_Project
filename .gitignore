@@ -8,7 +8,6 @@ __pycache__/
 *.pyc
 
 # Ignorar Datasets gigantes y modelos (haz backup de esto en Drive/Disco Duro, no en Git)
-*.csv
 *.xlsx
 *.zip
 *.h5
@@ -29,3 +28,4 @@ Crop_folders/
 .idea/
 *.onnx.data
 *.onnx
+Datasets_generados/

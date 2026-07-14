@@ -1,0 +1,1228 @@
+imagen,modelo,pixeles_incendio,total_pixeles,porcentaje_incendio
+10_24_Ciudad Madero_Tamaulipas_bloque_12_x0_y192.tiff,model_best.pth,2814,16384,17.1753
+10_24_Ciudad Madero_Tamaulipas_bloque_13_x64_y192.tiff,model_best.pth,2974,16384,18.1519
+10_24_Ciudad Madero_Tamaulipas_bloque_18_x128_y256.tiff,model_best.pth,997,16384,6.0852
+10_24_Ciudad Madero_Tamaulipas_bloque_21_x64_y286.tiff,model_best.pth,2137,16384,13.0432
+10_24_Ciudad Madero_Tamaulipas_bloque_3_x169_y0.tiff,model_best.pth,553,16384,3.3752
+10_24_Ciudad Madero_Tamaulipas_bloque_7_x169_y64.tiff,model_best.pth,916,16384,5.5908
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_101_x768_y768.tiff,model_best.pth,1504,16384,9.1797
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_104_x960_y768.tiff,model_best.pth,689,16384,4.2053
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_119_x960_y934.tiff,model_best.pth,1421,16384,8.6731
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_12_x320_y64.tiff,model_best.pth,5727,16384,34.9548
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_17_x128_y128.tiff,model_best.pth,4177,16384,25.4944
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_21_x384_y128.tiff,model_best.pth,7171,16384,43.7683
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_27_x384_y192.tiff,model_best.pth,7022,16384,42.8589
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_29_x512_y192.tiff,model_best.pth,4313,16384,26.3245
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_38_x704_y256.tiff,model_best.pth,4023,16384,24.5544
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_40_x384_y320.tiff,model_best.pth,4892,16384,29.8584
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_44_x640_y320.tiff,model_best.pth,4575,16384,27.9236
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_54_x896_y384.tiff,model_best.pth,3824,16384,23.3398
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_5_x320_y0.tiff,model_best.pth,3582,16384,21.8628
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_62_x896_y448.tiff,model_best.pth,5402,16384,32.9712
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_70_x832_y512.tiff,model_best.pth,9319,16384,56.8787
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_73_x448_y576.tiff,model_best.pth,936,16384,5.7129
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_78_x768_y576.tiff,model_best.pth,5055,16384,30.8533
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_82_x512_y640.tiff,model_best.pth,2883,16384,17.5964
+10_24_Cuitzeo del Porvenir_Guanajuato_bloque_97_x448_y768.tiff,model_best.pth,2560,16384,15.625
+10_24_Lago de Zumpango_Ciudad de México_bloque_8_x96_y128.tiff,model_best.pth,5830,16384,35.5835
+10_24_Lago de Zumpango_Ciudad de México_bloque_9_x0_y192.tiff,model_best.pth,4669,16384,28.4973
+10_24_San Andrés Coyotitlán_Veracruz_bloque_0_x0_y0.tiff,model_best.pth,7373,16384,45.0012
+10_24_San Andrés Coyotitlán_Veracruz_bloque_4_x64_y64.tiff,model_best.pth,9085,16384,55.4504
+10_24_San Andrés Coyotitlán_Veracruz_bloque_7_x64_y128.tiff,model_best.pth,9101,16384,55.5481
+10_24_Santiago Matatlán_Oaxaca_bloque_0_x0_y0.tiff,model_best.pth,72,16384,0.4395
+10_24_Santiago Matatlán_Oaxaca_bloque_7_x64_y120.tiff,model_best.pth,122,16384,0.7446
+11_24_El Tabaje_Oaxaca_bloque_9_x64_y89.tiff,model_best.pth,2323,16384,14.1785
+11_24_San Antonio_Veracruz_bloque_4_x64_y64.tiff,model_best.pth,8841,16384,53.9612
+11_24_San Antonio_Veracruz_bloque_7_x64_y128.tiff,model_best.pth,7830,16384,47.7905
+11_24_San Antonio_Veracruz_bloque_8_x97_y128.tiff,model_best.pth,5998,16384,36.6089
+11_Zapopan_Jalisco_bloque_3_x704_y768.tiff,model_best.pth,401,16384,2.4475
+11_Zapopan_Jalisco_bloque_4_x704_y832.tiff,model_best.pth,227,16384,1.3855
+12_24_Cuauhtémoc_Tamaulipas_bloque_0_x0_y0.tiff,model_best.pth,311,16384,1.8982
+12_24_Cuauhtémoc_Tamaulipas_bloque_12_x205_y128.tiff,model_best.pth,2,16384,0.0122
+12_24_Cuauhtémoc_Tamaulipas_bloque_14_x64_y192.tiff,model_best.pth,329,16384,2.0081
+12_24_Cuauhtémoc_Tamaulipas_bloque_18_x0_y256.tiff,model_best.pth,401,16384,2.4475
+12_24_Cuauhtémoc_Tamaulipas_bloque_26_x192_y320.tiff,model_best.pth,3324,16384,20.2881
+12_24_Cuauhtémoc_Tamaulipas_bloque_27_x205_y320.tiff,model_best.pth,2874,16384,17.5415
+12_24_Cuauhtémoc_Tamaulipas_bloque_28_x0_y365.tiff,model_best.pth,44,16384,0.2686
+12_24_Cuauhtémoc_Tamaulipas_bloque_4_x64_y64.tiff,model_best.pth,309,16384,1.886
+12_Balleza_Chihuahua_bloque_13_x320_y64.tiff,model_best.pth,1693,16384,10.3333
+12_Balleza_Chihuahua_bloque_16_x512_y64.tiff,model_best.pth,1629,16384,9.9426
+12_Balleza_Chihuahua_bloque_19_x64_y128.tiff,model_best.pth,757,16384,4.6204
+12_Balleza_Chihuahua_bloque_20_x128_y128.tiff,model_best.pth,987,16384,6.0242
+12_Balleza_Chihuahua_bloque_25_x448_y128.tiff,model_best.pth,1243,16384,7.5867
+12_Balleza_Chihuahua_bloque_4_x320_y0.tiff,model_best.pth,1435,16384,8.7585
+12_Balleza_Chihuahua_bloque_50_x256_y384.tiff,model_best.pth,2041,16384,12.4573
+12_Balleza_Chihuahua_bloque_55_x384_y388.tiff,model_best.pth,664,16384,4.0527
+12_Balleza_Chihuahua_bloque_7_x512_y0.tiff,model_best.pth,1643,16384,10.0281
+13_24_Popocatépetl_México_bloque_14_x128_y177.tiff,model_best.pth,494,16384,3.0151
+13_24_Popocatépetl_México_bloque_3_x157_y0.tiff,model_best.pth,465,16384,2.8381
+13_24_San Isidro_Veracruz_bloque_10_x64_y161.tiff,model_best.pth,5213,16384,31.8176
+13_24_San Isidro_Veracruz_bloque_11_x68_y161.tiff,model_best.pth,4974,16384,30.3589
+13_24_San Isidro_Veracruz_bloque_3_x0_y64.tiff,model_best.pth,7780,16384,47.4854
+14_24_La Concordia_Chiapas_bloque_0_x0_y0.tiff,model_best.pth,3892,16384,23.7549
+14_24_La Concordia_Chiapas_bloque_4_x0_y64.tiff,model_best.pth,3747,16384,22.8699
+14_24_Llano Grande_Chiapas_bloque_16_x64_y179.tiff,model_best.pth,1125,16384,6.8665
+14_24_Llano Grande_Chiapas_bloque_18_x192_y179.tiff,model_best.pth,2474,16384,15.1001
+14_24_Llano Grande_Chiapas_bloque_3_x192_y0.tiff,model_best.pth,488,16384,2.9785
+14_24_Llano Grande_Chiapas_bloque_5_x0_y64.tiff,model_best.pth,827,16384,5.0476
+14_24_Villa Hidalgo_Chiapas_bloque_13_x64_y128.tiff,model_best.pth,5381,16384,32.843
+14_24_Villa Hidalgo_Chiapas_bloque_16_x256_y128.tiff,model_best.pth,3053,16384,18.634
+14_24_Villa Hidalgo_Chiapas_bloque_17_x317_y128.tiff,model_best.pth,751,16384,4.5837
+14_24_Villa Hidalgo_Chiapas_bloque_19_x64_y192.tiff,model_best.pth,4006,16384,24.4507
+14_24_Villa Hidalgo_Chiapas_bloque_25_x128_y239.tiff,model_best.pth,2280,16384,13.916
+14_Ejido de Vergel_Durango_bloque_15_x0_y128.tiff,model_best.pth,685,16384,4.1809
+14_Ejido de Vergel_Durango_bloque_23_x499_y128.tiff,model_best.pth,2907,16384,17.7429
+14_Ejido de Vergel_Durango_bloque_24_x0_y192.tiff,model_best.pth,711,16384,4.3396
+14_Ejido de Vergel_Durango_bloque_27_x192_y192.tiff,model_best.pth,1412,16384,8.6182
+14_Ejido de Vergel_Durango_bloque_29_x320_y192.tiff,model_best.pth,3011,16384,18.3777
+14_Ejido de Vergel_Durango_bloque_32_x499_y192.tiff,model_best.pth,1116,16384,6.8115
+14_Ejido de Vergel_Durango_bloque_34_x192_y256.tiff,model_best.pth,398,16384,2.4292
+14_Ejido de Vergel_Durango_bloque_38_x448_y256.tiff,model_best.pth,79,16384,0.4822
+14_Ejido de Vergel_Durango_bloque_4_x320_y0.tiff,model_best.pth,610,16384,3.7231
+14_Ejido de Vergel_Durango_bloque_53_x192_y407.tiff,model_best.pth,2083,16384,12.7136
+14_Ejido de Vergel_Durango_bloque_54_x256_y407.tiff,model_best.pth,3138,16384,19.1528
+14_Ejido de Vergel_Durango_bloque_56_x384_y407.tiff,model_best.pth,479,16384,2.9236
+14_El Carmen_Querétaro_bloque_4_x0_y64.tiff,model_best.pth,4825,16384,29.4495
+14_El Carmen_Querétaro_bloque_5_x64_y64.tiff,model_best.pth,3576,16384,21.8262
+14_El Ciruelo_Oaxaca_bloque_10_x128_y105.tiff,model_best.pth,639,16384,3.9001
+14_El Ciruelo_Oaxaca_bloque_3_x138_y0.tiff,model_best.pth,1768,16384,10.791
+14_El Ciruelo_Oaxaca_bloque_9_x64_y105.tiff,model_best.pth,2934,16384,17.9077
+14_La Cañada_Querétaro_bloque_2_x128_y0.tiff,model_best.pth,2474,16384,15.1001
+14_La Cañada_Querétaro_bloque_3_x174_y0.tiff,model_best.pth,1995,16384,12.1765
+14_La Cañada_Querétaro_bloque_5_x64_y64.tiff,model_best.pth,3829,16384,23.3704
+14_La Palma_Querétaro_bloque_10_x0_y128.tiff,model_best.pth,8790,16384,53.6499
+14_La Palma_Querétaro_bloque_15_x0_y160.tiff,model_best.pth,7814,16384,47.6929
+14_La Palma_Querétaro_bloque_18_x192_y160.tiff,model_best.pth,3265,16384,19.928
+14_La Palma_Querétaro_bloque_2_x128_y0.tiff,model_best.pth,5006,16384,30.5542
+14_San Juanito_Durango_bloque_12_x576_y64.tiff,model_best.pth,53,16384,0.3235
+14_San Juanito_Durango_bloque_21_x448_y128.tiff,model_best.pth,3094,16384,18.8843
+14_San Juanito_Durango_bloque_25_x0_y192.tiff,model_best.pth,1734,16384,10.5835
+14_San Juanito_Durango_bloque_27_x128_y192.tiff,model_best.pth,2816,16384,17.1875
+14_San Juanito_Durango_bloque_35_x583_y192.tiff,model_best.pth,2529,16384,15.4358
+14_San Juanito_Durango_bloque_41_x320_y256.tiff,model_best.pth,97,16384,0.592
+14_San Juanito_Durango_bloque_50_x192_y320.tiff,model_best.pth,900,16384,5.4932
+14_San Juanito_Durango_bloque_54_x448_y320.tiff,model_best.pth,289,16384,1.7639
+14_San Juanito_Durango_bloque_58_x0_y384.tiff,model_best.pth,208,16384,1.2695
+14_San Juanito_Durango_bloque_59_x64_y384.tiff,model_best.pth,252,16384,1.5381
+14_San Juanito_Durango_bloque_5_x128_y64.tiff,model_best.pth,1961,16384,11.969
+14_San Juanito_Durango_bloque_60_x128_y384.tiff,model_best.pth,89,16384,0.5432
+14_San Juanito_Durango_bloque_61_x192_y384.tiff,model_best.pth,630,16384,3.8452
+14_San Juanito_Durango_bloque_63_x320_y384.tiff,model_best.pth,750,16384,4.5776
+14_San Juanito_Durango_bloque_65_x448_y384.tiff,model_best.pth,137,16384,0.8362
+14_San Juanito_Durango_bloque_66_x512_y384.tiff,model_best.pth,144,16384,0.8789
+14_San Juanito_Durango_bloque_68_x583_y384.tiff,model_best.pth,311,16384,1.8982
+14_San Juanito_Durango_bloque_7_x256_y64.tiff,model_best.pth,2152,16384,13.1348
+14_San Nicolas Esquiros_Guanajuato_bloque_13_x333_y64.tiff,model_best.pth,6034,16384,36.8286
+14_San Nicolas Esquiros_Guanajuato_bloque_14_x0_y100.tiff,model_best.pth,4392,16384,26.8066
+14_San Nicolas Esquiros_Guanajuato_bloque_16_x128_y100.tiff,model_best.pth,2916,16384,17.7979
+14_San Nicolas Esquiros_Guanajuato_bloque_17_x192_y100.tiff,model_best.pth,3221,16384,19.6594
+14_San Nicolas Esquiros_Guanajuato_bloque_7_x0_y64.tiff,model_best.pth,4551,16384,27.7771
+14_San Nicolas Esquiros_Guanajuato_bloque_9_x128_y64.tiff,model_best.pth,6781,16384,41.3879
+14_SanPedroLagunillas_Nayarit_bloque_12_x1088_y1280.tiff,model_best.pth,2234,16384,13.6353
+14_SanPedroLagunillas_Nayarit_bloque_2_x1024_y512.tiff,model_best.pth,936,16384,5.7129
+14_SanPedroLagunillas_Nayarit_bloque_3_x1088_y512.tiff,model_best.pth,1154,16384,7.0435
+14_SanPedroLagunillas_Nayarit_bloque_9_x1408_y1216.tiff,model_best.pth,1825,16384,11.1389
+14_Zinapecuaro_Michoacan_bloque_1_x832_y704.tiff,model_best.pth,368,16384,2.2461
+14_Zinapecuaro_Michoacan_bloque_3_x832_y768.tiff,model_best.pth,276,16384,1.6846
+15_24_Candelaria2_Campeche_bloque_0_x0_y0.tiff,model_best.pth,6262,16384,38.2202
+15_24_Candelaria2_Campeche_bloque_14_x512_y64.tiff,model_best.pth,3616,16384,22.0703
+15_24_Candelaria2_Campeche_bloque_7_x448_y0.tiff,model_best.pth,6174,16384,37.6831
+15_24_Candelaria_Campeche_bloque_17_x476_y64.tiff,model_best.pth,5976,16384,36.4746
+15_24_Candelaria_Campeche_bloque_18_x0_y128.tiff,model_best.pth,1506,16384,9.1919
+15_24_Candelaria_Campeche_bloque_24_x384_y128.tiff,model_best.pth,11894,16384,72.5952
+15_24_Candelaria_Campeche_bloque_27_x128_y192.tiff,model_best.pth,791,16384,4.8279
+15_24_Candelaria_Campeche_bloque_28_x192_y192.tiff,model_best.pth,1695,16384,10.3455
+15_24_Candelaria_Campeche_bloque_29_x256_y192.tiff,model_best.pth,6895,16384,42.0837
+15_24_Candelaria_Campeche_bloque_30_x320_y192.tiff,model_best.pth,13148,16384,80.249
+15_24_Candelaria_Campeche_bloque_35_x128_y256.tiff,model_best.pth,3661,16384,22.345
+15_24_Candelaria_Campeche_bloque_3_x192_y0.tiff,model_best.pth,13106,16384,79.9927
+15_24_Candelaria_Campeche_bloque_40_x448_y256.tiff,model_best.pth,6097,16384,37.2131
+15_24_Candelaria_Campeche_bloque_55_x256_y384.tiff,model_best.pth,6764,16384,41.2842
+15_24_Candelaria_Campeche_bloque_61_x192_y402.tiff,model_best.pth,4945,16384,30.1819
+15_24_Candelaria_Campeche_bloque_64_x384_y402.tiff,model_best.pth,2673,16384,16.3147
+15_24_Candelaria_Campeche_bloque_9_x0_y64.tiff,model_best.pth,3188,16384,19.458
+15_24_División del Norte_Campeche_bloque_5_x64_y64.tiff,model_best.pth,1356,16384,8.2764
+15_24_División del Norte_Campeche_bloque_8_x0_y86.tiff,model_best.pth,1041,16384,6.3538
+15_24_El Aguacatal_Campeche_bloque_16_x64_y128.tiff,model_best.pth,8660,16384,52.8564
+15_24_El Aguacatal_Campeche_bloque_33_x0_y296.tiff,model_best.pth,7025,16384,42.8772
+15_24_El Aguacatal_Campeche_bloque_37_x256_y296.tiff,model_best.pth,3533,16384,21.5637
+15_24_El Aguacatal_Campeche_bloque_5_x320_y0.tiff,model_best.pth,4360,16384,26.6113
+15_24_El Aguacatal_Campeche_bloque_6_x384_y0.tiff,model_best.pth,942,16384,5.7495
+15_24_Emiliano Zapata_Ciudad de México_bloque_13_x0_y192.tiff,model_best.pth,1363,16384,8.3191
+15_24_Emiliano Zapata_Ciudad de México_bloque_16_x384_y192.tiff,model_best.pth,135,16384,0.824
+15_24_Emiliano Zapata_Ciudad de México_bloque_19_x576_y192.tiff,model_best.pth,2428,16384,14.8193
+15_24_Emiliano Zapata_Ciudad de México_bloque_1_x640_y0.tiff,model_best.pth,1281,16384,7.8186
+15_24_Emiliano Zapata_Ciudad de México_bloque_20_x640_y192.tiff,model_best.pth,1710,16384,10.437
+15_24_Emiliano Zapata_Ciudad de México_bloque_21_x704_y192.tiff,model_best.pth,1270,16384,7.7515
+15_24_Emiliano Zapata_Ciudad de México_bloque_23_x0_y256.tiff,model_best.pth,3004,16384,18.335
+15_24_Emiliano Zapata_Ciudad de México_bloque_28_x320_y256.tiff,model_best.pth,3952,16384,24.1211
+15_24_Emiliano Zapata_Ciudad de México_bloque_46_x640_y320.tiff,model_best.pth,314,16384,1.9165
+15_24_Emiliano Zapata_Ciudad de México_bloque_48_x0_y384.tiff,model_best.pth,499,16384,3.0457
+15_24_Emiliano Zapata_Ciudad de México_bloque_55_x448_y384.tiff,model_best.pth,4800,16384,29.2969
+15_24_Emiliano Zapata_Ciudad de México_bloque_59_x128_y448.tiff,model_best.pth,13223,16384,80.7068
+15_24_Emiliano Zapata_Ciudad de México_bloque_64_x448_y448.tiff,model_best.pth,6607,16384,40.3259
+15_24_Emiliano Zapata_Ciudad de México_bloque_68_x128_y512.tiff,model_best.pth,10689,16384,65.2405
+15_24_Emiliano Zapata_Ciudad de México_bloque_70_x256_y512.tiff,model_best.pth,13636,16384,83.2275
+15_24_Emiliano Zapata_Ciudad de México_bloque_73_x448_y512.tiff,model_best.pth,5454,16384,33.2886
+15_24_Emiliano Zapata_Ciudad de México_bloque_74_x512_y512.tiff,model_best.pth,540,16384,3.2959
+15_24_Emiliano Zapata_Ciudad de México_bloque_78_x256_y576.tiff,model_best.pth,11513,16384,70.2698
+15_24_Emiliano Zapata_Ciudad de México_bloque_84_x256_y640.tiff,model_best.pth,5046,16384,30.7983
+15_24_Emiliano Zapata_Ciudad de México_bloque_87_x128_y663.tiff,model_best.pth,1815,16384,11.0779
+15_24_Emiliano Zapata_Ciudad de México_bloque_89_x256_y663.tiff,model_best.pth,2638,16384,16.1011
+15_24_Emiliano Zapata_Ciudad de México_bloque_8_x512_y128.tiff,model_best.pth,639,16384,3.9001
+15_24_Emiliano Zapata_Ciudad de México_bloque_9_x576_y128.tiff,model_best.pth,2450,16384,14.9536
+15_24_Jonuta_Campeche_bloque_14_x192_y192.tiff,model_best.pth,9436,16384,57.5928
+15_24_Jonuta_Campeche_bloque_21_x0_y320.tiff,model_best.pth,5468,16384,33.374
+15_24_Jonuta_Campeche_bloque_29_x192_y384.tiff,model_best.pth,5907,16384,36.0535
+15_24_Jonuta_Campeche_bloque_3_x128_y64.tiff,model_best.pth,2368,16384,14.4531
+15_24_Jonuta_Campeche_bloque_5_x237_y64.tiff,model_best.pth,8078,16384,49.3042
+15_24_Jonuta_Campeche_bloque_8_x128_y128.tiff,model_best.pth,2593,16384,15.8264
+15_24_La Trinitaria_Chiapas_bloque_7_x64_y107.tiff,model_best.pth,2385,16384,14.5569
+15_24_Venustiano Carranza_Chiapas_bloque_1_x64_y0.tiff,model_best.pth,625,16384,3.8147
+15_Llano Grande_Chiapas_bloque_0_x0_y0.tiff,model_best.pth,5411,16384,33.0261
+15_Llano Grande_Chiapas_bloque_1_x64_y0.tiff,model_best.pth,8397,16384,51.2512
+15_Michoacán_bloque_14_x128_y128.tiff,model_best.pth,2749,16384,16.7786
+15_Michoacán_bloque_15_x192_y128.tiff,model_best.pth,1722,16384,10.5103
+15_Michoacán_bloque_18_x64_y192.tiff,model_best.pth,1182,16384,7.2144
+15_Michoacán_bloque_2_x128_y0.tiff,model_best.pth,627,16384,3.8269
+15_Michoacán_bloque_7_x64_y64.tiff,model_best.pth,2985,16384,18.219
+15_Tuxpan de Bolaños_Nayarit_bloque_0_x0_y0.tiff,model_best.pth,62,16384,0.3784
+15_Tuxpan de Bolaños_Nayarit_bloque_10_x170_y128.tiff,model_best.pth,26,16384,0.1587
+15_Tuxpan de Bolaños_Nayarit_bloque_12_x64_y192.tiff,model_best.pth,238,16384,1.4526
+15_Tuxpan de Bolaños_Nayarit_bloque_16_x64_y256.tiff,model_best.pth,135,16384,0.824
+15_Tuxpan de Bolaños_Nayarit_bloque_17_x128_y256.tiff,model_best.pth,11,16384,0.0671
+15_Tuxpan de Bolaños_Nayarit_bloque_19_x0_y262.tiff,model_best.pth,114,16384,0.6958
+15_Tuxpan de Bolaños_Nayarit_bloque_20_x64_y262.tiff,model_best.pth,136,16384,0.8301
+15_Xalisco_Nayarit_bloque_11_x1024_y1280.tiff,model_best.pth,1051,16384,6.4148
+15_Xalisco_Nayarit_bloque_3_x1152_y1152.tiff,model_best.pth,423,16384,2.5818
+16_24_Emiliano Zapata2_Ciudad de México_bloque_2_x120_y0.tiff,model_best.pth,218,16384,1.3306
+16_24_Emiliano Zapata2_Ciudad de México_bloque_5_x120_y64.tiff,model_best.pth,180,16384,1.0986
+16_24_Emiliano Zapata_Ciudad de México_bloque_11_x64_y128.tiff,model_best.pth,3501,16384,21.3684
+16_24_Emiliano Zapata_Ciudad de México_bloque_14_x218_y128.tiff,model_best.pth,5962,16384,36.3892
+16_24_Emiliano Zapata_Ciudad de México_bloque_17_x128_y192.tiff,model_best.pth,7503,16384,45.7947
+16_24_Emiliano Zapata_Ciudad de México_bloque_7_x128_y64.tiff,model_best.pth,4391,16384,26.8005
+16_24_Emiliano Zapata_Ciudad de México_bloque_9_x218_y64.tiff,model_best.pth,4389,16384,26.7883
+16_24_Huamuchil_Oaxaca_bloque_10_x128_y128.tiff,model_best.pth,6938,16384,42.3462
+16_24_Huamuchil_Oaxaca_bloque_3_x149_y0.tiff,model_best.pth,1336,16384,8.1543
+16_24_Huamuchil_Oaxaca_bloque_7_x149_y64.tiff,model_best.pth,3472,16384,21.1914
+16_24_Huamuchil_Oaxaca_bloque_9_x64_y128.tiff,model_best.pth,8710,16384,53.1616
+16_24_Las Choapas_Veracruz_bloque_14_x0_y208.tiff,model_best.pth,4951,16384,30.2185
+16_24_Las Choapas_Veracruz_bloque_16_x128_y208.tiff,model_best.pth,2085,16384,12.7258
+16_24_Las Choapas_Veracruz_bloque_17_x158_y208.tiff,model_best.pth,1957,16384,11.9446
+16_24_Las Choapas_Veracruz_bloque_6_x0_y128.tiff,model_best.pth,2920,16384,17.8223
+16_24_Santa Catarina Ayotzingo_Ciudad de México_bloque_24_x0_y192.tiff,model_best.pth,300,16384,1.8311
+16_24_Santa Catarina Ayotzingo_Ciudad de México_bloque_25_x64_y192.tiff,model_best.pth,757,16384,4.6204
+16_24_Santa Catarina Ayotzingo_Ciudad de México_bloque_26_x128_y192.tiff,model_best.pth,450,16384,2.7466
+16_24_Santa Catarina Ayotzingo_Ciudad de México_bloque_35_x384_y256.tiff,model_best.pth,14,16384,0.0854
+16_24_Santa Catarina Ayotzingo_Ciudad de México_bloque_37_x461_y256.tiff,model_best.pth,4,16384,0.0244
+16_24_Santa Catarina Ayotzingo_Ciudad de México_bloque_43_x461_y317.tiff,model_best.pth,7,16384,0.0427
+16_Cacalutla_Guerrero_bloque_10_x64_y128.tiff,model_best.pth,11466,16384,69.9829
+16_Cacalutla_Guerrero_bloque_20_x308_y192.tiff,model_best.pth,2438,16384,14.8804
+16_Cacalutla_Guerrero_bloque_2_x192_y0.tiff,model_best.pth,2836,16384,17.3096
+16_Dr Domingo Chanona_Chiapas_bloque_16_x192_y128.tiff,model_best.pth,2019,16384,12.323
+16_Dr Domingo Chanona_Chiapas_bloque_2_x128_y0.tiff,model_best.pth,7113,16384,43.4143
+16_Dr Domingo Chanona_Chiapas_bloque_7_x0_y64.tiff,model_best.pth,4197,16384,25.6165
+16_El Lobo_Querétaro_bloque_22_x128_y230.tiff,model_best.pth,1419,16384,8.6609
+16_El Lobo_Querétaro_bloque_4_x207_y0.tiff,model_best.pth,465,16384,2.8381
+16_El Lobo_Querétaro_bloque_6_x64_y64.tiff,model_best.pth,1300,16384,7.9346
+16_González2_Tamaulipas_bloque_13_x448_y64.tiff,model_best.pth,4802,16384,29.3091
+16_González2_Tamaulipas_bloque_17_x128_y128.tiff,model_best.pth,8407,16384,51.3123
+16_González2_Tamaulipas_bloque_24_x0_y192.tiff,model_best.pth,7179,16384,43.8171
+16_González2_Tamaulipas_bloque_38_x448_y256.tiff,model_best.pth,8272,16384,50.4883
+16_González2_Tamaulipas_bloque_39_x466_y256.tiff,model_best.pth,6778,16384,41.3696
+16_González2_Tamaulipas_bloque_43_x448_y320.tiff,model_best.pth,6544,16384,39.9414
+16_González2_Tamaulipas_bloque_47_x384_y384.tiff,model_best.pth,9726,16384,59.3628
+16_González2_Tamaulipas_bloque_4_x384_y0.tiff,model_best.pth,4259,16384,25.9949
+16_González2_Tamaulipas_bloque_50_x256_y402.tiff,model_best.pth,4935,16384,30.1208
+16_González2_Tamaulipas_bloque_51_x320_y402.tiff,model_best.pth,10340,16384,63.1104
+16_González_Tamaulipas_bloque_13_x363_y64.tiff,model_best.pth,7570,16384,46.2036
+16_González_Tamaulipas_bloque_1_x64_y0.tiff,model_best.pth,4219,16384,25.7507
+16_González_Tamaulipas_bloque_23_x128_y192.tiff,model_best.pth,9023,16384,55.072
+16_González_Tamaulipas_bloque_25_x256_y192.tiff,model_best.pth,4296,16384,26.2207
+16_González_Tamaulipas_bloque_28_x64_y256.tiff,model_best.pth,12213,16384,74.5422
+16_González_Tamaulipas_bloque_29_x128_y256.tiff,model_best.pth,11000,16384,67.1387
+16_González_Tamaulipas_bloque_2_x128_y0.tiff,model_best.pth,7065,16384,43.1213
+16_González_Tamaulipas_bloque_3_x192_y0.tiff,model_best.pth,6900,16384,42.1143
+16_González_Tamaulipas_bloque_6_x363_y0.tiff,model_best.pth,6751,16384,41.2048
+16_González_Tamaulipas_bloque_8_x64_y64.tiff,model_best.pth,8774,16384,53.5522
+16_Lomas del Real_Tamaulipas_bloque_0_x0_y0.tiff,model_best.pth,437,16384,2.6672
+16_Lomas del Real_Tamaulipas_bloque_5_x72_y64.tiff,model_best.pth,1136,16384,6.9336
+16_Nuevo Morelos_Tamaulipas2_bloque_14_x126_y213.tiff,model_best.pth,0,16384,0.0
+16_Nuevo Morelos_Tamaulipas2_bloque_4_x64_y64.tiff,model_best.pth,134,16384,0.8179
+16_Nuevo Morelos_Tamaulipas2_bloque_7_x64_y128.tiff,model_best.pth,0,16384,0.0
+16_Nuevo Morelos_Tamaulipas3_bloque_0_x0_y0.tiff,model_best.pth,2578,16384,15.7349
+16_Nuevo Morelos_Tamaulipas3_bloque_11_x118_y192.tiff,model_best.pth,2224,16384,13.5742
+16_Nuevo Morelos_Tamaulipas3_bloque_12_x0_y229.tiff,model_best.pth,2004,16384,12.2314
+16_Nuevo Morelos_Tamaulipas3_bloque_14_x118_y229.tiff,model_best.pth,1839,16384,11.2244
+16_Nuevo Morelos_Tamaulipas3_bloque_6_x0_y128.tiff,model_best.pth,2140,16384,13.0615
+16_Nuevo Morelos_Tamaulipas3_bloque_7_x64_y128.tiff,model_best.pth,2162,16384,13.1958
+16_Nuevo Morelos_Tamaulipas_bloque_0_x0_y0.tiff,model_best.pth,1621,16384,9.8938
+16_Nuevo Morelos_Tamaulipas_bloque_3_x0_y64.tiff,model_best.pth,2513,16384,15.3381
+16_Oaxaca_Oaxaca_bloque_10_x64_y192.tiff,model_best.pth,245,16384,1.4954
+16_Oaxaca_Oaxaca_bloque_16_x188_y256.tiff,model_best.pth,30,16384,0.1831
+16_Oaxaca_Oaxaca_bloque_4_x128_y64.tiff,model_best.pth,373,16384,2.2766
+16_Oaxaca_Oaxaca_bloque_5_x0_y128.tiff,model_best.pth,2757,16384,16.8274
+16_Quimicho_Tlaxcala_bloque_10_x64_y141.tiff,model_best.pth,7479,16384,45.6482
+16_Quimicho_Tlaxcala_bloque_2_x84_y0.tiff,model_best.pth,1299,16384,7.9285
+16_Quimicho_Tlaxcala_bloque_9_x0_y141.tiff,model_best.pth,7512,16384,45.8496
+16_San José de los Pozos_Jalisco_bloque_12_x320_y128.tiff,model_best.pth,1218,16384,7.4341
+16_San José de los Pozos_Jalisco_bloque_19_x64_y256.tiff,model_best.pth,5957,16384,36.3586
+16_San José de los Pozos_Jalisco_bloque_21_x192_y256.tiff,model_best.pth,1471,16384,8.9783
+16_San José de los Pozos_Jalisco_bloque_3_x378_y0.tiff,model_best.pth,1457,16384,8.8928
+16_San Miguel Coyutlán_Jalisco_bloque_3_x168_y0.tiff,model_best.pth,1113,16384,6.7932
+16_San Miguel Coyutlán_Jalisco_bloque_5_x64_y64.tiff,model_best.pth,1355,16384,8.2703
+16_Santa Rosa_Jalisco_bloque_4_x0_y128.tiff,model_best.pth,8962,16384,54.6997
+16_Santo Domingo Aztacameca_Ciudad de México_bloque_3_x192_y0.tiff,model_best.pth,5533,16384,33.7708
+16_Santo Domingo Aztacameca_Ciudad de México_bloque_5_x0_y64.tiff,model_best.pth,2978,16384,18.1763
+16_Tepechitlán_Zacatecas2_bloque_13_x64_y128.tiff,model_best.pth,1371,16384,8.3679
+16_Tepechitlán_Zacatecas2_bloque_14_x128_y128.tiff,model_best.pth,2879,16384,17.572
+16_Tepechitlán_Zacatecas2_bloque_19_x0_y191.tiff,model_best.pth,727,16384,4.4373
+16_Tepechitlán_Zacatecas2_bloque_20_x128_y191.tiff,model_best.pth,1068,16384,6.5186
+16_Tepechitlán_Zacatecas2_bloque_5_x320_y0.tiff,model_best.pth,967,16384,5.9021
+16_Tepechitlán_Zacatecas_bloque_5_x118_y64.tiff,model_best.pth,394,16384,2.4048
+16_Tepechitlán_Zacatecas_bloque_6_x0_y128.tiff,model_best.pth,1238,16384,7.5562
+16_Totatiche_Zacatecas_bloque_11_x187_y67.tiff,model_best.pth,603,16384,3.6804
+16_Totatiche_Zacatecas_bloque_6_x128_y64.tiff,model_best.pth,1075,16384,6.5613
+16_Villa Manuel_Tamaulipas_bloque_6_x128_y64.tiff,model_best.pth,4884,16384,29.8096
+16_Villa Manuel_Tamaulipas_bloque_8_x64_y97.tiff,model_best.pth,2897,16384,17.6819
+16_Villa Manuel_Tamaulipas_bloque_9_x128_y97.tiff,model_best.pth,3824,16384,23.3398
+16_Xaltitla_Tlaxcala_bloque_21_x192_y128.tiff,model_best.pth,8830,16384,53.894
+16_Xaltitla_Tlaxcala_bloque_28_x640_y128.tiff,model_best.pth,1560,16384,9.5215
+16_Xaltitla_Tlaxcala_bloque_33_x320_y192.tiff,model_best.pth,11265,16384,68.7561
+16_Xaltitla_Tlaxcala_bloque_39_x661_y192.tiff,model_best.pth,856,16384,5.2246
+16_Xaltitla_Tlaxcala_bloque_51_x192_y320.tiff,model_best.pth,1727,16384,10.5408
+16_Xaltitla_Tlaxcala_bloque_5_x576_y0.tiff,model_best.pth,520,16384,3.1738
+16_Xaltitla_Tlaxcala_bloque_69_x384_y448.tiff,model_best.pth,6188,16384,37.7686
+16_Xaltitla_Tlaxcala_bloque_70_x448_y448.tiff,model_best.pth,6976,16384,42.5781
+16_Xaltitla_Tlaxcala_bloque_71_x512_y448.tiff,model_best.pth,8064,16384,49.2188
+16_Xaltitla_Tlaxcala_bloque_72_x576_y448.tiff,model_best.pth,7969,16384,48.6389
+16_Xaltitla_Tlaxcala_bloque_74_x661_y448.tiff,model_best.pth,2014,16384,12.2925
+16_Xaltitla_Tlaxcala_bloque_78_x512_y512.tiff,model_best.pth,7650,16384,46.6919
+16_Xaltitla_Tlaxcala_bloque_81_x661_y512.tiff,model_best.pth,840,16384,5.127
+16_Xaltitla_Tlaxcala_bloque_83_x384_y576.tiff,model_best.pth,3665,16384,22.3694
+16_Xaltitla_Tlaxcala_bloque_87_x320_y594.tiff,model_best.pth,224,16384,1.3672
+16_Xaltitla_Tlaxcala_bloque_89_x448_y594.tiff,model_best.pth,5065,16384,30.9143
+17_24_Cuajinicuilapa_Oaxaca_bloque_0_x64_y0.tiff,model_best.pth,726,16384,4.4312
+17_24_Cuajinicuilapa_Oaxaca_bloque_17_x320_y128.tiff,model_best.pth,2083,16384,12.7136
+17_24_Cuajinicuilapa_Oaxaca_bloque_19_x440_y128.tiff,model_best.pth,3787,16384,23.114
+17_24_Ometepec_Guerrero_bloque_0_x64_y0.tiff,model_best.pth,1142,16384,6.9702
+17_24_Ometepec_Guerrero_bloque_15_x192_y128.tiff,model_best.pth,2452,16384,14.9658
+17_24_Ometepec_Guerrero_bloque_19_x0_y192.tiff,model_best.pth,2708,16384,16.5283
+17_24_Ometepec_Guerrero_bloque_22_x192_y192.tiff,model_best.pth,2959,16384,18.0603
+17_24_Ometepec_Guerrero_bloque_23_x256_y192.tiff,model_best.pth,1437,16384,8.7708
+17_24_Ometepec_Guerrero_bloque_25_x373_y192.tiff,model_best.pth,3333,16384,20.343
+17_24_Ometepec_Guerrero_bloque_27_x64_y199.tiff,model_best.pth,2469,16384,15.0696
+17_24_Ometepec_Guerrero_bloque_28_x128_y199.tiff,model_best.pth,3627,16384,22.1375
+17_24_San Lucas Quilavini_Oaxaca_bloque_0_x0_y0.tiff,model_best.pth,1741,16384,10.6262
+17_24_San Lucas Quilavini_Oaxaca_bloque_9_x192_y128.tiff,model_best.pth,1673,16384,10.2112
+17_24_San Pablo Guila_Oaxaca_bloque_14_x0_y248.tiff,model_best.pth,2403,16384,14.6667
+17_24_Santa Bárbara_Ciudad de México_bloque_17_x384_y192.tiff,model_best.pth,283,16384,1.7273
+17_24_Santa Bárbara_Ciudad de México_bloque_24_x64_y256.tiff,model_best.pth,3291,16384,20.0867
+17_24_Santa Bárbara_Ciudad de México_bloque_37_x128_y320.tiff,model_best.pth,2990,16384,18.2495
+17_24_Santa Bárbara_Ciudad de México_bloque_40_x320_y320.tiff,model_best.pth,3247,16384,19.8181
+17_24_Santa Bárbara_Ciudad de México_bloque_41_x384_y320.tiff,model_best.pth,1002,16384,6.1157
+17_24_Santa Bárbara_Ciudad de México_bloque_45_x640_y320.tiff,model_best.pth,130,16384,0.7935
+17_24_Santa Bárbara_Ciudad de México_bloque_48_x128_y384.tiff,model_best.pth,6311,16384,38.5193
+17_24_Santa Bárbara_Ciudad de México_bloque_52_x384_y384.tiff,model_best.pth,3016,16384,18.4082
+17_24_Santa Bárbara_Ciudad de México_bloque_54_x512_y384.tiff,model_best.pth,58,16384,0.354
+17_24_Santa Bárbara_Ciudad de México_bloque_56_x64_y448.tiff,model_best.pth,8200,16384,50.0488
+17_24_Santa Bárbara_Ciudad de México_bloque_5_x576_y64.tiff,model_best.pth,4890,16384,29.8462
+17_24_Santa Bárbara_Ciudad de México_bloque_64_x64_y512.tiff,model_best.pth,6868,16384,41.9189
+17_24_Santa Bárbara_Ciudad de México_bloque_68_x320_y512.tiff,model_best.pth,9040,16384,55.1758
+17_24_Santa Bárbara_Ciudad de México_bloque_69_x384_y512.tiff,model_best.pth,2541,16384,15.509
+17_24_Santa Bárbara_Ciudad de México_bloque_6_x640_y64.tiff,model_best.pth,4936,16384,30.127
+17_24_Santa Bárbara_Ciudad de México_bloque_72_x64_y576.tiff,model_best.pth,1469,16384,8.9661
+17_24_Santa Bárbara_Ciudad de México_bloque_7_x682_y64.tiff,model_best.pth,2941,16384,17.9504
+17_24_Santa Bárbara_Ciudad de México_bloque_8_x448_y128.tiff,model_best.pth,46,16384,0.2808
+17_Arramberri_Nuevo_Leon_bloque_18_x256_y192.tiff,model_best.pth,2920,16384,17.8223
+17_Arramberri_Nuevo_Leon_bloque_1_x64_y0.tiff,model_best.pth,3856,16384,23.5352
+17_Arramberri_Nuevo_Leon_bloque_2_x128_y0.tiff,model_best.pth,3670,16384,22.3999
+17_Arramberri_Nuevo_Leon_bloque_3_x192_y0.tiff,model_best.pth,811,16384,4.95
+17_Arramberri_Nuevo_Leon_bloque_7_x192_y64.tiff,model_best.pth,3494,16384,21.3257
+17_Arramberri_Nuevo_Leon_bloque_8_x256_y64.tiff,model_best.pth,1270,16384,7.7515
+17_Córdoba_Veracruz_bloque_0_x384_y0.tiff,model_best.pth,1655,16384,10.1013
+17_Córdoba_Veracruz_bloque_104_x576_y640.tiff,model_best.pth,1670,16384,10.1929
+17_Córdoba_Veracruz_bloque_105_x640_y640.tiff,model_best.pth,737,16384,4.4983
+17_Córdoba_Veracruz_bloque_106_x704_y640.tiff,model_best.pth,528,16384,3.2227
+17_Córdoba_Veracruz_bloque_114_x576_y704.tiff,model_best.pth,9133,16384,55.7434
+17_Córdoba_Veracruz_bloque_120_x256_y768.tiff,model_best.pth,10639,16384,64.9353
+17_Córdoba_Veracruz_bloque_124_x512_y768.tiff,model_best.pth,13604,16384,83.0322
+17_Córdoba_Veracruz_bloque_126_x640_y768.tiff,model_best.pth,8538,16384,52.1118
+17_Córdoba_Veracruz_bloque_133_x448_y832.tiff,model_best.pth,11743,16384,71.6736
+17_Córdoba_Veracruz_bloque_137_x64_y896.tiff,model_best.pth,1335,16384,8.1482
+17_Córdoba_Veracruz_bloque_138_x128_y896.tiff,model_best.pth,8846,16384,53.9917
+17_Córdoba_Veracruz_bloque_144_x512_y896.tiff,model_best.pth,6447,16384,39.3494
+17_Córdoba_Veracruz_bloque_158_x384_y1024.tiff,model_best.pth,3416,16384,20.8496
+17_Córdoba_Veracruz_bloque_159_x448_y1024.tiff,model_best.pth,1858,16384,11.3403
+17_Córdoba_Veracruz_bloque_160_x192_y1088.tiff,model_best.pth,1458,16384,8.8989
+17_Córdoba_Veracruz_bloque_169_x128_y1157.tiff,model_best.pth,2971,16384,18.1335
+17_Córdoba_Veracruz_bloque_16_x640_y128.tiff,model_best.pth,891,16384,5.4382
+17_Córdoba_Veracruz_bloque_21_x384_y192.tiff,model_best.pth,7355,16384,44.8914
+17_Córdoba_Veracruz_bloque_24_x576_y192.tiff,model_best.pth,5093,16384,31.0852
+17_Córdoba_Veracruz_bloque_2_x512_y0.tiff,model_best.pth,4147,16384,25.3113
+17_Córdoba_Veracruz_bloque_31_x384_y256.tiff,model_best.pth,6579,16384,40.155
+17_Córdoba_Veracruz_bloque_37_x768_y256.tiff,model_best.pth,1539,16384,9.3933
+17_Córdoba_Veracruz_bloque_3_x576_y0.tiff,model_best.pth,2377,16384,14.5081
+17_Córdoba_Veracruz_bloque_41_x192_y320.tiff,model_best.pth,3162,16384,19.2993
+17_Córdoba_Veracruz_bloque_46_x576_y320.tiff,model_best.pth,8387,16384,51.1902
+17_Córdoba_Veracruz_bloque_47_x640_y320.tiff,model_best.pth,9784,16384,59.7168
+17_Córdoba_Veracruz_bloque_53_x128_y384.tiff,model_best.pth,2511,16384,15.3259
+17_Córdoba_Veracruz_bloque_56_x384_y384.tiff,model_best.pth,5006,16384,30.5542
+17_Córdoba_Veracruz_bloque_57_x448_y384.tiff,model_best.pth,5971,16384,36.4441
+17_Córdoba_Veracruz_bloque_59_x576_y384.tiff,model_best.pth,12460,16384,76.0498
+17_Córdoba_Veracruz_bloque_68_x256_y448.tiff,model_best.pth,1803,16384,11.0046
+17_Córdoba_Veracruz_bloque_70_x384_y448.tiff,model_best.pth,7450,16384,45.4712
+17_Córdoba_Veracruz_bloque_74_x640_y448.tiff,model_best.pth,12543,16384,76.5564
+17_Córdoba_Veracruz_bloque_7_x448_y64.tiff,model_best.pth,5489,16384,33.5022
+17_Córdoba_Veracruz_bloque_84_x512_y512.tiff,model_best.pth,2616,16384,15.9668
+17_Córdoba_Veracruz_bloque_85_x576_y512.tiff,model_best.pth,3100,16384,18.9209
+17_Córdoba_Veracruz_bloque_86_x640_y512.tiff,model_best.pth,5811,16384,35.4675
+17_Córdoba_Veracruz_bloque_89_x192_y576.tiff,model_best.pth,1229,16384,7.5012
+17_Córdoba_Veracruz_bloque_8_x512_y64.tiff,model_best.pth,8122,16384,49.5728
+17_Córdoba_Veracruz_bloque_90_x256_y576.tiff,model_best.pth,4797,16384,29.2786
+17_Córdoba_Veracruz_bloque_93_x448_y576.tiff,model_best.pth,9656,16384,58.9355
+17_Córdoba_Veracruz_bloque_97_x704_y576.tiff,model_best.pth,448,16384,2.7344
+17_Huitzuca_de_Figueroa_Guerrero_bloque_0_x384_y64.tiff,model_best.pth,286,16384,1.7456
+17_Huitzuca_de_Figueroa_Guerrero_bloque_10_x320_y384.tiff,model_best.pth,2432,16384,14.8438
+17_Huitzuca_de_Figueroa_Guerrero_bloque_14_x192_y448.tiff,model_best.pth,2008,16384,12.2559
+17_Huitzuca_de_Figueroa_Guerrero_bloque_25_x398_y576.tiff,model_best.pth,2565,16384,15.6555
+17_Huitzuca_de_Figueroa_Guerrero_bloque_26_x64_y640.tiff,model_best.pth,1256,16384,7.666
+17_Huitzuca_de_Figueroa_Guerrero_bloque_29_x64_y704.tiff,model_best.pth,1863,16384,11.3708
+17_Huitzuca_de_Figueroa_Guerrero_bloque_31_x0_y728.tiff,model_best.pth,524,16384,3.1982
+17_Huitzuca_de_Figueroa_Guerrero_bloque_32_x64_y728.tiff,model_best.pth,1797,16384,10.968
+17_Huitzuca_de_Figueroa_Guerrero_bloque_33_x128_y728.tiff,model_best.pth,1234,16384,7.5317
+17_Huitzuca_de_Figueroa_Guerrero_bloque_4_x398_y128.tiff,model_best.pth,311,16384,1.8982
+17_Huitzuca_de_Figueroa_Guerrero_bloque_5_x320_y192.tiff,model_best.pth,302,16384,1.8433
+17_Huitzuca_de_Figueroa_Guerrero_bloque_9_x256_y384.tiff,model_best.pth,2367,16384,14.447
+17_Zacapu_Michoacan_bloque_0_x256_y0.tiff,model_best.pth,803,16384,4.9011
+17_Zacapu_Michoacan_bloque_5_x64_y111.tiff,model_best.pth,1921,16384,11.7249
+18_24_Ciudad Guzmán_Jalisco_bloque_13_x189_y192.tiff,model_best.pth,2624,16384,16.0156
+18_24_Ciudad Guzmán_Jalisco_bloque_17_x189_y256.tiff,model_best.pth,909,16384,5.5481
+18_24_Ciudad Guzmán_Jalisco_bloque_21_x189_y320.tiff,model_best.pth,0,16384,0.0
+18_24_Ciudad Guzmán_Jalisco_bloque_2_x0_y64.tiff,model_best.pth,370,16384,2.2583
+18_24_Ciudad Guzmán_Jalisco_bloque_4_x128_y64.tiff,model_best.pth,589,16384,3.595
+18_24_Ciudad Guzmán_Jalisco_bloque_5_x189_y64.tiff,model_best.pth,443,16384,2.7039
+18_24_Ciudad Guzmán_Jalisco_bloque_8_x128_y128.tiff,model_best.pth,2277,16384,13.8977
+18_24_El Sabino_Jalisco_bloque_3_x38_y64.tiff,model_best.pth,5561,16384,33.9417
+18_24_San Sebastián del Sur_Jalisco_bloque_0_x64_y0.tiff,model_best.pth,82,16384,0.5005
+18_24_San Sebastián del Sur_Jalisco_bloque_11_x0_y192.tiff,model_best.pth,5,16384,0.0305
+18_24_San Sebastián del Sur_Jalisco_bloque_13_x128_y192.tiff,model_best.pth,358,16384,2.1851
+18_24_San Sebastián del Sur_Jalisco_bloque_16_x64_y256.tiff,model_best.pth,34,16384,0.2075
+18_24_San Sebastián del Sur_Jalisco_bloque_21_x128_y320.tiff,model_best.pth,0,16384,0.0
+18_24_San Sebastián del Sur_Jalisco_bloque_23_x0_y327.tiff,model_best.pth,0,16384,0.0
+18_24_San Sebastián del Sur_Jalisco_bloque_5_x128_y64.tiff,model_best.pth,2,16384,0.0122
+18_24_San Sebastián del Sur_Jalisco_bloque_6_x134_y64.tiff,model_best.pth,8,16384,0.0488
+18_24_San Sebastián del Sur_Jalisco_bloque_7_x0_y128.tiff,model_best.pth,0,16384,0.0
+18_Arcelia_Guerrero_bloque_5_x149_y64.tiff,model_best.pth,983,16384,5.9998
+18_Atenango_del_rio_Guerrero_bloque_10_x128_y320.tiff,model_best.pth,0,16384,0.0
+18_Atenango_del_rio_Guerrero_bloque_15_x64_y512.tiff,model_best.pth,0,16384,0.0
+18_Atenango_del_rio_Guerrero_bloque_22_x128_y896.tiff,model_best.pth,0,16384,0.0
+18_Atenango_del_rio_Guerrero_bloque_5_x256_y64.tiff,model_best.pth,0,16384,0.0
+18_Jolalpan_Puebla_bloque_11_x64_y192.tiff,model_best.pth,2200,16384,13.4277
+18_Jolalpan_Puebla_bloque_19_x256_y256.tiff,model_best.pth,307,16384,1.8738
+18_Jolalpan_Puebla_bloque_23_x1664_y320.tiff,model_best.pth,934,16384,5.7007
+18_Jolalpan_Puebla_bloque_26_x1600_y384.tiff,model_best.pth,776,16384,4.7363
+18_Jolalpan_Puebla_bloque_31_x1600_y448.tiff,model_best.pth,762,16384,4.6509
+18_Jolalpan_Puebla_bloque_38_x1280_y640.tiff,model_best.pth,3172,16384,19.3604
+18_Jolalpan_Puebla_bloque_42_x128_y704.tiff,model_best.pth,1023,16384,6.2439
+18_Jolalpan_Puebla_bloque_47_x64_y768.tiff,model_best.pth,787,16384,4.8035
+18_Jolalpan_Puebla_bloque_50_x1280_y768.tiff,model_best.pth,2306,16384,14.0747
+18_Jolalpan_Puebla_bloque_51_x1344_y768.tiff,model_best.pth,2417,16384,14.7522
+18_Jolalpan_Puebla_bloque_53_x256_y832.tiff,model_best.pth,1524,16384,9.3018
+18_Jolalpan_Puebla_bloque_55_x1216_y832.tiff,model_best.pth,2095,16384,12.7869
+18_Jolalpan_Puebla_bloque_56_x1280_y832.tiff,model_best.pth,2645,16384,16.1438
+18_Jolalpan_Puebla_bloque_58_x1408_y832.tiff,model_best.pth,1364,16384,8.3252
+18_Jolalpan_Puebla_bloque_59_x1216_y896.tiff,model_best.pth,1808,16384,11.0352
+18_Jolalpan_Puebla_bloque_5_x320_y64.tiff,model_best.pth,2862,16384,17.4683
+18_Jolalpan_Puebla_bloque_68_x64_y1216.tiff,model_best.pth,2100,16384,12.8174
+18_Jolalpan_Puebla_bloque_6_x64_y128.tiff,model_best.pth,993,16384,6.0608
+18_Jolalpan_Puebla_bloque_70_x192_y1216.tiff,model_best.pth,2193,16384,13.385
+18_Jolalpan_Puebla_bloque_75_x384_y1280.tiff,model_best.pth,2304,16384,14.0625
+18_Jolalpan_Puebla_bloque_7_x128_y128.tiff,model_best.pth,2932,16384,17.8955
+18_Jolalpan_Puebla_bloque_9_x256_y128.tiff,model_best.pth,3252,16384,19.8486
+18_Ocampo_Coahuila_bloque_12_x64_y256.tiff,model_best.pth,896,16384,5.4688
+18_Ocampo_Coahuila_bloque_13_x256_y256.tiff,model_best.pth,800,16384,4.8828
+18_Ocampo_Coahuila_bloque_1_x448_y0.tiff,model_best.pth,499,16384,3.0457
+18_Ocampo_Coahuila_bloque_25_x256_y384.tiff,model_best.pth,472,16384,2.8809
+18_Ocampo_Coahuila_bloque_2_x1152_y0.tiff,model_best.pth,859,16384,5.2429
+18_Ocampo_Coahuila_bloque_30_x128_y448.tiff,model_best.pth,1185,16384,7.2327
+18_Ocampo_Coahuila_bloque_34_x704_y448.tiff,model_best.pth,1410,16384,8.606
+18_Ocampo_Coahuila_bloque_38_x704_y512.tiff,model_best.pth,592,16384,3.6133
+18_Ocampo_Coahuila_bloque_7_x1152_y64.tiff,model_best.pth,606,16384,3.6987
+18_Ocampo_Coahuila_bloque_8_x1166_y64.tiff,model_best.pth,534,16384,3.2593
+18_Ocampo_Coahuila_bloque_9_x1152_y128.tiff,model_best.pth,100,16384,0.6104
+18_Tomatlan_Jalisco_bloque_12_x0_y256.tiff,model_best.pth,1012,16384,6.1768
+18_Tomatlan_Jalisco_bloque_6_x64_y128.tiff,model_best.pth,2685,16384,16.3879
+18_Tomatlan_Jalisco_bloque_8_x187_y128.tiff,model_best.pth,1131,16384,6.9031
+18_Tomatlan_Jalisco_bloque_9_x0_y192.tiff,model_best.pth,2010,16384,12.2681
+19_Bocoyna_Chihuahua_bloque_13_x256_y128.tiff,model_best.pth,8292,16384,50.6104
+19_Bocoyna_Chihuahua_bloque_18_x576_y128.tiff,model_best.pth,2496,16384,15.2344
+19_Bocoyna_Chihuahua_bloque_19_x640_y128.tiff,model_best.pth,699,16384,4.2664
+19_Bocoyna_Chihuahua_bloque_1_x384_y0.tiff,model_best.pth,2418,16384,14.7583
+19_Bocoyna_Chihuahua_bloque_20_x704_y128.tiff,model_best.pth,668,16384,4.0771
+19_Bocoyna_Chihuahua_bloque_22_x0_y192.tiff,model_best.pth,924,16384,5.6396
+19_Bocoyna_Chihuahua_bloque_23_x64_y192.tiff,model_best.pth,4203,16384,25.6531
+19_Bocoyna_Chihuahua_bloque_25_x192_y192.tiff,model_best.pth,10693,16384,65.2649
+19_Bocoyna_Chihuahua_bloque_27_x320_y192.tiff,model_best.pth,9451,16384,57.6843
+19_Bocoyna_Chihuahua_bloque_30_x512_y192.tiff,model_best.pth,7323,16384,44.696
+19_Bocoyna_Chihuahua_bloque_47_x704_y256.tiff,model_best.pth,3476,16384,21.2158
+19_Bocoyna_Chihuahua_bloque_54_x320_y320.tiff,model_best.pth,3082,16384,18.811
+19_Bocoyna_Chihuahua_bloque_55_x384_y320.tiff,model_best.pth,2323,16384,14.1785
+19_Bocoyna_Chihuahua_bloque_56_x448_y320.tiff,model_best.pth,623,16384,3.8025
+19_Bocoyna_Chihuahua_bloque_61_x64_y384.tiff,model_best.pth,2144,16384,13.0859
+19_Bocoyna_Chihuahua_bloque_66_x384_y384.tiff,model_best.pth,5130,16384,31.311
+19_Bocoyna_Chihuahua_bloque_70_x640_y384.tiff,model_best.pth,1460,16384,8.9111
+19_Bocoyna_Chihuahua_bloque_72_x128_y448.tiff,model_best.pth,2043,16384,12.4695
+19_Bocoyna_Chihuahua_bloque_76_x384_y448.tiff,model_best.pth,4928,16384,30.0781
+19_Bocoyna_Chihuahua_bloque_7_x448_y64.tiff,model_best.pth,6718,16384,41.0034
+19_Bocoyna_Chihuahua_bloque_8_x512_y64.tiff,model_best.pth,2596,16384,15.8447
+19_Guadalupe_y_calvo_Chihuahua_bloque_11_x320_y64.tiff,model_best.pth,732,16384,4.4678
+19_Guadalupe_y_calvo_Chihuahua_bloque_13_x0_y128.tiff,model_best.pth,3419,16384,20.8679
+19_Guadalupe_y_calvo_Chihuahua_bloque_16_x192_y128.tiff,model_best.pth,2040,16384,12.4512
+19_Guadalupe_y_calvo_Chihuahua_bloque_17_x256_y128.tiff,model_best.pth,1193,16384,7.2815
+19_Guadalupe_y_calvo_Chihuahua_bloque_18_x0_y192.tiff,model_best.pth,2668,16384,16.2842
+19_Guadalupe_y_calvo_Chihuahua_bloque_20_x128_y192.tiff,model_best.pth,1603,16384,9.7839
+19_Guadalupe_y_calvo_Chihuahua_bloque_26_x192_y256.tiff,model_best.pth,1180,16384,7.2021
+19_Guazapares_Chihuahua_bloque_0_x256_y0.tiff,model_best.pth,2248,16384,13.7207
+19_Guazapares_Chihuahua_bloque_104_x704_y576.tiff,model_best.pth,164,16384,1.001
+19_Guazapares_Chihuahua_bloque_107_x128_y640.tiff,model_best.pth,5320,16384,32.4707
+19_Guazapares_Chihuahua_bloque_114_x576_y640.tiff,model_best.pth,430,16384,2.6245
+19_Guazapares_Chihuahua_bloque_116_x704_y640.tiff,model_best.pth,99,16384,0.6042
+19_Guazapares_Chihuahua_bloque_117_x0_y704.tiff,model_best.pth,2814,16384,17.1753
+19_Guazapares_Chihuahua_bloque_122_x320_y704.tiff,model_best.pth,2451,16384,14.9597
+19_Guazapares_Chihuahua_bloque_12_x448_y64.tiff,model_best.pth,5341,16384,32.5989
+19_Guazapares_Chihuahua_bloque_133_x320_y768.tiff,model_best.pth,2648,16384,16.1621
+19_Guazapares_Chihuahua_bloque_134_x384_y768.tiff,model_best.pth,2580,16384,15.7471
+19_Guazapares_Chihuahua_bloque_137_x576_y768.tiff,model_best.pth,3,16384,0.0183
+19_Guazapares_Chihuahua_bloque_140_x192_y832.tiff,model_best.pth,2114,16384,12.9028
+19_Guazapares_Chihuahua_bloque_145_x512_y832.tiff,model_best.pth,63,16384,0.3845
+19_Guazapares_Chihuahua_bloque_153_x192_y913.tiff,model_best.pth,776,16384,4.7363
+19_Guazapares_Chihuahua_bloque_154_x256_y913.tiff,model_best.pth,476,16384,2.9053
+19_Guazapares_Chihuahua_bloque_155_x320_y913.tiff,model_best.pth,643,16384,3.9246
+19_Guazapares_Chihuahua_bloque_16_x780_y64.tiff,model_best.pth,235,16384,1.4343
+19_Guazapares_Chihuahua_bloque_18_x64_y128.tiff,model_best.pth,4942,16384,30.1636
+19_Guazapares_Chihuahua_bloque_19_x128_y128.tiff,model_best.pth,7694,16384,46.9604
+19_Guazapares_Chihuahua_bloque_22_x320_y128.tiff,model_best.pth,5735,16384,35.0037
+19_Guazapares_Chihuahua_bloque_25_x512_y128.tiff,model_best.pth,3339,16384,20.3796
+19_Guazapares_Chihuahua_bloque_2_x384_y0.tiff,model_best.pth,4186,16384,25.5493
+19_Guazapares_Chihuahua_bloque_34_x384_y192.tiff,model_best.pth,5140,16384,31.3721
+19_Guazapares_Chihuahua_bloque_38_x640_y192.tiff,model_best.pth,2900,16384,17.7002
+19_Guazapares_Chihuahua_bloque_3_x448_y0.tiff,model_best.pth,1342,16384,8.1909
+19_Guazapares_Chihuahua_bloque_41_x780_y192.tiff,model_best.pth,131,16384,0.7996
+19_Guazapares_Chihuahua_bloque_51_x576_y256.tiff,model_best.pth,4887,16384,29.8279
+19_Guazapares_Chihuahua_bloque_53_x704_y256.tiff,model_best.pth,1045,16384,6.3782
+19_Guazapares_Chihuahua_bloque_61_x448_y320.tiff,model_best.pth,1179,16384,7.196
+19_Guazapares_Chihuahua_bloque_62_x512_y320.tiff,model_best.pth,4189,16384,25.5676
+19_Guazapares_Chihuahua_bloque_69_x256_y384.tiff,model_best.pth,5300,16384,32.3486
+19_Guazapares_Chihuahua_bloque_71_x384_y384.tiff,model_best.pth,3707,16384,22.6257
+19_Guazapares_Chihuahua_bloque_79_x256_y448.tiff,model_best.pth,6737,16384,41.1194
+19_Guazapares_Chihuahua_bloque_84_x64_y512.tiff,model_best.pth,5651,16384,34.491
+19_Guazapares_Chihuahua_bloque_91_x512_y512.tiff,model_best.pth,1513,16384,9.2346
+19_Guazapares_Chihuahua_bloque_9_x256_y64.tiff,model_best.pth,5983,16384,36.5173
+19_Huamuxtitlan_bloque_2_x256_y320.tiff,model_best.pth,4570,16384,27.8931
+19_Huamuxtitlan_bloque_5_x256_y384.tiff,model_best.pth,2414,16384,14.7339
+19_Jala_Nayarit_bloque_102_x0_y832.tiff,model_best.pth,1508,16384,9.2041
+19_Jala_Nayarit_bloque_104_x128_y832.tiff,model_best.pth,71,16384,0.4333
+19_Jala_Nayarit_bloque_12_x1472_y192.tiff,model_best.pth,1563,16384,9.5398
+19_Jala_Nayarit_bloque_14_x320_y256.tiff,model_best.pth,427,16384,2.6062
+19_Jala_Nayarit_bloque_16_x1280_y256.tiff,model_best.pth,1130,16384,6.897
+19_Jala_Nayarit_bloque_19_x1472_y256.tiff,model_best.pth,1342,16384,8.1909
+19_Jala_Nayarit_bloque_1_x1152_y0.tiff,model_best.pth,1245,16384,7.5989
+19_Jala_Nayarit_bloque_26_x1152_y320.tiff,model_best.pth,70,16384,0.4272
+19_Jala_Nayarit_bloque_31_x1472_y320.tiff,model_best.pth,2768,16384,16.8945
+19_Jala_Nayarit_bloque_32_x1536_y320.tiff,model_best.pth,3798,16384,23.1812
+19_Jala_Nayarit_bloque_35_x128_y384.tiff,model_best.pth,227,16384,1.3855
+19_Jala_Nayarit_bloque_3_x1088_y64.tiff,model_best.pth,1516,16384,9.2529
+19_Jala_Nayarit_bloque_46_x1536_y384.tiff,model_best.pth,3888,16384,23.7305
+19_Jala_Nayarit_bloque_58_x1216_y448.tiff,model_best.pth,1149,16384,7.0129
+19_Jala_Nayarit_bloque_68_x256_y512.tiff,model_best.pth,91,16384,0.5554
+19_Jala_Nayarit_bloque_73_x1216_y512.tiff,model_best.pth,1059,16384,6.4636
+19_Jala_Nayarit_bloque_76_x1408_y512.tiff,model_best.pth,1528,16384,9.3262
+19_Jala_Nayarit_bloque_77_x1472_y512.tiff,model_best.pth,707,16384,4.3152
+19_Jala_Nayarit_bloque_84_x384_y576.tiff,model_best.pth,147,16384,0.8972
+19_Jala_Nayarit_bloque_90_x320_y640.tiff,model_best.pth,329,16384,2.0081
+19_Jala_Nayarit_bloque_91_x384_y640.tiff,model_best.pth,93,16384,0.5676
+19_Jala_Nayarit_bloque_92_x0_y704.tiff,model_best.pth,871,16384,5.3162
+19_Jala_Nayarit_bloque_97_x320_y704.tiff,model_best.pth,887,16384,5.4138
+19_Monte_Escobedo2_bloque_15_x896_y512.tiff,model_best.pth,64,16384,0.3906
+19_Monte_Escobedo2_bloque_1_x768_y0.tiff,model_best.pth,88,16384,0.5371
+19_Monte_Escobedo2_bloque_23_x384_y640.tiff,model_best.pth,59,16384,0.3601
+19_Monte_Escobedo2_bloque_8_x512_y128.tiff,model_best.pth,293,16384,1.7883
+19_Monte_escobedo_bloque_0_x320_y256.tiff,model_best.pth,1929,16384,11.7737
+19_Monte_escobedo_bloque_5_x320_y320.tiff,model_best.pth,3044,16384,18.5791
+19_Monte_escobedo_bloque_8_x192_y384.tiff,model_best.pth,2354,16384,14.3677
+19_Rosario_Sinaloa_bloque_0_x256_y0.tiff,model_best.pth,81,16384,0.4944
+19_Rosario_Sinaloa_bloque_12_x128_y192.tiff,model_best.pth,19,16384,0.116
+19_Rosario_Sinaloa_bloque_13_x192_y192.tiff,model_best.pth,40,16384,0.2441
+19_Rosario_Sinaloa_bloque_15_x64_y256.tiff,model_best.pth,82,16384,0.5005
+19_Rosario_Sinaloa_bloque_21_x1024_y384.tiff,model_best.pth,97,16384,0.592
+19_Rosario_Sinaloa_bloque_23_x1152_y384.tiff,model_best.pth,440,16384,2.6855
+19_Rosario_Sinaloa_bloque_25_x832_y448.tiff,model_best.pth,5,16384,0.0305
+19_Rosario_Sinaloa_bloque_31_x1664_y960.tiff,model_best.pth,57,16384,0.3479
+19_Rosario_Sinaloa_bloque_33_x1792_y960.tiff,model_best.pth,417,16384,2.5452
+19_Rosario_Sinaloa_bloque_45_x1792_y1088.tiff,model_best.pth,1235,16384,7.5378
+19_Rosario_Sinaloa_bloque_50_x1728_y1118.tiff,model_best.pth,734,16384,4.48
+19_Rosario_Sinaloa_bloque_52_x1856_y1118.tiff,model_best.pth,97,16384,0.592
+19_Rosario_Sinaloa_bloque_5_x384_y64.tiff,model_best.pth,218,16384,1.3306
+19_Rosario_Sinaloa_bloque_7_x128_y128.tiff,model_best.pth,20,16384,0.1221
+19_Tequila_Jalisco_bloque_103_x1472_y576.tiff,model_best.pth,739,16384,4.5105
+19_Tequila_Jalisco_bloque_108_x832_y704.tiff,model_best.pth,589,16384,3.595
+19_Tequila_Jalisco_bloque_111_x640_y768.tiff,model_best.pth,351,16384,2.1423
+19_Tequila_Jalisco_bloque_117_x1088_y768.tiff,model_best.pth,69,16384,0.4211
+19_Tequila_Jalisco_bloque_121_x1024_y832.tiff,model_best.pth,459,16384,2.8015
+19_Tequila_Jalisco_bloque_123_x0_y896.tiff,model_best.pth,1394,16384,8.5083
+19_Tequila_Jalisco_bloque_124_x64_y896.tiff,model_best.pth,1674,16384,10.2173
+19_Tequila_Jalisco_bloque_125_x128_y896.tiff,model_best.pth,569,16384,3.4729
+19_Tequila_Jalisco_bloque_128_x1088_y896.tiff,model_best.pth,679,16384,4.1443
+19_Tequila_Jalisco_bloque_131_x128_y960.tiff,model_best.pth,2174,16384,13.269
+19_Tequila_Jalisco_bloque_143_x192_y1024.tiff,model_best.pth,685,16384,4.1809
+19_Tequila_Jalisco_bloque_150_x1408_y1024.tiff,model_best.pth,531,16384,3.241
+19_Tequila_Jalisco_bloque_151_x1472_y1024.tiff,model_best.pth,1214,16384,7.4097
+19_Tequila_Jalisco_bloque_160_x1088_y1088.tiff,model_best.pth,1564,16384,9.5459
+19_Tequila_Jalisco_bloque_163_x704_y1152.tiff,model_best.pth,1579,16384,9.6375
+19_Tequila_Jalisco_bloque_164_x1088_y1152.tiff,model_best.pth,1037,16384,6.3293
+19_Tequila_Jalisco_bloque_176_x0_y1280.tiff,model_best.pth,135,16384,0.824
+19_Tequila_Jalisco_bloque_181_x2176_y1280.tiff,model_best.pth,1494,16384,9.1187
+19_Tequila_Jalisco_bloque_18_x1600_y64.tiff,model_best.pth,1089,16384,6.6467
+19_Tequila_Jalisco_bloque_194_x960_y1472.tiff,model_best.pth,783,16384,4.7791
+19_Tequila_Jalisco_bloque_196_x1856_y1472.tiff,model_best.pth,679,16384,4.1443
+19_Tequila_Jalisco_bloque_21_x1856_y64.tiff,model_best.pth,1686,16384,10.2905
+19_Tequila_Jalisco_bloque_26_x2240_y64.tiff,model_best.pth,605,16384,3.6926
+19_Tequila_Jalisco_bloque_27_x1536_y128.tiff,model_best.pth,442,16384,2.6978
+19_Tequila_Jalisco_bloque_30_x1728_y128.tiff,model_best.pth,1510,16384,9.2163
+19_Tequila_Jalisco_bloque_40_x1600_y192.tiff,model_best.pth,339,16384,2.0691
+19_Tequila_Jalisco_bloque_45_x1920_y192.tiff,model_best.pth,1429,16384,8.7219
+19_Tequila_Jalisco_bloque_49_x2176_y192.tiff,model_best.pth,496,16384,3.0273
+19_Tequila_Jalisco_bloque_52_x2372_y192.tiff,model_best.pth,333,16384,2.0325
+19_Tequila_Jalisco_bloque_71_x1152_y384.tiff,model_best.pth,822,16384,5.0171
+19_Tequila_Jalisco_bloque_76_x1536_y384.tiff,model_best.pth,536,16384,3.2715
+19_Tequila_Jalisco_bloque_7_x1920_y0.tiff,model_best.pth,835,16384,5.0964
+19_Tequila_Jalisco_bloque_94_x1216_y512.tiff,model_best.pth,897,16384,5.4749
+19_Tequila_Jalisco_bloque_9_x2112_y0.tiff,model_best.pth,1450,16384,8.8501
+20-Jiquipila-Chiapas_bloque_0_x896_y0.tiff,model_best.pth,2432,16384,14.8438
+20-Jiquipila-Chiapas_bloque_11_x128_y512.tiff,model_best.pth,766,16384,4.6753
+20-Jiquipila-Chiapas_bloque_13_x64_y576.tiff,model_best.pth,1424,16384,8.6914
+20-Jiquipila-Chiapas_bloque_1_x946_y0.tiff,model_best.pth,2446,16384,14.9292
+20_Cotija_Michoacan_bloque_10_x512_y64.tiff,model_best.pth,4232,16384,25.8301
+20_Cotija_Michoacan_bloque_14_x128_y128.tiff,model_best.pth,4007,16384,24.4568
+20_Cotija_Michoacan_bloque_15_x192_y128.tiff,model_best.pth,3471,16384,21.1853
+20_Cotija_Michoacan_bloque_45_x256_y384.tiff,model_best.pth,6650,16384,40.5884
+20_Cotija_Michoacan_bloque_47_x384_y384.tiff,model_best.pth,2556,16384,15.6006
+20_Cotija_Michoacan_bloque_48_x64_y448.tiff,model_best.pth,4449,16384,27.1545
+20_Cotija_Michoacan_bloque_50_x192_y448.tiff,model_best.pth,7448,16384,45.459
+20_Cotija_Michoacan_bloque_55_x64_y512.tiff,model_best.pth,10805,16384,65.9485
+20_Cotija_Michoacan_bloque_58_x256_y512.tiff,model_best.pth,4876,16384,29.7607
+20_Coyuya_de_Catalan_Guerrero_bloque_13_x64_y384.tiff,model_best.pth,2922,16384,17.8345
+20_Coyuya_de_Catalan_Guerrero_bloque_2_x832_y256.tiff,model_best.pth,5277,16384,32.2083
+20_Coyuya_de_Catalan_Guerrero_bloque_9_x896_y320.tiff,model_best.pth,6372,16384,38.8916
+20_Ensenada_Baja California_bloque_12_x192_y256.tiff,model_best.pth,1090,16384,6.6528
+20_Ensenada_Baja California_bloque_27_x0_y448.tiff,model_best.pth,705,16384,4.303
+20_Ensenada_Baja California_bloque_36_x64_y489.tiff,model_best.pth,2171,16384,13.2507
+20_Ensenada_Baja California_bloque_3_x0_y128.tiff,model_best.pth,99,16384,0.6042
+20_Ensenada_Baja California_bloque_4_x64_y128.tiff,model_best.pth,202,16384,1.2329
+20_Ensenada_Baja California_bloque_7_x64_y192.tiff,model_best.pth,453,16384,2.7649
+20_Monte escobedo_Zacatecas_bloque_10_x320_y128.tiff,model_best.pth,2000,16384,12.207
+20_Monte escobedo_Zacatecas_bloque_11_x384_y128.tiff,model_best.pth,1901,16384,11.6028
+20_Monte escobedo_Zacatecas_bloque_14_x576_y128.tiff,model_best.pth,3179,16384,19.4031
+20_Monte escobedo_Zacatecas_bloque_20_x448_y192.tiff,model_best.pth,1558,16384,9.5093
+20_Monte escobedo_Zacatecas_bloque_21_x512_y192.tiff,model_best.pth,399,16384,2.4353
+20_Monte escobedo_Zacatecas_bloque_23_x640_y192.tiff,model_best.pth,693,16384,4.2297
+20_Monte escobedo_Zacatecas_bloque_2_x640_y0.tiff,model_best.pth,1596,16384,9.7412
+20_Monte escobedo_Zacatecas_bloque_33_x128_y320.tiff,model_best.pth,998,16384,6.0913
+20_Monte escobedo_Zacatecas_bloque_38_x448_y320.tiff,model_best.pth,624,16384,3.8086
+20_Monte escobedo_Zacatecas_bloque_40_x576_y320.tiff,model_best.pth,912,16384,5.5664
+20_Monte escobedo_Zacatecas_bloque_46_x448_y384.tiff,model_best.pth,467,16384,2.8503
+20_Monte escobedo_Zacatecas_bloque_47_x512_y384.tiff,model_best.pth,674,16384,4.1138
+20_Monte escobedo_Zacatecas_bloque_4_x742_y0.tiff,model_best.pth,347,16384,2.1179
+20_Monte escobedo_Zacatecas_bloque_56_x512_y448.tiff,model_best.pth,176,16384,1.0742
+20_Monte escobedo_Zacatecas_bloque_77_x128_y704.tiff,model_best.pth,1690,16384,10.3149
+20_Monte escobedo_Zacatecas_bloque_81_x64_y789.tiff,model_best.pth,1097,16384,6.6956
+20_Santa Catarina_Juquila_bloque_10_x256_y64.tiff,model_best.pth,529,16384,3.2288
+20_Santa Catarina_Juquila_bloque_14_x128_y128.tiff,model_best.pth,743,16384,4.5349
+20_Villa_jimenez_Michoacan_bloque_105_x960_y576.tiff,model_best.pth,7948,16384,48.5107
+20_Villa_jimenez_Michoacan_bloque_118_x704_y640.tiff,model_best.pth,8616,16384,52.5879
+20_Villa_jimenez_Michoacan_bloque_119_x768_y640.tiff,model_best.pth,7331,16384,44.7449
+20_Villa_jimenez_Michoacan_bloque_125_x1152_y640.tiff,model_best.pth,11643,16384,71.0632
+20_Villa_jimenez_Michoacan_bloque_131_x448_y704.tiff,model_best.pth,7837,16384,47.8333
+20_Villa_jimenez_Michoacan_bloque_139_x960_y704.tiff,model_best.pth,5414,16384,33.0444
+20_Villa_jimenez_Michoacan_bloque_142_x1152_y704.tiff,model_best.pth,11174,16384,68.2007
+20_Villa_jimenez_Michoacan_bloque_145_x320_y768.tiff,model_best.pth,1772,16384,10.8154
+20_Villa_jimenez_Michoacan_bloque_147_x448_y768.tiff,model_best.pth,5945,16384,36.2854
+20_Villa_jimenez_Michoacan_bloque_148_x512_y768.tiff,model_best.pth,3547,16384,21.6492
+20_Villa_jimenez_Michoacan_bloque_153_x832_y768.tiff,model_best.pth,4622,16384,28.2104
+20_Villa_jimenez_Michoacan_bloque_155_x960_y768.tiff,model_best.pth,7806,16384,47.644
+20_Villa_jimenez_Michoacan_bloque_158_x1152_y768.tiff,model_best.pth,10090,16384,61.5845
+20_Villa_jimenez_Michoacan_bloque_159_x1198_y768.tiff,model_best.pth,8379,16384,51.1414
+20_Villa_jimenez_Michoacan_bloque_168_x896_y832.tiff,model_best.pth,7400,16384,45.166
+20_Villa_jimenez_Michoacan_bloque_169_x960_y832.tiff,model_best.pth,7723,16384,47.1375
+20_Villa_jimenez_Michoacan_bloque_16_x512_y128.tiff,model_best.pth,1067,16384,6.5125
+20_Villa_jimenez_Michoacan_bloque_178_x704_y896.tiff,model_best.pth,5299,16384,32.3425
+20_Villa_jimenez_Michoacan_bloque_181_x896_y896.tiff,model_best.pth,5393,16384,32.9163
+20_Villa_jimenez_Michoacan_bloque_182_x960_y896.tiff,model_best.pth,5418,16384,33.0688
+20_Villa_jimenez_Michoacan_bloque_195_x1024_y960.tiff,model_best.pth,2904,16384,17.7246
+20_Villa_jimenez_Michoacan_bloque_198_x1198_y960.tiff,model_best.pth,4381,16384,26.7395
+20_Villa_jimenez_Michoacan_bloque_201_x512_y1024.tiff,model_best.pth,2881,16384,17.5842
+20_Villa_jimenez_Michoacan_bloque_206_x832_y1024.tiff,model_best.pth,68,16384,0.415
+20_Villa_jimenez_Michoacan_bloque_209_x1024_y1024.tiff,model_best.pth,3127,16384,19.0857
+20_Villa_jimenez_Michoacan_bloque_211_x1152_y1024.tiff,model_best.pth,4638,16384,28.3081
+20_Villa_jimenez_Michoacan_bloque_212_x1198_y1024.tiff,model_best.pth,2828,16384,17.2607
+20_Villa_jimenez_Michoacan_bloque_223_x768_y1088.tiff,model_best.pth,134,16384,0.8179
+20_Villa_jimenez_Michoacan_bloque_22_x320_y192.tiff,model_best.pth,2850,16384,17.395
+20_Villa_jimenez_Michoacan_bloque_231_x256_y1152.tiff,model_best.pth,1476,16384,9.0088
+20_Villa_jimenez_Michoacan_bloque_236_x576_y1152.tiff,model_best.pth,985,16384,6.012
+20_Villa_jimenez_Michoacan_bloque_239_x768_y1152.tiff,model_best.pth,2572,16384,15.6982
+20_Villa_jimenez_Michoacan_bloque_240_x832_y1152.tiff,model_best.pth,3868,16384,23.6084
+20_Villa_jimenez_Michoacan_bloque_248_x384_y1216.tiff,model_best.pth,1463,16384,8.9294
+20_Villa_jimenez_Michoacan_bloque_257_x960_y1216.tiff,model_best.pth,1073,16384,6.5491
+20_Villa_jimenez_Michoacan_bloque_25_x512_y192.tiff,model_best.pth,7312,16384,44.6289
+20_Villa_jimenez_Michoacan_bloque_260_x320_y1280.tiff,model_best.pth,1589,16384,9.6985
+20_Villa_jimenez_Michoacan_bloque_264_x704_y1280.tiff,model_best.pth,1106,16384,6.7505
+20_Villa_jimenez_Michoacan_bloque_267_x0_y1344.tiff,model_best.pth,2290,16384,13.9771
+20_Villa_jimenez_Michoacan_bloque_26_x576_y192.tiff,model_best.pth,9817,16384,59.9182
+20_Villa_jimenez_Michoacan_bloque_290_x320_y1472.tiff,model_best.pth,3289,16384,20.0745
+20_Villa_jimenez_Michoacan_bloque_292_x448_y1472.tiff,model_best.pth,1342,16384,8.1909
+20_Villa_jimenez_Michoacan_bloque_294_x576_y1472.tiff,model_best.pth,2725,16384,16.6321
+20_Villa_jimenez_Michoacan_bloque_299_x320_y1536.tiff,model_best.pth,1428,16384,8.7158
+20_Villa_jimenez_Michoacan_bloque_300_x384_y1536.tiff,model_best.pth,1003,16384,6.1218
+20_Villa_jimenez_Michoacan_bloque_309_x512_y1588.tiff,model_best.pth,2983,16384,18.2068
+20_Villa_jimenez_Michoacan_bloque_32_x384_y256.tiff,model_best.pth,2512,16384,15.332
+20_Villa_jimenez_Michoacan_bloque_34_x512_y256.tiff,model_best.pth,10845,16384,66.1926
+20_Villa_jimenez_Michoacan_bloque_38_x768_y256.tiff,model_best.pth,9649,16384,58.8928
+20_Villa_jimenez_Michoacan_bloque_40_x256_y320.tiff,model_best.pth,5068,16384,30.9326
+20_Villa_jimenez_Michoacan_bloque_41_x320_y320.tiff,model_best.pth,3484,16384,21.2646
+20_Villa_jimenez_Michoacan_bloque_44_x512_y320.tiff,model_best.pth,12022,16384,73.3765
+20_Villa_jimenez_Michoacan_bloque_4_x256_y64.tiff,model_best.pth,2515,16384,15.3503
+20_Villa_jimenez_Michoacan_bloque_56_x640_y384.tiff,model_best.pth,12835,16384,78.3386
+20_Villa_jimenez_Michoacan_bloque_59_x832_y384.tiff,model_best.pth,8849,16384,54.01
+20_Villa_jimenez_Michoacan_bloque_68_x576_y448.tiff,model_best.pth,11650,16384,71.106
+20_Villa_jimenez_Michoacan_bloque_75_x64_y512.tiff,model_best.pth,1888,16384,11.5234
+20_Villa_jimenez_Michoacan_bloque_80_x384_y512.tiff,model_best.pth,13636,16384,83.2275
+20_Villa_jimenez_Michoacan_bloque_82_x512_y512.tiff,model_best.pth,11990,16384,73.1812
+20_Villa_jimenez_Michoacan_bloque_83_x576_y512.tiff,model_best.pth,11161,16384,68.1213
+20_Villa_jimenez_Michoacan_bloque_90_x1024_y512.tiff,model_best.pth,9585,16384,58.5022
+20_Villa_jimenez_Michoacan_bloque_91_x64_y576.tiff,model_best.pth,2505,16384,15.2893
+20_Villa_jimenez_Michoacan_bloque_98_x512_y576.tiff,model_best.pth,9789,16384,59.7473
+21_Ajuchitlan_Guerrero_bloque_0_x192_y0.tiff,model_best.pth,3887,16384,23.7244
+21_Ajuchitlan_Guerrero_bloque_10_x128_y128.tiff,model_best.pth,6138,16384,37.4634
+21_Ajuchitlan_Guerrero_bloque_16_x128_y192.tiff,model_best.pth,3763,16384,22.9675
+21_Ajuchitlan_Guerrero_bloque_27_x640_y256.tiff,model_best.pth,5374,16384,32.8003
+21_Ajuchitlan_Guerrero_bloque_30_x896_y256.tiff,model_best.pth,1548,16384,9.4482
+21_Ajuchitlan_Guerrero_bloque_34_x576_y320.tiff,model_best.pth,2900,16384,17.7002
+21_Ajuchitlan_Guerrero_bloque_36_x704_y320.tiff,model_best.pth,2712,16384,16.5527
+21_Ajuchitlan_Guerrero_bloque_41_x256_y384.tiff,model_best.pth,3153,16384,19.2444
+21_Ajuchitlan_Guerrero_bloque_42_x512_y384.tiff,model_best.pth,2227,16384,13.5925
+21_Ajuchitlan_Guerrero_bloque_44_x640_y384.tiff,model_best.pth,2922,16384,17.8345
+21_Ajuchitlan_Guerrero_bloque_46_x128_y448.tiff,model_best.pth,2390,16384,14.5874
+21_Ajuchitlan_Guerrero_bloque_48_x256_y448.tiff,model_best.pth,5324,16384,32.4951
+21_Ajuchitlan_Guerrero_bloque_59_x768_y512.tiff,model_best.pth,5739,16384,35.0281
+21_Ajuchitlan_Guerrero_bloque_60_x832_y512.tiff,model_best.pth,2566,16384,15.6616
+21_Ajuchitlan_Guerrero_bloque_61_x576_y576.tiff,model_best.pth,2595,16384,15.8386
+21_Ajuchitlan_Guerrero_bloque_69_x512_y640.tiff,model_best.pth,2647,16384,16.156
+21_Ajuchitlan_Guerrero_bloque_74_x0_y704.tiff,model_best.pth,1518,16384,9.2651
+21_Ajuchitlan_Guerrero_bloque_77_x576_y704.tiff,model_best.pth,2517,16384,15.3625
+21_Ajuchitlan_Guerrero_bloque_79_x704_y704.tiff,model_best.pth,6892,16384,42.0654
+21_Ajuchitlan_Guerrero_bloque_88_x832_y768.tiff,model_best.pth,2902,16384,17.7124
+21_Ajuchitlan_Guerrero_bloque_89_x896_y768.tiff,model_best.pth,2550,16384,15.564
+21_Ajuchitlan_Guerrero_bloque_90_x0_y832.tiff,model_best.pth,2391,16384,14.5935
+21_Ajuchitlan_Guerrero_bloque_91_x640_y832.tiff,model_best.pth,2329,16384,14.2151
+21_Ajuchitlan_Guerrero_bloque_94_x832_y832.tiff,model_best.pth,2543,16384,15.5212
+21_Ajuchitlan_Guerrero_bloque_95_x896_y832.tiff,model_best.pth,2323,16384,14.1785
+21_Ajuchitlan_Guerrero_bloque_99_x832_y889.tiff,model_best.pth,2874,16384,17.5415
+21_Atoyac2_Jalisco_bloque_11_x1472_y896.tiff,model_best.pth,197,16384,1.2024
+21_Atoyac2_Jalisco_bloque_2_x256_y640.tiff,model_best.pth,258,16384,1.5747
+21_Atoyac2_Jalisco_bloque_8_x1344_y832.tiff,model_best.pth,359,16384,2.1912
+21_Atoyac_Jalisco_bloque_1_x2304_y64.tiff,model_best.pth,831,16384,5.072
+21_Atoyac_Jalisco_bloque_23_x896_y384.tiff,model_best.pth,258,16384,1.5747
+21_Atoyac_Jalisco_bloque_27_x2112_y896.tiff,model_best.pth,491,16384,2.9968
+21_Atoyac_Jalisco_bloque_7_x2048_y192.tiff,model_best.pth,750,16384,4.5776
+21_Balleza_Chihuahua1_bloque_10_x512_y64.tiff,model_best.pth,1919,16384,11.7126
+21_Balleza_Chihuahua1_bloque_12_x640_y64.tiff,model_best.pth,784,16384,4.7852
+21_Balleza_Chihuahua1_bloque_18_x512_y128.tiff,model_best.pth,3231,16384,19.7205
+21_Balleza_Chihuahua1_bloque_32_x512_y256.tiff,model_best.pth,3126,16384,19.0796
+21_Balleza_Chihuahua1_bloque_34_x192_y320.tiff,model_best.pth,6194,16384,37.8052
+21_Balleza_Chihuahua1_bloque_35_x256_y320.tiff,model_best.pth,9497,16384,57.9651
+21_Balleza_Chihuahua1_bloque_37_x384_y320.tiff,model_best.pth,7056,16384,43.0664
+21_Balleza_Chihuahua1_bloque_41_x640_y320.tiff,model_best.pth,87,16384,0.531
+21_Balleza_Chihuahua1_bloque_42_x128_y384.tiff,model_best.pth,2545,16384,15.5334
+21_Balleza_Chihuahua1_bloque_44_x256_y384.tiff,model_best.pth,13090,16384,79.895
+21_Balleza_Chihuahua1_bloque_47_x448_y384.tiff,model_best.pth,3502,16384,21.3745
+21_Balleza_Chihuahua1_bloque_55_x384_y448.tiff,model_best.pth,5454,16384,33.2886
+21_Balleza_Chihuahua1_bloque_57_x512_y448.tiff,model_best.pth,3117,16384,19.0247
+21_Balleza_Chihuahua1_bloque_58_x576_y448.tiff,model_best.pth,551,16384,3.363
+21_Balleza_Chihuahua1_bloque_59_x64_y512.tiff,model_best.pth,3479,16384,21.2341
+21_Balleza_Chihuahua1_bloque_60_x128_y512.tiff,model_best.pth,5933,16384,36.2122
+21_Balleza_Chihuahua1_bloque_69_x192_y576.tiff,model_best.pth,2470,16384,15.0757
+21_Balleza_Chihuahua1_bloque_72_x384_y576.tiff,model_best.pth,2538,16384,15.4907
+21_Balleza_Chihuahua1_bloque_77_x64_y704.tiff,model_best.pth,1888,16384,11.5234
+21_Balleza_Chihuahua1_bloque_78_x128_y704.tiff,model_best.pth,2805,16384,17.1204
+21_Balleza_Chihuahua1_bloque_7_x320_y64.tiff,model_best.pth,4953,16384,30.2307
+21_Balleza_Chihuahua1_bloque_9_x448_y64.tiff,model_best.pth,1678,16384,10.2417
+21_Balleza_Chihuahua2_bloque_15_x443_y64.tiff,model_best.pth,731,16384,4.4617
+21_Balleza_Chihuahua2_bloque_18_x128_y128.tiff,model_best.pth,0,16384,0.0
+21_Balleza_Chihuahua2_bloque_1_x64_y0.tiff,model_best.pth,34,16384,0.2075
+21_Balleza_Chihuahua2_bloque_21_x320_y128.tiff,model_best.pth,163,16384,0.9949
+21_Balleza_Chihuahua2_bloque_23_x443_y128.tiff,model_best.pth,51,16384,0.3113
+21_Balleza_Chihuahua2_bloque_26_x320_y192.tiff,model_best.pth,133,16384,0.8118
+21_Balleza_Chihuahua2_bloque_4_x256_y0.tiff,model_best.pth,140,16384,0.8545
+21_Balleza_Chihuahua2_bloque_5_x320_y0.tiff,model_best.pth,503,16384,3.0701
+21_Balleza_Chihuahua2_bloque_7_x443_y0.tiff,model_best.pth,758,16384,4.6265
+21_Balleza_Chihuahua2_bloque_8_x0_y64.tiff,model_best.pth,189,16384,1.1536
+21_Bavispe_Sonora2_bloque_0_x0_y0.tiff,model_best.pth,2110,16384,12.8784
+21_Bavispe_Sonora2_bloque_14_x192_y320.tiff,model_best.pth,2819,16384,17.2058
+21_Bavispe_Sonora2_bloque_3_x192_y64.tiff,model_best.pth,1975,16384,12.0544
+21_Bavispe_Sonora2_bloque_6_x128_y128.tiff,model_best.pth,4117,16384,25.1282
+21_Bavispe_Sonora_bloque_11_x128_y384.tiff,model_best.pth,0,16384,0.0
+21_Bavispe_Sonora_bloque_16_x576_y384.tiff,model_best.pth,0,16384,0.0
+21_Bavispe_Sonora_bloque_21_x320_y576.tiff,model_best.pth,10,16384,0.061
+21_Bavispe_Sonora_bloque_22_x384_y576.tiff,model_best.pth,5,16384,0.0305
+21_Bavispe_Sonora_bloque_3_x128_y256.tiff,model_best.pth,15,16384,0.0916
+21_Bavispe_Sonora_bloque_4_x192_y256.tiff,model_best.pth,23,16384,0.1404
+21_Bavispe_Sonora_bloque_6_x384_y256.tiff,model_best.pth,0,16384,0.0
+21_Bavispe_Sonora_bloque_8_x128_y320.tiff,model_best.pth,15,16384,0.0916
+21_Bavispe_Sonora_bloque_9_x192_y320.tiff,model_best.pth,18,16384,0.1099
+21_Chilpancingo de lo bravo_Guerrero_bloque_13_x128_y128.tiff,model_best.pth,4226,16384,25.7935
+21_Chilpancingo de lo bravo_Guerrero_bloque_17_x0_y192.tiff,model_best.pth,2399,16384,14.6423
+21_Chilpancingo de lo bravo_Guerrero_bloque_19_x128_y192.tiff,model_best.pth,1773,16384,10.8215
+21_Chilpancingo de lo bravo_Guerrero_bloque_20_x192_y192.tiff,model_best.pth,1657,16384,10.1135
+21_Chilpancingo de lo bravo_Guerrero_bloque_23_x384_y192.tiff,model_best.pth,791,16384,4.8279
+21_Chilpancingo de lo bravo_Guerrero_bloque_31_x384_y256.tiff,model_best.pth,1077,16384,6.5735
+21_Chilpancingo de lo bravo_Guerrero_bloque_35_x256_y313.tiff,model_best.pth,3442,16384,21.0083
+21_Chilpancingo de lo bravo_Guerrero_bloque_36_x320_y313.tiff,model_best.pth,2658,16384,16.2231
+21_Chilpancingo de lo bravo_Guerrero_bloque_8_x192_y64.tiff,model_best.pth,3929,16384,23.9807
+21_Durango_BuenosAires_bloque_12_x1280_y320.tiff,model_best.pth,119,16384,0.7263
+21_Durango_BuenosAires_bloque_14_x1472_y320.tiff,model_best.pth,127,16384,0.7751
+21_Durango_BuenosAires_bloque_1_x960_y0.tiff,model_best.pth,712,16384,4.3457
+21_Durango_BuenosAires_bloque_2_x1024_y0.tiff,model_best.pth,334,16384,2.0386
+21_El Tule_Estado de Mexico_bloque_6_x0_y128.tiff,model_best.pth,439,16384,2.6794
+21_General Panfilo Natera_Zacatecas_bloque_5_x64_y41.tiff,model_best.pth,5590,16384,34.1187
+21_La Escondida_Tamaulipas_bloque_12_x64_y256.tiff,model_best.pth,306,16384,1.8677
+21_La Escondida_Tamaulipas_bloque_14_x180_y256.tiff,model_best.pth,321,16384,1.9592
+21_La Escondida_Tamaulipas_bloque_1_x64_y0.tiff,model_best.pth,214,16384,1.3062
+21_La Escondida_Tamaulipas_bloque_20_x64_y337.tiff,model_best.pth,96,16384,0.5859
+21_La Escondida_Tamaulipas_bloque_22_x180_y337.tiff,model_best.pth,528,16384,3.2227
+21_La Escondida_Tamaulipas_bloque_2_x0_y64.tiff,model_best.pth,287,16384,1.7517
+21_La Escondida_Tamaulipas_bloque_8_x64_y192.tiff,model_best.pth,217,16384,1.3245
+21_Mezquitic_Jalisco2_bloque_0_x448_y128.tiff,model_best.pth,1080,16384,6.5918
+21_Mezquitic_Jalisco2_bloque_102_x1600_y2240.tiff,model_best.pth,713,16384,4.3518
+21_Mezquitic_Jalisco2_bloque_107_x1920_y2304.tiff,model_best.pth,2208,16384,13.4766
+21_Mezquitic_Jalisco2_bloque_15_x1280_y192.tiff,model_best.pth,1935,16384,11.8103
+21_Mezquitic_Jalisco2_bloque_18_x1920_y192.tiff,model_best.pth,662,16384,4.0405
+21_Mezquitic_Jalisco2_bloque_1_x512_y128.tiff,model_best.pth,1063,16384,6.488
+21_Mezquitic_Jalisco2_bloque_22_x192_y256.tiff,model_best.pth,1528,16384,9.3262
+21_Mezquitic_Jalisco2_bloque_30_x64_y320.tiff,model_best.pth,1365,16384,8.3313
+21_Mezquitic_Jalisco2_bloque_34_x1152_y320.tiff,model_best.pth,2289,16384,13.9709
+21_Mezquitic_Jalisco2_bloque_39_x1088_y384.tiff,model_best.pth,904,16384,5.5176
+21_Mezquitic_Jalisco2_bloque_3_x640_y128.tiff,model_best.pth,2675,16384,16.3269
+21_Mezquitic_Jalisco2_bloque_46_x1152_y448.tiff,model_best.pth,972,16384,5.9326
+21_Mezquitic_Jalisco2_bloque_59_x1088_y1472.tiff,model_best.pth,624,16384,3.8086
+21_Mezquitic_Jalisco2_bloque_61_x1152_y1536.tiff,model_best.pth,1565,16384,9.552
+21_Mezquitic_Jalisco2_bloque_65_x1408_y1664.tiff,model_best.pth,866,16384,5.2856
+21_Mezquitic_Jalisco2_bloque_72_x1152_y1792.tiff,model_best.pth,922,16384,5.6274
+21_Mezquitic_Jalisco2_bloque_73_x1216_y1792.tiff,model_best.pth,1276,16384,7.7881
+21_Mezquitic_Jalisco2_bloque_83_x1536_y1856.tiff,model_best.pth,2976,16384,18.1641
+21_Mezquitic_Jalisco2_bloque_8_x448_y192.tiff,model_best.pth,1570,16384,9.5825
+21_Mezquitic_Jalisco2_bloque_95_x1472_y1984.tiff,model_best.pth,1439,16384,8.783
+21_Mezquitic_Jalisco2_bloque_96_x1536_y1984.tiff,model_best.pth,844,16384,5.1514
+21_Mezquitic_Jalisco_bloque_10_x1152_y1536.tiff,model_best.pth,206,16384,1.2573
+21_Mezquitic_Jalisco_bloque_6_x1152_y896.tiff,model_best.pth,1274,16384,7.7759
+21_Mezquitic_Jalisco_bloque_7_x1216_y896.tiff,model_best.pth,619,16384,3.7781
+21_Palizada_Campeche_bloque_1_x384_y0.tiff,model_best.pth,512,16384,3.125
+21_Palizada_Campeche_bloque_24_x448_y256.tiff,model_best.pth,3030,16384,18.4937
+21_Palizada_Campeche_bloque_39_x384_y384.tiff,model_best.pth,4988,16384,30.4443
+21_Palizada_Campeche_bloque_42_x704_y384.tiff,model_best.pth,1549,16384,9.4543
+21_Palizada_Campeche_bloque_43_x768_y384.tiff,model_best.pth,275,16384,1.6785
+21_Palizada_Campeche_bloque_47_x320_y448.tiff,model_best.pth,4773,16384,29.1321
+21_Palizada_Campeche_bloque_56_x256_y512.tiff,model_best.pth,2039,16384,12.4451
+21_Palizada_Campeche_bloque_5_x512_y64.tiff,model_best.pth,1585,16384,9.6741
+21_Palizada_Campeche_bloque_60_x512_y512.tiff,model_best.pth,1407,16384,8.5876
+21_Palizada_Campeche_bloque_61_x576_y512.tiff,model_best.pth,678,16384,4.1382
+21_Palizada_Campeche_bloque_64_x841_y512.tiff,model_best.pth,81,16384,0.4944
+21_Palizada_Campeche_bloque_69_x384_y576.tiff,model_best.pth,737,16384,4.4983
+21_Palizada_Campeche_bloque_73_x192_y640.tiff,model_best.pth,820,16384,5.0049
+21_Palizada_Campeche_bloque_74_x256_y640.tiff,model_best.pth,525,16384,3.2043
+21_Palizada_Campeche_bloque_9_x384_y128.tiff,model_best.pth,1687,16384,10.2966
+21_Rosamorada_Nayarit_bloque_10_x1216_y640.tiff,model_best.pth,266,16384,1.6235
+21_Rosamorada_Nayarit_bloque_30_x1216_y1280.tiff,model_best.pth,305,16384,1.8616
+21_Rosamorada_Nayarit_bloque_34_x1600_y1472.tiff,model_best.pth,314,16384,1.9165
+21_Rosamorada_Nayarit_bloque_40_x1472_y2368.tiff,model_best.pth,448,16384,2.7344
+21_Salinas Victoria_Nuevo León_bloque_0_x0_y0.tiff,model_best.pth,4091,16384,24.9695
+21_San Jose Agua Azul_Guanajuato_bloque_10_x128_y128.tiff,model_best.pth,7604,16384,46.4111
+21_San Jose Agua Azul_Guanajuato_bloque_14_x128_y183.tiff,model_best.pth,6904,16384,42.1387
+21_San Jose Agua Azul_Guanajuato_bloque_3_x187_y0.tiff,model_best.pth,2977,16384,18.1702
+21_San Jose Agua Azul_Guanajuato_bloque_7_x187_y64.tiff,model_best.pth,2547,16384,15.5457
+21_San Nicolas Esquiros_Guanajuato_bloque_10_x256_y64.tiff,model_best.pth,5841,16384,35.6506
+21_San Nicolas Esquiros_Guanajuato_bloque_4_x256_y0.tiff,model_best.pth,7382,16384,45.0562
+21_San Nicolas Esquiros_Guanajuato_bloque_8_x128_y64.tiff,model_best.pth,3707,16384,22.6257
+21_Tomatlán_Jalisco_bloque_0_x256_y128.tiff,model_best.pth,1103,16384,6.7322
+21_Tomatlán_Jalisco_bloque_2_x192_y192.tiff,model_best.pth,838,16384,5.1147
+21_Villa Jiménez_Michoacán_bloque_109_x1152_y640.tiff,model_best.pth,3687,16384,22.5037
+21_Villa Jiménez_Michoacán_bloque_119_x832_y704.tiff,model_best.pth,398,16384,2.4292
+21_Villa Jiménez_Michoacán_bloque_131_x832_y768.tiff,model_best.pth,535,16384,3.2654
+21_Villa Jiménez_Michoacán_bloque_141_x704_y832.tiff,model_best.pth,587,16384,3.5828
+21_Villa Jiménez_Michoacán_bloque_142_x768_y832.tiff,model_best.pth,229,16384,1.3977
+21_Villa Jiménez_Michoacán_bloque_151_x1340_y832.tiff,model_best.pth,4555,16384,27.8015
+21_Villa Jiménez_Michoacán_bloque_156_x960_y896.tiff,model_best.pth,22,16384,0.1343
+21_Villa Jiménez_Michoacán_bloque_157_x1024_y896.tiff,model_best.pth,38,16384,0.2319
+21_Villa Jiménez_Michoacán_bloque_158_x1088_y896.tiff,model_best.pth,12,16384,0.0732
+21_Villa Jiménez_Michoacán_bloque_169_x1216_y960.tiff,model_best.pth,733,16384,4.4739
+21_Villa Jiménez_Michoacán_bloque_16_x768_y192.tiff,model_best.pth,5136,16384,31.3477
+21_Villa Jiménez_Michoacán_bloque_176_x896_y1024.tiff,model_best.pth,0,16384,0.0
+21_Villa Jiménez_Michoacán_bloque_17_x832_y192.tiff,model_best.pth,4895,16384,29.8767
+21_Villa Jiménez_Michoacán_bloque_192_x384_y1152.tiff,model_best.pth,1236,16384,7.5439
+21_Villa Jiménez_Michoacán_bloque_195_x576_y1152.tiff,model_best.pth,468,16384,2.8564
+21_Villa Jiménez_Michoacán_bloque_196_x640_y1152.tiff,model_best.pth,41,16384,0.2502
+21_Villa Jiménez_Michoacán_bloque_1_x704_y64.tiff,model_best.pth,203,16384,1.239
+21_Villa Jiménez_Michoacán_bloque_205_x512_y1216.tiff,model_best.pth,90,16384,0.5493
+21_Villa Jiménez_Michoacán_bloque_209_x960_y1216.tiff,model_best.pth,90,16384,0.5493
+21_Villa Jiménez_Michoacán_bloque_20_x384_y256.tiff,model_best.pth,141,16384,0.8606
+21_Villa Jiménez_Michoacán_bloque_210_x128_y1280.tiff,model_best.pth,1794,16384,10.9497
+21_Villa Jiménez_Michoacán_bloque_212_x448_y1280.tiff,model_best.pth,0,16384,0.0
+21_Villa Jiménez_Michoacán_bloque_215_x640_y1280.tiff,model_best.pth,1,16384,0.0061
+21_Villa Jiménez_Michoacán_bloque_217_x192_y1344.tiff,model_best.pth,1828,16384,11.1572
+21_Villa Jiménez_Michoacán_bloque_218_x448_y1344.tiff,model_best.pth,89,16384,0.5432
+21_Villa Jiménez_Michoacán_bloque_222_x192_y1408.tiff,model_best.pth,771,16384,4.7058
+21_Villa Jiménez_Michoacán_bloque_223_x320_y1408.tiff,model_best.pth,0,16384,0.0
+21_Villa Jiménez_Michoacán_bloque_227_x576_y1408.tiff,model_best.pth,89,16384,0.5432
+21_Villa Jiménez_Michoacán_bloque_230_x384_y1472.tiff,model_best.pth,0,16384,0.0
+21_Villa Jiménez_Michoacán_bloque_23_x576_y256.tiff,model_best.pth,1618,16384,9.8755
+21_Villa Jiménez_Michoacán_bloque_26_x768_y256.tiff,model_best.pth,5957,16384,36.3586
+21_Villa Jiménez_Michoacán_bloque_27_x832_y256.tiff,model_best.pth,2551,16384,15.5701
+21_Villa Jiménez_Michoacán_bloque_31_x512_y320.tiff,model_best.pth,533,16384,3.2532
+21_Villa Jiménez_Michoacán_bloque_32_x576_y320.tiff,model_best.pth,2226,16384,13.5864
+21_Villa Jiménez_Michoacán_bloque_41_x512_y384.tiff,model_best.pth,4000,16384,24.4141
+21_Villa Jiménez_Michoacán_bloque_44_x704_y384.tiff,model_best.pth,7307,16384,44.5984
+21_Villa Jiménez_Michoacán_bloque_47_x896_y384.tiff,model_best.pth,2333,16384,14.2395
+21_Villa Jiménez_Michoacán_bloque_49_x1024_y384.tiff,model_best.pth,7769,16384,47.4182
+21_Villa Jiménez_Michoacán_bloque_52_x320_y448.tiff,model_best.pth,1528,16384,9.3262
+21_Villa Jiménez_Michoacán_bloque_56_x576_y448.tiff,model_best.pth,9518,16384,58.0933
+21_Villa Jiménez_Michoacán_bloque_66_x256_y512.tiff,model_best.pth,1551,16384,9.4666
+21_Villa Jiménez_Michoacán_bloque_76_x896_y512.tiff,model_best.pth,1552,16384,9.4727
+21_Villa Jiménez_Michoacán_bloque_7_x704_y128.tiff,model_best.pth,1531,16384,9.3445
+21_Villa Jiménez_Michoacán_bloque_82_x320_y576.tiff,model_best.pth,1728,16384,10.5469
+21_Villa Jiménez_Michoacán_bloque_84_x448_y576.tiff,model_best.pth,2849,16384,17.3889
+21_Villa Jiménez_Michoacán_bloque_88_x704_y576.tiff,model_best.pth,3703,16384,22.6013
+21_Villa Jiménez_Michoacán_bloque_90_x832_y576.tiff,model_best.pth,2476,16384,15.1123
+21_Villa Jiménez_Michoacán_bloque_94_x1088_y576.tiff,model_best.pth,1243,16384,7.5867
+21_Villa Jiménez_Michoacán_bloque_96_x320_y640.tiff,model_best.pth,264,16384,1.6113
+21_Villa Jiménez_Michoacán_bloque_97_x384_y640.tiff,model_best.pth,1515,16384,9.2468
+21_Villa Jiménez_Michoacán_bloque_99_x512_y640.tiff,model_best.pth,2039,16384,12.4451
+21_Villa de Cos_Zacatecas_bloque_0_x768_y512.tiff,model_best.pth,2005,16384,12.2375
+21_Villa de Cos_Zacatecas_bloque_15_x960_y704.tiff,model_best.pth,0,16384,0.0
+21_Villa de Cos_Zacatecas_bloque_16_x1024_y704.tiff,model_best.pth,91,16384,0.5554
+21_Villa de Cos_Zacatecas_bloque_17_x1088_y704.tiff,model_best.pth,111,16384,0.6775
+21_Villa de Cos_Zacatecas_bloque_1_x768_y576.tiff,model_best.pth,1474,16384,8.9966
+21_Villa de Cos_Zacatecas_bloque_23_x960_y768.tiff,model_best.pth,79,16384,0.4822
+21_Villa de Cos_Zacatecas_bloque_25_x640_y832.tiff,model_best.pth,388,16384,2.3682
+21_Villa de Cos_Zacatecas_bloque_2_x832_y576.tiff,model_best.pth,786,16384,4.7974
+21_Villa de Cos_Zacatecas_bloque_33_x832_y896.tiff,model_best.pth,2562,16384,15.6372
+21_Villa de Cos_Zacatecas_bloque_34_x896_y896.tiff,model_best.pth,2989,16384,18.2434
+21_Villa de Cos_Zacatecas_bloque_7_x960_y640.tiff,model_best.pth,0,16384,0.0
+21_Zacualpan_Guerrero_bloque_10_x128_y128.tiff,model_best.pth,4751,16384,28.9978
+21_Zacualpan_Guerrero_bloque_15_x396_y128.tiff,model_best.pth,1046,16384,6.3843
+21_Zacualpan_Guerrero_bloque_21_x320_y192.tiff,model_best.pth,2612,16384,15.9424
+21_Zacualpan_Guerrero_bloque_29_x320_y199.tiff,model_best.pth,2674,16384,16.3208
+21_Zacualpan_Guerrero_bloque_7_x320_y64.tiff,model_best.pth,1483,16384,9.0515
+22_Badiraguato_Sinaloa_bloque_0_x0_y0.tiff,model_best.pth,204,16384,1.2451
+22_Badiraguato_Sinaloa_bloque_10_x64_y128.tiff,model_best.pth,260,16384,1.5869
+22_Badiraguato_Sinaloa_bloque_4_x0_y64.tiff,model_best.pth,354,16384,2.1606
+22_Badiraguato_Sinaloa_bloque_6_x192_y64.tiff,model_best.pth,4,16384,0.0244
+22_Calsimiro_Castillo_Jalisco_bloque_13_x640_y192.tiff,model_best.pth,3257,16384,19.8792
+22_Calsimiro_Castillo_Jalisco_bloque_16_x780_y192.tiff,model_best.pth,1568,16384,9.5703
+22_Calsimiro_Castillo_Jalisco_bloque_22_x704_y320.tiff,model_best.pth,2585,16384,15.7776
+22_Calsimiro_Castillo_Jalisco_bloque_5_x576_y64.tiff,model_best.pth,2338,16384,14.27
+22_Casimiro Castillo_Jalisco_bloque_14_x1344_y1088.tiff,model_best.pth,1093,16384,6.6711
+22_Casimiro Castillo_Jalisco_bloque_15_x1280_y1152.tiff,model_best.pth,1212,16384,7.3975
+22_Casimiro Castillo_Jalisco_bloque_9_x1216_y1024.tiff,model_best.pth,1359,16384,8.2947
+22_Chihuahua_Guachochi_bloque_12_x896_y512.tiff,model_best.pth,0,16384,0.0
+22_Chihuahua_Guachochi_bloque_16_x832_y640.tiff,model_best.pth,0,16384,0.0
+22_Chihuahua_Guachochi_bloque_2_x256_y256.tiff,model_best.pth,1419,16384,8.6609
+22_Guachochi_Chihuahua_bloque_10_x768_y384.tiff,model_best.pth,2267,16384,13.8367
+22_Guachochi_Chihuahua_bloque_17_x384_y576.tiff,model_best.pth,1917,16384,11.7004
+22_Guachochi_Chihuahua_bloque_18_x576_y576.tiff,model_best.pth,1203,16384,7.3425
+22_Jonuta_Campeche_bloque_12_x64_y97.tiff,model_best.pth,1288,16384,7.8613
+22_Jonuta_Campeche_bloque_2_x192_y0.tiff,model_best.pth,3345,16384,20.4163
+22_Jonuta_Campeche_bloque_6_x64_y64.tiff,model_best.pth,849,16384,5.1819
+22_Jonuta_Campeche_bloque_9_x256_y64.tiff,model_best.pth,3576,16384,21.8262
+22_La Concordia_Sinaloa_bloque_0_x128_y448.tiff,model_best.pth,782,16384,4.7729
+22_La Concordia_Sinaloa_bloque_13_x1472_y704.tiff,model_best.pth,2534,16384,15.4663
+22_La Concordia_Sinaloa_bloque_16_x1024_y768.tiff,model_best.pth,976,16384,5.957
+22_La Concordia_Sinaloa_bloque_19_x1408_y768.tiff,model_best.pth,5989,16384,36.554
+22_La Concordia_Sinaloa_bloque_21_x1536_y768.tiff,model_best.pth,1482,16384,9.0454
+22_La Concordia_Sinaloa_bloque_31_x1344_y896.tiff,model_best.pth,5182,16384,31.6284
+22_La Concordia_Sinaloa_bloque_33_x1664_y896.tiff,model_best.pth,2103,16384,12.8357
+22_La Concordia_Sinaloa_bloque_35_x1792_y896.tiff,model_best.pth,1953,16384,11.9202
+22_La Concordia_Sinaloa_bloque_40_x1536_y960.tiff,model_best.pth,1130,16384,6.897
+22_La Concordia_Sinaloa_bloque_41_x1664_y960.tiff,model_best.pth,1607,16384,9.8083
+22_La Concordia_Sinaloa_bloque_46_x1472_y1024.tiff,model_best.pth,3701,16384,22.5891
+22_La Concordia_Sinaloa_bloque_53_x1600_y1088.tiff,model_best.pth,3478,16384,21.228
+22_La Concordia_Sinaloa_bloque_5_x384_y576.tiff,model_best.pth,108,16384,0.6592
+22_La Concordia_Sinaloa_bloque_65_x960_y1344.tiff,model_best.pth,737,16384,4.4983
+22_La Concordia_Sinaloa_bloque_68_x704_y1408.tiff,model_best.pth,1157,16384,7.0618
+22_La Concordia_Sinaloa_bloque_69_x960_y1408.tiff,model_best.pth,652,16384,3.9795
+22_La Concordia_Sinaloa_bloque_71_x896_y1664.tiff,model_best.pth,633,16384,3.8635
+22_La Concordia_Sinaloa_bloque_72_x960_y1664.tiff,model_best.pth,630,16384,3.8452
+22_La Concordia_Sinaloa_bloque_75_x768_y1792.tiff,model_best.pth,454,16384,2.771
+22_La Mesilla_Chiapas_bloque_10_x128_y128.tiff,model_best.pth,5689,16384,34.7229
+22_La Mesilla_Chiapas_bloque_4_x0_y64.tiff,model_best.pth,7060,16384,43.0908
+22_La Mesilla_Chiapas_bloque_5_x64_y64.tiff,model_best.pth,6972,16384,42.5537
+22_La Mesilla_Chiapas_bloque_9_x64_y128.tiff,model_best.pth,7398,16384,45.1538
+22_La_Yesca_Nayarit_bloque_104_x256_y1280.tiff,model_best.pth,612,16384,3.7354
+22_La_Yesca_Nayarit_bloque_105_x320_y1280.tiff,model_best.pth,1322,16384,8.0688
+22_La_Yesca_Nayarit_bloque_106_x384_y1280.tiff,model_best.pth,919,16384,5.6091
+22_La_Yesca_Nayarit_bloque_111_x64_y1408.tiff,model_best.pth,4406,16384,26.8921
+22_La_Yesca_Nayarit_bloque_113_x384_y1408.tiff,model_best.pth,617,16384,3.7659
+22_La_Yesca_Nayarit_bloque_115_x64_y1472.tiff,model_best.pth,1656,16384,10.1074
+22_La_Yesca_Nayarit_bloque_118_x320_y1472.tiff,model_best.pth,813,16384,4.9622
+22_La_Yesca_Nayarit_bloque_120_x128_y1517.tiff,model_best.pth,745,16384,4.5471
+22_La_Yesca_Nayarit_bloque_19_x192_y320.tiff,model_best.pth,994,16384,6.0669
+22_La_Yesca_Nayarit_bloque_20_x256_y320.tiff,model_best.pth,3087,16384,18.8416
+22_La_Yesca_Nayarit_bloque_23_x832_y320.tiff,model_best.pth,3634,16384,22.1802
+22_La_Yesca_Nayarit_bloque_33_x960_y384.tiff,model_best.pth,1388,16384,8.4717
+22_La_Yesca_Nayarit_bloque_39_x320_y448.tiff,model_best.pth,1073,16384,6.5491
+22_La_Yesca_Nayarit_bloque_42_x192_y576.tiff,model_best.pth,723,16384,4.4128
+22_La_Yesca_Nayarit_bloque_45_x576_y576.tiff,model_best.pth,2197,16384,13.4094
+22_La_Yesca_Nayarit_bloque_49_x256_y640.tiff,model_best.pth,464,16384,2.832
+22_La_Yesca_Nayarit_bloque_50_x512_y640.tiff,model_best.pth,987,16384,6.0242
+22_La_Yesca_Nayarit_bloque_52_x640_y640.tiff,model_best.pth,1499,16384,9.1492
+22_La_Yesca_Nayarit_bloque_54_x1344_y640.tiff,model_best.pth,608,16384,3.7109
+22_La_Yesca_Nayarit_bloque_55_x640_y704.tiff,model_best.pth,323,16384,1.9714
+22_La_Yesca_Nayarit_bloque_65_x1280_y832.tiff,model_best.pth,923,16384,5.6335
+22_La_Yesca_Nayarit_bloque_71_x320_y896.tiff,model_best.pth,1077,16384,6.5735
+22_La_Yesca_Nayarit_bloque_75_x256_y960.tiff,model_best.pth,1621,16384,9.8938
+22_La_Yesca_Nayarit_bloque_82_x320_y1024.tiff,model_best.pth,621,16384,3.7903
+22_La_Yesca_Nayarit_bloque_94_x256_y1152.tiff,model_best.pth,2601,16384,15.8752
+22_Mezquital 2_Durango_bloque_12_x384_y384.tiff,model_best.pth,2130,16384,13.0005
+22_Mezquital 2_Durango_bloque_16_x576_y448.tiff,model_best.pth,560,16384,3.418
+22_Mezquital 2_Durango_bloque_24_x256_y640.tiff,model_best.pth,1204,16384,7.3486
+22_Mezquital 2_Durango_bloque_27_x1216_y1472.tiff,model_best.pth,1288,16384,7.8613
+22_Mezquital 2_Durango_bloque_32_x1344_y1536.tiff,model_best.pth,2730,16384,16.6626
+22_Mezquital 2_Durango_bloque_35_x1280_y1600.tiff,model_best.pth,4546,16384,27.7466
+22_Mezquital 2_Durango_bloque_38_x1280_y1664.tiff,model_best.pth,2992,16384,18.2617
+22_Mezquital 2_Durango_bloque_42_x1344_y1728.tiff,model_best.pth,1932,16384,11.792
+22_Mezquital 2_Durango_bloque_54_x1728_y1856.tiff,model_best.pth,4261,16384,26.0071
+22_Mezquital 2_Durango_bloque_55_x1792_y1856.tiff,model_best.pth,8582,16384,52.3804
+22_Mezquital 2_Durango_bloque_57_x1920_y1856.tiff,model_best.pth,2252,16384,13.7451
+22_Mezquital 2_Durango_bloque_60_x1792_y1920.tiff,model_best.pth,8013,16384,48.9075
+22_Mezquital 2_Durango_bloque_6_x256_y256.tiff,model_best.pth,1608,16384,9.8145
+22_Pueblo Nuevo2_Durango_bloque_13_x768_y2176.tiff,model_best.pth,3998,16384,24.4019
+22_Pueblo Nuevo2_Durango_bloque_16_x960_y2176.tiff,model_best.pth,1194,16384,7.2876
+22_Pueblo Nuevo2_Durango_bloque_4_x896_y1984.tiff,model_best.pth,588,16384,3.5889
+22_Santiago Papasquiaro_Durango_bloque_0_x1984_y768.tiff,model_best.pth,397,16384,2.4231
+22_Santiago Papasquiaro_Durango_bloque_12_x1792_y896.tiff,model_best.pth,676,16384,4.126
+22_Santiago Papasquiaro_Durango_bloque_31_x1344_y1088.tiff,model_best.pth,768,16384,4.6875
+22_Santiago Papasquiaro_Durango_bloque_37_x1792_y1088.tiff,model_best.pth,352,16384,2.1484
+22_Santiago Papasquiaro_Durango_bloque_38_x1280_y1152.tiff,model_best.pth,247,16384,1.5076
+22_Santiago Papasquiaro_Durango_bloque_48_x1664_y1216.tiff,model_best.pth,545,16384,3.3264
+22_Santiago Papasquiaro_Durango_bloque_50_x1408_y1280.tiff,model_best.pth,1117,16384,6.8176
+22_Santiago Papasquiaro_Durango_bloque_51_x1472_y1280.tiff,model_best.pth,1097,16384,6.6956
+22_Santiago Papasquiaro_Durango_bloque_52_x1536_y1280.tiff,model_best.pth,864,16384,5.2734
+22_Santiago Papasquiaro_Durango_bloque_9_x1600_y896.tiff,model_best.pth,309,16384,1.886
+22_Santiago_Papasquiaro_Durango_bloque_105_x192_y768.tiff,model_best.pth,4453,16384,27.179
+22_Santiago_Papasquiaro_Durango_bloque_11_x960_y192.tiff,model_best.pth,3849,16384,23.4924
+22_Santiago_Papasquiaro_Durango_bloque_121_x192_y896.tiff,model_best.pth,1482,16384,9.0454
+22_Santiago_Papasquiaro_Durango_bloque_123_x320_y896.tiff,model_best.pth,5094,16384,31.0913
+22_Santiago_Papasquiaro_Durango_bloque_132_x384_y960.tiff,model_best.pth,984,16384,6.0059
+22_Santiago_Papasquiaro_Durango_bloque_136_x256_y973.tiff,model_best.pth,1651,16384,10.0769
+22_Santiago_Papasquiaro_Durango_bloque_138_x384_y973.tiff,model_best.pth,686,16384,4.187
+22_Santiago_Papasquiaro_Durango_bloque_20_x960_y256.tiff,model_best.pth,6746,16384,41.1743
+22_Santiago_Papasquiaro_Durango_bloque_27_x768_y320.tiff,model_best.pth,9479,16384,57.8552
+22_Santiago_Papasquiaro_Durango_bloque_2_x832_y128.tiff,model_best.pth,363,16384,2.2156
+22_Santiago_Papasquiaro_Durango_bloque_39_x832_y384.tiff,model_best.pth,4740,16384,28.9307
+22_Santiago_Papasquiaro_Durango_bloque_50_x704_y448.tiff,model_best.pth,1825,16384,11.1389
+22_Santiago_Papasquiaro_Durango_bloque_53_x896_y448.tiff,model_best.pth,856,16384,5.2246
+22_Santiago_Papasquiaro_Durango_bloque_58_x256_y512.tiff,model_best.pth,1716,16384,10.4736
+22_Santiago_Papasquiaro_Durango_bloque_62_x512_y512.tiff,model_best.pth,952,16384,5.8105
+22_Santiago_Papasquiaro_Durango_bloque_63_x576_y512.tiff,model_best.pth,338,16384,2.063
+22_Santiago_Papasquiaro_Durango_bloque_68_x1024_y512.tiff,model_best.pth,475,16384,2.8992
+22_Santiago_Papasquiaro_Durango_bloque_70_x128_y576.tiff,model_best.pth,899,16384,5.4871
+22_Santiago_Papasquiaro_Durango_bloque_72_x256_y576.tiff,model_best.pth,3788,16384,23.1201
+22_Santiago_Papasquiaro_Durango_bloque_73_x320_y576.tiff,model_best.pth,5112,16384,31.2012
+22_Santiago_Papasquiaro_Durango_bloque_84_x256_y640.tiff,model_best.pth,2914,16384,17.7856
+22_Santiago_Papasquiaro_Durango_bloque_88_x512_y640.tiff,model_best.pth,7348,16384,44.8486
+22_Santiago_Papasquiaro_Durango_bloque_89_x576_y640.tiff,model_best.pth,7600,16384,46.3867
+22_Santiago_Papasquiaro_Durango_bloque_8_x768_y192.tiff,model_best.pth,1338,16384,8.1665
+22_Santiago_Papasquiaro_Durango_bloque_98_x448_y704.tiff,model_best.pth,7813,16384,47.6868
+22_Santo Domingo_Zacatecas_bloque_10_x384_y64.tiff,model_best.pth,1670,16384,10.1929
+22_Santo Domingo_Zacatecas_bloque_14_x64_y128.tiff,model_best.pth,402,16384,2.4536
+22_Santo Domingo_Zacatecas_bloque_21_x505_y128.tiff,model_best.pth,1817,16384,11.0901
+22_Santo Domingo_Zacatecas_bloque_25_x192_y192.tiff,model_best.pth,1573,16384,9.6008
+22_Santo Domingo_Zacatecas_bloque_26_x256_y192.tiff,model_best.pth,3373,16384,20.5872
+22_Santo Domingo_Zacatecas_bloque_28_x384_y192.tiff,model_best.pth,2740,16384,16.7236
+22_Santo Domingo_Zacatecas_bloque_35_x256_y256.tiff,model_best.pth,5129,16384,31.3049
+22_Santo Domingo_Zacatecas_bloque_36_x320_y256.tiff,model_best.pth,5970,16384,36.438
+22_Santo Domingo_Zacatecas_bloque_55_x256_y447.tiff,model_best.pth,859,16384,5.2429
+22_Santo Domingo_Zacatecas_bloque_6_x128_y64.tiff,model_best.pth,1151,16384,7.0251
+22_Santo Domingo_Zacatecas_bloque_8_x256_y64.tiff,model_best.pth,1831,16384,11.1755
+22_Tlatenango_Aguascalientes_bloque_108_x0_y832.tiff,model_best.pth,20,16384,0.1221
+22_Tlatenango_Aguascalientes_bloque_111_x320_y832.tiff,model_best.pth,266,16384,1.6235
+22_Tlatenango_Aguascalientes_bloque_112_x384_y832.tiff,model_best.pth,429,16384,2.6184
+22_Tlatenango_Aguascalientes_bloque_125_x629_y896.tiff,model_best.pth,273,16384,1.6663
+22_Tlatenango_Aguascalientes_bloque_127_x192_y954.tiff,model_best.pth,225,16384,1.3733
+22_Tlatenango_Aguascalientes_bloque_12_x64_y128.tiff,model_best.pth,58,16384,0.354
+22_Tlatenango_Aguascalientes_bloque_14_x192_y128.tiff,model_best.pth,543,16384,3.3142
+22_Tlatenango_Aguascalientes_bloque_22_x256_y192.tiff,model_best.pth,899,16384,5.4871
+22_Tlatenango_Aguascalientes_bloque_25_x448_y192.tiff,model_best.pth,1036,16384,6.3232
+22_Tlatenango_Aguascalientes_bloque_35_x64_y320.tiff,model_best.pth,751,16384,4.5837
+22_Tlatenango_Aguascalientes_bloque_39_x320_y320.tiff,model_best.pth,191,16384,1.1658
+22_Tlatenango_Aguascalientes_bloque_42_x512_y320.tiff,model_best.pth,295,16384,1.8005
+22_Tlatenango_Aguascalientes_bloque_44_x0_y384.tiff,model_best.pth,103,16384,0.6287
+22_Tlatenango_Aguascalientes_bloque_4_x384_y0.tiff,model_best.pth,91,16384,0.5554
+22_Tlatenango_Aguascalientes_bloque_54_x0_y448.tiff,model_best.pth,390,16384,2.3804
+22_Tlatenango_Aguascalientes_bloque_64_x0_y512.tiff,model_best.pth,1242,16384,7.5806
+22_Tlatenango_Aguascalientes_bloque_6_x128_y64.tiff,model_best.pth,434,16384,2.6489
+22_Tlatenango_Aguascalientes_bloque_75_x0_y576.tiff,model_best.pth,913,16384,5.5725
+22_Tlatenango_Aguascalientes_bloque_76_x64_y576.tiff,model_best.pth,1016,16384,6.2012
+22_Tlatenango_Aguascalientes_bloque_77_x128_y576.tiff,model_best.pth,186,16384,1.1353
+22_Tlatenango_Aguascalientes_bloque_81_x384_y576.tiff,model_best.pth,1470,16384,8.9722
+22_Tlatenango_Aguascalientes_bloque_83_x512_y576.tiff,model_best.pth,728,16384,4.4434
+22_Tlatenango_Aguascalientes_bloque_93_x448_y640.tiff,model_best.pth,225,16384,1.3733
+22_Tlatenango_Aguascalientes_bloque_95_x64_y704.tiff,model_best.pth,392,16384,2.3926
+22_Tlatenango_Aguascalientes_bloque_98_x384_y704.tiff,model_best.pth,274,16384,1.6724
+22_Urique_Chihuahua_bloque_17_x448_y576.tiff,model_best.pth,955,16384,5.8289
+22_Urique_Chihuahua_bloque_18_x512_y576.tiff,model_best.pth,3104,16384,18.9453
+22_Urique_Chihuahua_bloque_21_x704_y576.tiff,model_best.pth,65,16384,0.3967
+22_Urique_Chihuahua_bloque_24_x640_y640.tiff,model_best.pth,592,16384,3.6133
+22_Urique_Chihuahua_bloque_3_x512_y384.tiff,model_best.pth,1413,16384,8.6243
+22_Urique_Chihuahua_bloque_7_x448_y448.tiff,model_best.pth,898,16384,5.481
+22_Zacapu_Michoacan_bloque_102_x960_y448.tiff,model_best.pth,744,16384,4.541
+22_Zacapu_Michoacan_bloque_103_x1024_y448.tiff,model_best.pth,1759,16384,10.7361
+22_Zacapu_Michoacan_bloque_107_x256_y512.tiff,model_best.pth,477,16384,2.9114
+22_Zacapu_Michoacan_bloque_108_x320_y512.tiff,model_best.pth,755,16384,4.6082
+22_Zacapu_Michoacan_bloque_112_x576_y512.tiff,model_best.pth,1271,16384,7.7576
+22_Zacapu_Michoacan_bloque_115_x768_y512.tiff,model_best.pth,525,16384,3.2043
+22_Zacapu_Michoacan_bloque_118_x960_y512.tiff,model_best.pth,1095,16384,6.6833
+22_Zacapu_Michoacan_bloque_123_x320_y576.tiff,model_best.pth,291,16384,1.7761
+22_Zacapu_Michoacan_bloque_129_x704_y576.tiff,model_best.pth,177,16384,1.0803
+22_Zacapu_Michoacan_bloque_12_x192_y64.tiff,model_best.pth,94,16384,0.5737
+22_Zacapu_Michoacan_bloque_132_x896_y576.tiff,model_best.pth,1686,16384,10.2905
+22_Zacapu_Michoacan_bloque_135_x1088_y576.tiff,model_best.pth,3108,16384,18.9697
+22_Zacapu_Michoacan_bloque_136_x1152_y576.tiff,model_best.pth,3443,16384,21.0144
+22_Zacapu_Michoacan_bloque_143_x704_y640.tiff,model_best.pth,106,16384,0.647
+22_Zacapu_Michoacan_bloque_149_x1088_y640.tiff,model_best.pth,3073,16384,18.7561
+22_Zacapu_Michoacan_bloque_150_x1152_y640.tiff,model_best.pth,3527,16384,21.5271
+22_Zacapu_Michoacan_bloque_151_x1194_y640.tiff,model_best.pth,2584,16384,15.7715
+22_Zacapu_Michoacan_bloque_153_x512_y704.tiff,model_best.pth,11,16384,0.0671
+22_Zacapu_Michoacan_bloque_156_x704_y704.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_160_x960_y704.tiff,model_best.pth,738,16384,4.5044
+22_Zacapu_Michoacan_bloque_161_x1024_y704.tiff,model_best.pth,532,16384,3.2471
+22_Zacapu_Michoacan_bloque_167_x640_y768.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_16_x448_y64.tiff,model_best.pth,420,16384,2.5635
+22_Zacapu_Michoacan_bloque_172_x960_y768.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_17_x512_y64.tiff,model_best.pth,1329,16384,8.1116
+22_Zacapu_Michoacan_bloque_180_x640_y832.tiff,model_best.pth,45,16384,0.2747
+22_Zacapu_Michoacan_bloque_185_x960_y832.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_187_x1088_y832.tiff,model_best.pth,427,16384,2.6062
+22_Zacapu_Michoacan_bloque_188_x1152_y832.tiff,model_best.pth,382,16384,2.3315
+22_Zacapu_Michoacan_bloque_193_x320_y896.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_196_x512_y896.tiff,model_best.pth,13,16384,0.0793
+22_Zacapu_Michoacan_bloque_197_x576_y896.tiff,model_best.pth,10,16384,0.061
+22_Zacapu_Michoacan_bloque_199_x704_y896.tiff,model_best.pth,52,16384,0.3174
+22_Zacapu_Michoacan_bloque_200_x768_y896.tiff,model_best.pth,4,16384,0.0244
+22_Zacapu_Michoacan_bloque_205_x1088_y896.tiff,model_best.pth,144,16384,0.8789
+22_Zacapu_Michoacan_bloque_206_x1152_y896.tiff,model_best.pth,102,16384,0.6226
+22_Zacapu_Michoacan_bloque_207_x128_y960.tiff,model_best.pth,37,16384,0.2258
+22_Zacapu_Michoacan_bloque_208_x192_y960.tiff,model_best.pth,3,16384,0.0183
+22_Zacapu_Michoacan_bloque_20_x704_y64.tiff,model_best.pth,876,16384,5.3467
+22_Zacapu_Michoacan_bloque_213_x512_y960.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_217_x768_y960.tiff,model_best.pth,1,16384,0.0061
+22_Zacapu_Michoacan_bloque_21_x768_y64.tiff,model_best.pth,477,16384,2.9114
+22_Zacapu_Michoacan_bloque_221_x0_y1024.tiff,model_best.pth,19,16384,0.116
+22_Zacapu_Michoacan_bloque_230_x640_y1024.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_239_x320_y1088.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_246_x0_y1152.tiff,model_best.pth,29,16384,0.177
+22_Zacapu_Michoacan_bloque_25_x384_y128.tiff,model_best.pth,3,16384,0.0183
+22_Zacapu_Michoacan_bloque_265_x64_y1280.tiff,model_best.pth,6,16384,0.0366
+22_Zacapu_Michoacan_bloque_278_x320_y1344.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_280_x448_y1344.tiff,model_best.pth,13,16384,0.0793
+22_Zacapu_Michoacan_bloque_281_x512_y1344.tiff,model_best.pth,124,16384,0.7568
+22_Zacapu_Michoacan_bloque_286_x384_y1402.tiff,model_best.pth,0,16384,0.0
+22_Zacapu_Michoacan_bloque_288_x512_y1402.tiff,model_best.pth,286,16384,1.7456
+22_Zacapu_Michoacan_bloque_34_x320_y192.tiff,model_best.pth,286,16384,1.7456
+22_Zacapu_Michoacan_bloque_38_x576_y192.tiff,model_best.pth,4109,16384,25.0793
+22_Zacapu_Michoacan_bloque_42_x832_y192.tiff,model_best.pth,2350,16384,14.3433
+22_Zacapu_Michoacan_bloque_54_x832_y256.tiff,model_best.pth,2101,16384,12.8235
+22_Zacapu_Michoacan_bloque_60_x320_y320.tiff,model_best.pth,5652,16384,34.4971
+22_Zacapu_Michoacan_bloque_67_x768_y320.tiff,model_best.pth,1215,16384,7.4158
+22_Zacapu_Michoacan_bloque_73_x128_y384.tiff,model_best.pth,3005,16384,18.3411
+22_Zacapu_Michoacan_bloque_78_x448_y384.tiff,model_best.pth,8438,16384,51.5015
+22_Zacapu_Michoacan_bloque_79_x512_y384.tiff,model_best.pth,5584,16384,34.082
+22_Zacapu_Michoacan_bloque_8_x512_y0.tiff,model_best.pth,867,16384,5.2917
+22_Zacapu_Michoacan_bloque_99_x768_y448.tiff,model_best.pth,707,16384,4.3152
+23_Centla_Tabasco_bloque_2_x0_y38.tiff,model_best.pth,812,16384,4.9561
+23_Chihuahua_Madera_bloque_11_x1152_y832.tiff,model_best.pth,1997,16384,12.1887
+23_Chihuahua_Madera_bloque_12_x1216_y832.tiff,model_best.pth,840,16384,5.127
+23_Chihuahua_Madera_bloque_1_x1152_y704.tiff,model_best.pth,1382,16384,8.4351
+23_Chihuahua_Madera_bloque_27_x128_y1088.tiff,model_best.pth,333,16384,2.0325
+23_Chihuahua_Madera_bloque_31_x1152_y1088.tiff,model_best.pth,453,16384,2.7649
+23_Chihuahua_Madera_bloque_4_x1024_y768.tiff,model_best.pth,718,16384,4.3823
+23_Chihuahua_Madera_bloque_8_x1280_y768.tiff,model_best.pth,343,16384,2.0935
+23_Madera_Chihuahua_bloque_2_x320_y192.tiff,model_best.pth,683,16384,4.1687
+23_Nacori_Chico_Sonora_bloque_17_x0_y192.tiff,model_best.pth,2371,16384,14.4714
+23_Nacori_Chico_Sonora_bloque_1_x64_y0.tiff,model_best.pth,2871,16384,17.5232
+23_Nacori_Chico_Sonora_bloque_2_x128_y0.tiff,model_best.pth,3119,16384,19.0369
+23_Nacori_Chico_Sonora_bloque_3_x192_y0.tiff,model_best.pth,4870,16384,29.7241
+23_Nacori_Chico_Sonora_bloque_4_x256_y0.tiff,model_best.pth,3996,16384,24.3896
+23_Nayarit_Acaponeta_bloque_11_x896_y576.tiff,model_best.pth,280,16384,1.709
+23_Nayarit_Acaponeta_bloque_12_x768_y640.tiff,model_best.pth,396,16384,2.417
+23_Nayarit_Acaponeta_bloque_9_x768_y576.tiff,model_best.pth,1877,16384,11.4563
+24_Nayarit_Del_Nayar1_bloque_5_x704_y512.tiff,model_best.pth,7,16384,0.0427
+24_Nayarit_Del_Nayar2_bloque_0_x384_y320.tiff,model_best.pth,426,16384,2.6001
+24_Nayarit_Del_Nayar2_bloque_13_x192_y768.tiff,model_best.pth,599,16384,3.656
+24_Nayarit_Del_Nayar2_bloque_1_x448_y320.tiff,model_best.pth,478,16384,2.9175
+24_Nayarit_Del_Nayar2_bloque_8_x1024_y448.tiff,model_best.pth,423,16384,2.5818
+24_Ocosingo_Chiapas_bloque_10_x0_y192.tiff,model_best.pth,5427,16384,33.1238
+24_Ocosingo_Chiapas_bloque_16_x0_y256.tiff,model_best.pth,4840,16384,29.541
+24_Ocosingo_Chiapas_bloque_17_x64_y256.tiff,model_best.pth,6760,16384,41.2598
+24_Ocosingo_Chiapas_bloque_23_x64_y320.tiff,model_best.pth,3609,16384,22.0276
+24_Ocosingo_Chiapas_bloque_29_x64_y367.tiff,model_best.pth,2087,16384,12.738
+24_Ocosingo_Chiapas_bloque_30_x128_y367.tiff,model_best.pth,2564,16384,15.6494
+24_Ocosingo_Chiapas_bloque_5_x64_y128.tiff,model_best.pth,4268,16384,26.0498
+24_Ocosingo_Chiapas_bloque_6_x128_y128.tiff,model_best.pth,5273,16384,32.1838
+24_Ocosingo_Chiapas_bloque_7_x192_y128.tiff,model_best.pth,4455,16384,27.1912
+24_Yecora_Sonora2_bloque_3_x0_y43.tiff,model_best.pth,3063,16384,18.6951
+24_Yecora_Sonora3_bloque_1_x64_y0.tiff,model_best.pth,3687,16384,22.5037
+24_Yecora_Sonora3_bloque_3_x0_y64.tiff,model_best.pth,2291,16384,13.9832
+24_Yecora_Sonora3_bloque_6_x0_y70.tiff,model_best.pth,2037,16384,12.4329
+24_Yecora_Sonora3_bloque_8_x126_y70.tiff,model_best.pth,3444,16384,21.0205
+24_Yecora_Sonora_bloque_0_x0_y0.tiff,model_best.pth,1356,16384,8.2764
+24_Yecora_Sonora_bloque_18_x128_y256.tiff,model_best.pth,2976,16384,18.1641
+24_Yecora_Sonora_bloque_23_x151_y320.tiff,model_best.pth,1169,16384,7.135
+24_Yecora_Sonora_bloque_25_x64_y339.tiff,model_best.pth,2128,16384,12.9883
+24_Yecora_Sonora_bloque_27_x151_y339.tiff,model_best.pth,1028,16384,6.2744
+24_Yecora_Sonora_bloque_6_x128_y64.tiff,model_best.pth,5907,16384,36.0535
+24_Yecora_Sonora_bloque_7_x151_y64.tiff,model_best.pth,5020,16384,30.6396
+24_bloque_16_x0_y256.tiff,model_best.pth,4840,16384,29.541
+24_bloque_29_x64_y367.tiff,model_best.pth,2087,16384,12.738
+24_bloque_2_x128_y64.tiff,model_best.pth,3290,16384,20.0806
+24_bloque_31_x192_y367.tiff,model_best.pth,2634,16384,16.0767
+24_bloque_33_x279_y367.tiff,model_best.pth,1578,16384,9.6313
+24_bloque_4_x0_y128.tiff,model_best.pth,2588,16384,15.7959
+24_bloque_5_x64_y128.tiff,model_best.pth,4268,16384,26.0498
+25_24_Nonoava_bloque_16_x256_y192.tiff,model_best.pth,0,16384,0.0
+25_24_Nonoava_bloque_21_x0_y256.tiff,model_best.pth,158,16384,0.9644
+25_24_Nonoava_bloque_26_x512_y256.tiff,model_best.pth,13,16384,0.0793
+25_24_Nonoava_bloque_42_x576_y384.tiff,model_best.pth,146,16384,0.8911
+25_24_Nonoava_bloque_46_x832_y384.tiff,model_best.pth,0,16384,0.0
+25_24_Nonoava_bloque_53_x768_y448.tiff,model_best.pth,0,16384,0.0
+25_24_Nonoava_bloque_54_x832_y448.tiff,model_best.pth,0,16384,0.0
+25_24_Nonoava_bloque_59_x576_y512.tiff,model_best.pth,47,16384,0.2869
+25_24_Nonoava_bloque_60_x640_y512.tiff,model_best.pth,2,16384,0.0122
+25_24_Nonoava_bloque_64_x887_y512.tiff,model_best.pth,0,16384,0.0
+25_24_Nonoava_bloque_65_x384_y560.tiff,model_best.pth,3,16384,0.0183
+25_24_Nonoava_bloque_66_x448_y560.tiff,model_best.pth,8,16384,0.0488
+25_24_Nonoava_bloque_68_x576_y560.tiff,model_best.pth,29,16384,0.177
+26_Durango_Tepehuanes_bloque_10_x448_y448.tiff,model_best.pth,76,16384,0.4639
+26_Durango_Tepehuanes_bloque_8_x512_y384.tiff,model_best.pth,298,16384,1.8188
+26_Sonora_Agua_prieta_bloque_3_x576_y640.tiff,model_best.pth,433,16384,2.6428
+26_Sonora_Agua_prieta_bloque_5_x576_y689.tiff,model_best.pth,325,16384,1.9836
+28_Tecate_Baja California1_bloque_1_x64_y0.tiff,model_best.pth,3929,16384,23.9807
+28_Tecate_Baja California1_bloque_4_x0_y4.tiff,model_best.pth,3013,16384,18.3899
+28_Tecate_Baja_ California3_bloque_0_x0_y0.tiff,model_best.pth,2652,16384,16.1865
+28_Tecate_Baja_ California3_bloque_1_x39_y0.tiff,model_best.pth,2428,16384,14.8193
+28_Tecate_Baja_ California3_bloque_3_x39_y5.tiff,model_best.pth,2385,16384,14.5569
+29_Macuspana_Tabasco2_bloque_6_x128_y59.tiff,model_best.pth,2301,16384,14.0442
+5_Ensenada_BajaCalifornia_bloque_1_x1664_y448.tiff,model_best.pth,85,16384,0.5188
+5_Ensenada_BajaCalifornia_bloque_8_x768_y1472.tiff,model_best.pth,62,16384,0.3784
+9_Tepic_Nayarit_bloque_19_x1600_y1344.tiff,model_best.pth,646,16384,3.9429
+9_Tepic_Nayarit_bloque_23_x128_y1472.tiff,model_best.pth,1063,16384,6.488
+9_Tepic_Nayarit_bloque_2_x1600_y768.tiff,model_best.pth,226,16384,1.3794
