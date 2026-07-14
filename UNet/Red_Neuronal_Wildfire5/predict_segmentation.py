@@ -22,7 +22,7 @@ def check_gpu_availability():
     except RuntimeError:
         return False
 
-def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5, visualization=False):
+def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5, visualization=False, guardar_imagen=False):
     """
     Realizar predicción de incendios forestales
     
@@ -98,16 +98,12 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
     
     for b in range(min(bands, 4)):
         band_data = ds.GetRasterBand(b+1).ReadAsArray()
-        
-        # ✅ CORREGIDO: Normalización para UInt16
-        # Dividir por 12500 (como en el entrenamiento) en lugar de 65535
         band_data = band_data.astype(np.float32) / 12500.0
         band_data = np.clip(band_data, 0, 1)
         image[b, :, :] = band_data
     
     print(f"✓ Normalización completada (UInt16 → [0,1])")
     
-    # Configuración para procesamiento por patches
     patch_size = 128  # Tamaño de los patches (mismo que en entrenamiento)
     overlap = 32      # Superposición entre patches para suavizar bordes
     
@@ -196,6 +192,20 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
     print(f"Píxeles sin incendio: {total_pixels - fire_pixels:,} ({100-fire_percent:.2f}%)")
     print("="*60 + "\n")
     
+    nombre_imagen = os.path.basename(image_path)
+    nombre_modelo = os.path.basename(model_path)
+
+    # Línea que inferencias.py parsea para armar el CSV de resultados
+    print(f"CSV_RESULT|{nombre_imagen}|{nombre_modelo}|{fire_pixels}|{total_pixels}|{fire_percent:.4f}")
+
+    if not guardar_imagen:
+        print("[guardar_imagen=False] No se escribió ningún archivo de imagen.")
+        ds = None
+        print("\n" + "="*60)
+        print("PREDICCIÓN COMPLETADA")
+        print("="*60)
+        return
+
     # Determinar formato de salida por extensión
     output_ext = os.path.splitext(output_path)[1].lower()
     
@@ -277,7 +287,7 @@ def predict_image(model_path, image_path, output_path, gpu=False, threshold=0.5,
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predicción de Incendios Forestales')
-    parser.add_argument('--model', required=True, help='Ruta al modelo entrenado (.pth)')
+    parser.add_argument('--model', required=True, help='Ruta al modelo entrenado (.pth)', default="weights/model_final.pth")
     parser.add_argument('--image', required=True, help='Ruta a la imagen de entrada (TIFF 4 bandas)')
     parser.add_argument('--output', required=True, help='Ruta para guardar la predicción')
     parser.add_argument('--gpu', type=str, default="auto", 
@@ -286,6 +296,8 @@ if __name__ == '__main__':
                        help='Umbral de probabilidad para clasificar como incendio (0-1, default: 0.5)')
     parser.add_argument('--visualization', type=str, default="False",
                        help='Generar visualizaciones adicionales (mapa de probabilidades)')
+    parser.add_argument('--guardar_imagen', type=str, default="False",
+                       help='Guardar la imagen de predicción en disco (True/False, default: False)')
     
     args = parser.parse_args()
     
@@ -295,5 +307,6 @@ if __name__ == '__main__':
         args.output, 
         args.gpu,
         args.threshold,
-        args.visualization.lower() == "true"
+        args.visualization.lower() == "true",
+        args.guardar_imagen.lower() == "true"
     )

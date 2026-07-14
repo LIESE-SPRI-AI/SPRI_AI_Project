@@ -1,17 +1,43 @@
 import os
+import csv
 import shutil
 import random
 from pathlib import Path
 
-DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/twentyPercent" 
+DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Datasets_generados/Dataset_csv" 
 DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
 DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+
+# Ruta al CSV generado por el script de creación del dataset (columna 'bloque' y 'pixeles_incendio')
+RUTA_CSV_PIXELES = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/data/pixeles_incendio.csv"
+
+
+def cargar_conteo_pixeles(ruta_csv):
+    """
+    Lee el CSV de conteo de píxeles de incendio y regresa un diccionario
+    { nombre_bloque_sin_extension: pixeles_incendio }
+    """
+    conteo = {}
+    if not os.path.exists(ruta_csv):
+        print(f"⚠ No se encontró el CSV de píxeles en: {ruta_csv}")
+        print(f"  Los archivos train_incendios.txt/valid_incendios.txt tendrán 0 para todos los bloques.")
+        return conteo
+
+    with open(ruta_csv, "r", newline="", encoding="utf-8") as f:
+        lector = csv.DictReader(f)
+        for fila in lector:
+            conteo[fila["bloque"]] = int(fila["pixeles_incendio"])
+
+    print(f"✓ Conteo de píxeles cargado: {len(conteo)} bloques registrados en el CSV")
+    return conteo
+
 
 def procesar_dataset(
     dir_entrada,
     dir_salida_base,
     dir_txts,
-    porcentaje_entrenamiento=0.8
+    porcentaje_entrenamiento=0.8,
+    ruta_csv_pixeles=RUTA_CSV_PIXELES
 ):
     """
     Procesa el dataset según las especificaciones dadas.
@@ -21,7 +47,11 @@ def procesar_dataset(
         dir_salida_base: Directorio base de salida donde se crearán las carpetas
         dir_txts: Directorio donde se guardarán los archivos txt
         porcentaje_entrenamiento: Porcentaje de archivos para entrenamiento (default: 0.8)
+        ruta_csv_pixeles: Ruta al CSV con el conteo de píxeles de incendio por bloque
     """
+    
+    # Cargar el conteo de píxeles de incendio por bloque
+    conteo_pixeles = cargar_conteo_pixeles(ruta_csv_pixeles)
     
     # Definir rutas de entrada
     dir_true = Path(dir_entrada) / "True"
@@ -85,52 +115,65 @@ def procesar_dataset(
     print(f"✓ {len(entrenamiento)} archivos para entrenamiento ({porcentaje_entrenamiento*100:.0f}%)")
     print(f"✓ {len(validacion)} archivos para validación ({(1-porcentaje_entrenamiento)*100:.0f}%)")
     
-    # Procesar archivos de entrenamiento
-    nombres_entrenamiento = []
-    for archivo_true, archivo_mask in entrenamiento:
-        # Copiar archivo True
-        shutil.copy2(
-            dir_true / archivo_true,
-            dir_imagenes / archivo_true
-        )
+    bloques_sin_conteo = []
+
+    def procesar_grupo(grupo):
+        """Copia archivos y arma la lista (nombre_sin_ext, pixeles_incendio) para un grupo"""
+        registros = []
+        for archivo_true, archivo_mask in grupo:
+            # Copiar archivo True
+            shutil.copy2(
+                dir_true / archivo_true,
+                dir_imagenes / archivo_true
+            )
+            
+            # Copiar archivo Mask
+            shutil.copy2(
+                dir_mask / archivo_mask,
+                dir_segmentacion / archivo_mask
+            )
+            
+            # Nombre sin extensión (corregido: antes duplicaba ".tiff")
+            nombre_sin_ext = Path(archivo_true).stem
+            
+            pixeles = conteo_pixeles.get(nombre_sin_ext)
+            if pixeles is None:
+                bloques_sin_conteo.append(nombre_sin_ext)
+                pixeles = 0
+            
+            registros.append((nombre_sin_ext, pixeles))
         
-        # Copiar archivo Mask
-        shutil.copy2(
-            dir_mask / archivo_mask,
-            dir_segmentacion / archivo_mask
-        )
-        
-        # Guardar nombre sin extensión
-        nombre_sin_ext = Path(archivo_true + ".tiff").stem
-        nombres_entrenamiento.append(nombre_sin_ext)
+        return registros
     
-    # Procesar archivos de validación
-    nombres_validacion = []
-    for archivo_true, archivo_mask in validacion:
-        # Copiar archivo True
-        shutil.copy2(
-            dir_true / archivo_true,
-            dir_imagenes / archivo_true
-        )
-        
-        # Copiar archivo Mask
-        shutil.copy2(
-            dir_mask / archivo_mask,
-            dir_segmentacion / archivo_mask
-        )
-        
-        # Guardar nombre sin extensión
-        nombre_sin_ext = Path(archivo_true + ".tiff").stem
-        nombres_validacion.append(nombre_sin_ext)
+    # Procesar archivos de entrenamiento y validación
+    registros_entrenamiento = procesar_grupo(entrenamiento)
+    registros_validacion = procesar_grupo(validacion)
     
-    # Escribir archivos txt
+    # Ordenar por nombre para que train.txt / train_incendios.txt queden alineados línea a línea
+    registros_entrenamiento.sort(key=lambda t: t[0])
+    registros_validacion.sort(key=lambda t: t[0])
+    
+    if bloques_sin_conteo:
+        print(f"\n⚠ {len(bloques_sin_conteo)} bloques no se encontraron en el CSV de píxeles "
+              f"(se les asignó 0). Ejemplos: {bloques_sin_conteo[:5]}")
+    
+    # Escribir archivos txt de nombres
     with open(dir_txts_completo / "train.txt", "w") as f:
-        for nombre in sorted(nombres_entrenamiento):
+        for nombre, _ in registros_entrenamiento:
             f.write(f"{nombre}\n")
     
     with open(dir_txts_completo / "valid.txt", "w") as f:
-        for nombre in sorted(nombres_validacion):
+        for nombre, _ in registros_validacion:
             f.write(f"{nombre}\n")
+    
+    # Escribir archivos txt del conteo de píxeles de incendio: "nombre_bloque pixeles_incendio"
+    with open(dir_txts_completo / "train_incendios.txt", "w") as f:
+        for nombre, pixeles in registros_entrenamiento:
+            f.write(f"{nombre} {pixeles}\n")
+    
+    with open(dir_txts_completo / "valid_incendios.txt", "w") as f:
+        for nombre, pixeles in registros_validacion:
+            f.write(f"{nombre} {pixeles}\n")
     
     # Resumen final
     print("\n" + "="*50)
@@ -140,8 +183,11 @@ def procesar_dataset(
     print(f"  - Imágenes: {dir_imagenes}")
     print(f"  - Segmentación: {dir_segmentacion}")
     print(f"\n✓ Archivos de división creados en:")
-    print(f"  - Entrenamiento: {dir_txts_completo / 'train.txt'} ({len(nombres_entrenamiento)} archivos)")
-    print(f"  - Validación: {dir_txts_completo / 'valid.txt'} ({len(nombres_validacion)} archivos)")
+    print(f"  - Entrenamiento: {dir_txts_completo / 'train.txt'} ({len(registros_entrenamiento)} archivos)")
+    print(f"  - Validación: {dir_txts_completo / 'valid.txt'} ({len(registros_validacion)} archivos)")
+    print(f"\n✓ Conteo de píxeles de incendio creado en:")
+    print(f"  - Entrenamiento: {dir_txts_completo / 'train_incendios.txt'}")
+    print(f"  - Validación: {dir_txts_completo / 'valid_incendios.txt'}")
     print("="*50)
 
 if __name__ == "__main__":
@@ -153,7 +199,8 @@ if __name__ == "__main__":
             dir_entrada=DIRECTORIO_ENTRADA,
             dir_salida_base=DIRECTORIO_SALIDA_BASE,
             dir_txts=DIRECTORIO_TXTS,
-            porcentaje_entrenamiento=0.8
+            porcentaje_entrenamiento=0.8,
+            ruta_csv_pixeles=RUTA_CSV_PIXELES
         )
     except Exception as e:
         print(f"❌ Error durante el procesamiento: {e}")
@@ -161,3 +208,4 @@ if __name__ == "__main__":
         print("1. Las rutas especificadas sean correctas")
         print("2. La carpeta de entrada contenga las subcarpetas 'True' y 'Mask'")
         print("3. Ambos directorios tengan los mismos archivos (mismos nombres)")
+        print("4. El CSV de píxeles de incendio exista y tenga las columnas 'bloque' y 'pixeles_incendio'")
