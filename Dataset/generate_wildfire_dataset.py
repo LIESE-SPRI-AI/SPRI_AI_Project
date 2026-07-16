@@ -11,12 +11,12 @@ import time
 import gc
 
 # Configuración de rutas
-input_directory = "/home/liese2/SPRI_AI_project/Dataset/Raw" 
+input_directory = "/home/felix/SPRI_AI_Project/Dataset/Raw" 
 output_directory = input_directory
 temp_directory = input_directory
 
-output_dir_img = "/home/liese2/SPRI_AI_project/Dataset/FivePercent/True"
-output_dir_mask = "/home/liese2/SPRI_AI_project/Dataset/FivePercent/Mask"
+output_dir_img = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5/True"
+output_dir_mask = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5/Mask"
 
 # Configuración
 target_min = 0
@@ -24,7 +24,7 @@ target_max = (2 ** 16) - 1
 new_data_type = "UInt16"
 final_format = "GTiff"
 
-UMBRAL_PORCENTAJE_ROJO = 0.05
+UMBRAL_PORCENTAJE_ROJO = 0.035
 TAMANO_BLOQUE = 128
 OVERLAP = 64
 

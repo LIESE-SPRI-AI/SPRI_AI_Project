@@ -3,9 +3,9 @@ import shutil
 import random
 from pathlib import Path
 
-DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/twentyPercent" 
-DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
-DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+DIRECTORIO_ENTRADA = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5" 
+DIRECTORIO_SALIDA_BASE = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
+DIRECTORIO_TXTS = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
 
 def procesar_dataset(
     dir_entrada,
