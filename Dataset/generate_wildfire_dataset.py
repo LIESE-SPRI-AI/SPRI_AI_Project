@@ -11,12 +11,17 @@ import time
 import gc
 
 # Configuración de rutas
-input_directory = "/home/liese2/SPRI_AI_project/Dataset/Raw" 
+input_directory = "/home/felix/SPRI_AI_Project/Dataset/Raw" 
 output_directory = input_directory
 temp_directory = input_directory
 
+<<<<<<< HEAD
 output_dir_img = "/home/liese2/SPRI_AI_project/Dataset/Datasets_generados/Dataset_csv/True"
 output_dir_mask = "/home/liese2/SPRI_AI_project/Dataset/Datasets_generados/Dataset_csv/Mask"
+=======
+output_dir_img = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5/True"
+output_dir_mask = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5/Mask"
+>>>>>>> release/1.0.2
 
 # Configuración
 target_min = 0
