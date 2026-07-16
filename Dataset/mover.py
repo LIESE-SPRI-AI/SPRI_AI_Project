@@ -4,9 +4,15 @@ import shutil
 import random
 from pathlib import Path
 
+<<<<<<< HEAD
 DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Datasets_generados/Dataset_csv" 
 DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
 DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+=======
+DIRECTORIO_ENTRADA = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5" 
+DIRECTORIO_SALIDA_BASE = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
+DIRECTORIO_TXTS = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
+>>>>>>> release/1.0.2
 
 # Ruta al CSV generado por el script de creación del dataset (columna 'bloque' y 'pixeles_incendio')
 RUTA_CSV_PIXELES = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/data/pixeles_incendio.csv"
