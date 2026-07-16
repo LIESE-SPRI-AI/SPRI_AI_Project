@@ -4,33 +4,9 @@ import shutil
 import random
 from pathlib import Path
 
-DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Datasets_generados/Dataset_csv" 
-DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
-DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
-
-# Ruta al CSV generado por el script de creación del dataset (columna 'bloque' y 'pixeles_incendio')
-RUTA_CSV_PIXELES = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/data/pixeles_incendio.csv"
-
-
-def cargar_conteo_pixeles(ruta_csv):
-    """
-    Lee el CSV de conteo de píxeles de incendio y regresa un diccionario
-    { nombre_bloque_sin_extension: pixeles_incendio }
-    """
-    conteo = {}
-    if not os.path.exists(ruta_csv):
-        print(f"⚠ No se encontró el CSV de píxeles en: {ruta_csv}")
-        print(f"  Los archivos train_incendios.txt/valid_incendios.txt tendrán 0 para todos los bloques.")
-        return conteo
-
-    with open(ruta_csv, "r", newline="", encoding="utf-8") as f:
-        lector = csv.DictReader(f)
-        for fila in lector:
-            conteo[fila["bloque"]] = int(fila["pixeles_incendio"])
-
-    print(f"✓ Conteo de píxeles cargado: {len(conteo)} bloques registrados en el CSV")
-    return conteo
-
+DIRECTORIO_ENTRADA = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5" 
+DIRECTORIO_SALIDA_BASE = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
+DIRECTORIO_TXTS = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
 
 def procesar_dataset(
     dir_entrada,
