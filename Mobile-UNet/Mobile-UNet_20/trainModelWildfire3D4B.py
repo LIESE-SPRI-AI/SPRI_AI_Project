@@ -24,7 +24,7 @@ if not BASE_DIR:
     exit(0)
 
 parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
-DATA_PATH = os.path.join(BASE_DIR, "Mobile-UNet/Mobile-UNet_19/data")
+DATA_PATH = os.path.join(BASE_DIR, "Mobile-UNet/Mobile-UNet_1/data")
 print(f"Ruta de datos: {DATA_PATH}")
 
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
