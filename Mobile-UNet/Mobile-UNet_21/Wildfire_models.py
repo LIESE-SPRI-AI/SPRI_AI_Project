@@ -137,7 +137,7 @@ class UNet2D(nn.Module):
         self.upconv5 = QATConvTranspose2d(16, out_channels, kernel_size=4, stride=2, padding=1)
 
     def forward(self, x):
-        # Encoder
+        # encoder
         x = self.stem(x)
         x1 = self.d1(x)
         x2 = self.d2(x1)
@@ -145,16 +145,17 @@ class UNet2D(nn.Module):
         x4 = self.d4b(self.d4a(x3))
         x5 = self.d5b(self.d5a(x4))
 
+        # decoder con skip connections
         l1 = self._match_and_cat(self.upconv1_quant(self.upconv1(x5)), x4)
-        l2 = self.ir1(l1)
+        l2 = self.ir1(l1) # 16x16x96
         l3 = self._match_and_cat(self.upconv2_quant(self.upconv2(l2)), x3)
-        l4 = self.ir2(l3)
+        l4 = self.ir2(l3) # 32x32x32
         l5 = self._match_and_cat(self.upconv3_quant(self.upconv3(l4)), x2)
-        l6 = self.ir3(l5)
+        l6 = self.ir3(l5) # 64x64x24
         l7 = self._match_and_cat(self.upconv4_quant(self.upconv4(l6)), x1)
-        l8 = self.ir4(l7)
+        l8 = self.ir4(l7) # 128x128x16
 
-        out = self.upconv5(l8)
+        out = self.upconv5(l8) # 256x256x2
 
         return out
     
