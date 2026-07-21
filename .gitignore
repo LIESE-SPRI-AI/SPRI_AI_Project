@@ -29,3 +29,5 @@ Crop_folders/
 *.onnx.data
 *.onnx
 Datasets_generados/
+*.tif
+*.tiff
