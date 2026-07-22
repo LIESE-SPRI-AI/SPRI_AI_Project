@@ -3,7 +3,6 @@
 import argparse
 import os
 import tempfile
-import shutil
 import time
 import numpy as np
 import torch
@@ -17,19 +16,16 @@ from PIL import Image
 import requests
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 BASE_DIR = os.getenv("BASE_DIR")
 if not BASE_DIR:
     print("Warning: BASE_DIR is not set in the environment.")
+    exit(0)
 
-# Configuración
 parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
-# Ruta fija al dataset
-DATA_PATH = os.path.join(BASE_DIR, "Mobile-UNet/Mobile-UNet_1/data")
+DATA_PATH = os.path.join(BASE_DIR, "Mobile-UNet/Mobile-UNet_19/data")
 print(f"Ruta de datos: {DATA_PATH}")
-exit(0)
 
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
 parser.add_argument('-b', '--batch-size', default=4, type=int, help='mini-batch size')
@@ -42,19 +38,16 @@ parser.add_argument('--checkpoint-freq', default=5, type=int, help='guardar chec
 best_iou = 0
 
 def check_gpu_availability():
-    """Verificar si CUDA está disponible y funcionando correctamente"""
     print(f"PyTorch version: {torch.__version__}")
     
     if not torch.cuda.is_available():
-        print("⚠ CUDA no está disponible en este sistema")
+        print("CUDA no está disponible en este sistema")
         return False
     
     try:
-        # Imprimir info sin causar error
         print(f"CUDA disponible: Sí")
         print(f"CUDA Version (PyTorch): {torch.version.cuda}")
         
-        # Verificar si realmente podemos usar CUDA
         device_count = torch.cuda.device_count()
         print(f"Número de GPUs disponibles: {device_count}")
         
@@ -75,21 +68,23 @@ def check_gpu_availability():
                 print("⚠ Posible problema de compatibilidad CUDA/drivers")
                 return False
         else:
-            print("⚠ No se detectaron GPUs")
+            print("No se detectaron GPUs")
             return False
             
     except Exception as e:
-        print(f"⚠ Error inesperado: {e}")
+        print(f"Error inesperado: {e}")
         return False
 
 def custom_collate_fn(batch):
     return batch
 
 class SegmentationDataset(Dataset):
-    def __init__(self, images_dir, masks_dir, image_list, target_size=128):
+    def __init__(self, images_dir, masks_dir, image_list, target_size=128, augment = False):
         self.images_dir = images_dir
         self.masks_dir = masks_dir
         self.target_size = target_size
+        self.augment = augment
+        self.augmentation = Augmentation() if augment else None
 
         with open(image_list, 'r') as f:
             self.images = [line.strip() for line in f if line.strip()]
@@ -121,6 +116,8 @@ class SegmentationDataset(Dataset):
         try:
             img = self.load_and_resize_image(img_path, self.target_size)
             mask = self.load_and_resize_mask(mask_path, self.target_size)
+            if self.augment:
+                img, mask = self.augmentation(img, mask)
             return img, mask
         except Exception as e:
             print(f"Error cargando {img_name}: {e}")
@@ -251,7 +248,6 @@ def check_class_balance(dataset, name="Dataset"):
         print(f"{name} - No se pudieron contar píxeles")
 
 def process_batch_train(model, batch, criterion, device, optimizer):
-    """Procesar un batch para entrenamiento"""
     batch_loss = 0
     batch_iou = 0
     n_samples = 0
@@ -285,8 +281,7 @@ def process_batch_train(model, batch, criterion, device, optimizer):
     return batch_loss / n_samples, batch_iou / n_samples if n_samples > 0 else 0
 
 def process_batch_validate(model, batch, device):
-    """Procesar un batch para validación"""
-    batch_iou = 0
+    batch_iou = 1
     n_samples = 0
     
     for i, (input, target) in enumerate(batch):
@@ -375,6 +370,34 @@ def enviar_notificacion(mensaje):
     except Exception as e:
         print(f"No me la hagas jochis: {e}")
 
+class Augmentation:
+    def __init__(self, p_flip = 0.5, p_rotate = 0.5, p_bright = 0.3, p_noise = 0.2, bright_range = 0.15, noise_std = 0.02):
+        self.p_flip = p_flip
+        self.p_rotate = p_rotate
+        self.p_bright = p_bright
+        self.p_noise = p_noise
+        self.bright_range = bright_range
+        self.noise_std = noise_std
+
+    def __call__(self, image, mask):
+        if torch.rand(1).item() < self.p_flip:
+            image = torch.flip(image, dims=[2])
+            mask = torch.flip(mask, dims=[1])
+        if torch.rand(1).item() < self.p_flip:
+            image = torch.flip(image, dims=[1])
+            mask = torch.flip(mask, dims=[0])
+        if torch.rand(1).item() < self.p_rotate:
+            k = torch.randint(1, 4, (1,)).item()
+            image = torch.rot90(image, k, dims=[1, 2])
+            mask = torch.rot90(mask, k, dims=[0, 1])
+        if torch.rand(1).item() < self.p_bright:
+            factor = 1.0 + (torch.rand(image.shape[0], 1, 1) * 2 - 1) * self.bright_range
+            image = torch.clamp(image * factor, 0.0, 1.0)
+        if torch.rand(1).item() < self.p_noise:
+            noise = torch.randn_like(image) * self.noise_std
+            image = torch.clamp(image + noise, 0.0, 1.0)
+        return image.contiguous(), mask.contiguous()
+
 def main():
     global best_iou
     args = parser.parse_args()
@@ -435,8 +458,8 @@ def main():
         else:
             print(f"✓ {name}: {path}")
     
-    train_dataset = SegmentationDataset(images_dir, masks_dir, train_list, args.image_size)
-    val_dataset = SegmentationDataset(images_dir, masks_dir, val_list, args.image_size)
+    train_dataset = SegmentationDataset(images_dir, masks_dir, train_list, args.image_size, augment=True)
+    val_dataset = SegmentationDataset(images_dir, masks_dir, val_list, args.image_size, augment=False)
     
     print(f"\nImágenes de entrenamiento: {len(train_dataset)}")
     print(f"Imágenes de validación: {len(val_dataset)}")

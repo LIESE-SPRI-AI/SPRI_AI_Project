@@ -3,7 +3,6 @@
 import argparse
 import os
 import tempfile
-import shutil
 import time
 import numpy as np
 import torch
@@ -17,19 +16,16 @@ from PIL import Image
 import requests
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 BASE_DIR = os.getenv("BASE_DIR")
 if not BASE_DIR:
     print("Warning: BASE_DIR is not set in the environment.")
+    exit(0)
 
-# Configuración
 parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
-# Ruta fija al dataset
 DATA_PATH = os.path.join(BASE_DIR, "Mobile-UNet/Mobile-UNet_1/data")
 print(f"Ruta de datos: {DATA_PATH}")
-exit(0)
 
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
 parser.add_argument('-b', '--batch-size', default=4, type=int, help='mini-batch size')
@@ -42,19 +38,16 @@ parser.add_argument('--checkpoint-freq', default=5, type=int, help='guardar chec
 best_iou = 0
 
 def check_gpu_availability():
-    """Verificar si CUDA está disponible y funcionando correctamente"""
     print(f"PyTorch version: {torch.__version__}")
     
     if not torch.cuda.is_available():
-        print("⚠ CUDA no está disponible en este sistema")
+        print("CUDA no está disponible en este sistema")
         return False
     
     try:
-        # Imprimir info sin causar error
         print(f"CUDA disponible: Sí")
         print(f"CUDA Version (PyTorch): {torch.version.cuda}")
         
-        # Verificar si realmente podemos usar CUDA
         device_count = torch.cuda.device_count()
         print(f"Número de GPUs disponibles: {device_count}")
         
@@ -75,11 +68,11 @@ def check_gpu_availability():
                 print("⚠ Posible problema de compatibilidad CUDA/drivers")
                 return False
         else:
-            print("⚠ No se detectaron GPUs")
+            print("No se detectaron GPUs")
             return False
             
     except Exception as e:
-        print(f"⚠ Error inesperado: {e}")
+        print(f"Error inesperado: {e}")
         return False
 
 def custom_collate_fn(batch):
