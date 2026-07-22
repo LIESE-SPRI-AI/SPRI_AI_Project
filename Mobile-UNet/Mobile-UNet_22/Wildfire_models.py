@@ -102,7 +102,7 @@ class UNet2D(nn.Module):
             nn.BatchNorm2d(32),
             nn.ReLU6(inplace=True),
             FakeQuantAct(int_bits=3, frac_bits=4, signed=False)
-        )
+        ) #32 64 64
         #enconder de chava
         self.d1 = make_stage(32, 16, expand_ratio=1, n=1, stride=1) # 16 64 64
         self.d2 = make_stage(16, 24, expand_ratio=6, n=2, stride=2) # 24 32 32
