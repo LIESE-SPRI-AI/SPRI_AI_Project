@@ -1,0 +1,16 @@
+<map id="chec_quant.main" name="chec_quant.main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,139,80"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="36,56,28,46,32,36,47,30,72,28,103,32,115,41,112,45,101,37,72,33,48,35,36,40,33,46,40,53"/>
+<area shape="rect" id="Node000002" href="$namespacechec__quant.html#ae3abb98663fb6a87809733f0fd8b5897" title=" " alt="" coords="207,5,383,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="129,52,223,31,224,36,131,57"/>
+<area shape="rect" id="Node000003" href="$namespacechec__quant.html#a7cc1f7cefb3b9ed38926ab44dbf2db82" title=" " alt="" coords="187,104,403,129"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="131,77,224,98,223,104,129,83"/>
+<area shape="rect" id="Node000006" href="$namespacechec__quant.html#a02da5aca47722bef1722330659016c3a" title=" " alt="" coords="197,55,392,80"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="139,65,184,65,184,70,139,70"/>
+<area shape="rect" id="Node000004" href="$namespacechec__quant.html#a2315c0cc904a09b87262b3829e822e37" title=" " alt="" coords="451,55,644,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="360,101,467,80,468,85,361,107"/>
+<area shape="rect" id="Node000005" href="$namespacechec__quant.html#aad504512b55520131f7df68c1a981586" title=" " alt="" coords="470,104,625,129"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="403,114,456,114,456,119,403,119"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="392,65,437,65,437,70,392,70"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="361,77,468,99,467,104,360,83"/>
+</map>

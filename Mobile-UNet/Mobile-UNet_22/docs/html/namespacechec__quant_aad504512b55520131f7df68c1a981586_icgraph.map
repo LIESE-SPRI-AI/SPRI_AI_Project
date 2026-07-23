@@ -1,0 +1,11 @@
+<map id="chec_quant.scale_of" name="chec_quant.scale_of">
+<area shape="rect" id="Node000001" title=" " alt="" coords="451,31,605,56"/>
+<area shape="rect" id="Node000002" href="$namespacechec__quant.html#a7cc1f7cefb3b9ed38926ab44dbf2db82" title=" " alt="" coords="187,5,403,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,36,403,32,403,27,437,31"/>
+<area shape="rect" id="Node000004" href="$namespacechec__quant.html#a02da5aca47722bef1722330659016c3a" title=" " alt="" coords="197,55,392,80"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="437,55,393,60,392,55,437,50"/>
+<area shape="rect" id="Node000003" href="$namespacechec__quant.html#a5a6cef1cbeedf984165782656cc7f402" title=" " alt="" coords="5,31,139,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,34,139,38,139,33,173,29"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="112,21,101,13,72,9,48,11,36,16,33,22,40,29,36,32,28,22,32,12,47,6,72,4,103,8,115,17"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="183,58,138,53,139,48,184,53"/>
+</map>

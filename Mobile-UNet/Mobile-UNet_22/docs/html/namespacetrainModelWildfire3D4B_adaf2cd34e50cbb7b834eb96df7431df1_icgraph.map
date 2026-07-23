@@ -1,0 +1,15 @@
+<map id="trainModelWildfire3D4B.calculate_iou" name="trainModelWildfire3D4B.calculate_iou">
+<area shape="rect" id="Node000001" title=" " alt="" coords="829,45,1096,70"/>
+<area shape="rect" id="Node000002" href="$namespacetrainModelWildfire3D4B.html#a942492e483ba8e15d7d8ede54ed5e1b7" title=" " alt="" coords="551,5,781,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="831,46,781,40,782,35,832,41"/>
+<area shape="rect" id="Node000005" href="$namespacetrainModelWildfire3D4B.html#af665a40f86af88d9547bfa42f6242d3c" title=" " alt="" coords="551,69,781,109"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="832,74,782,80,781,74,831,69"/>
+<area shape="rect" id="Node000003" href="$namespacetrainModelWildfire3D4B.html#a3223aa63f84575638c008501bc161b31" title=" " alt="" coords="280,17,491,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="537,30,491,31,491,25,537,25"/>
+<area shape="rect" id="Node000004" href="$namespacetrainModelWildfire3D4B.html#aa9cd5a20a6d687600dc33da76770f8d6" title=" " alt="" coords="5,46,220,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,45,220,50,220,44,266,39"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="161,37,159,32,150,29,113,25,83,27,68,32,65,37,73,44,69,48,59,38,64,28,82,21,113,19,152,23,162,28,166,34"/>
+<area shape="rect" id="Node000006" href="$namespacetrainModelWildfire3D4B.html#ae51f5ead9ab03d3dc81fc3a68a62a786" title=" " alt="" coords="268,70,503,95"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="537,89,503,88,503,83,537,84"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="254,74,220,71,220,65,255,68"/>
+</map>
