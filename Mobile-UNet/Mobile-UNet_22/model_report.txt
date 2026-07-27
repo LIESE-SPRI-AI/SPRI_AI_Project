@@ -1,0 +1,667 @@
+UNet2D(
+  (input_quant): FakeQuantAct()
+  (stem): Sequential(
+    (0): QATConv2d(4, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU6(inplace=True)
+    (3): FakeQuantAct()
+  )
+  (d1): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+        (5): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (d2): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(16, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(96, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=96, bias=False)
+        (5): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (1): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(144, 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False)
+        (5): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(144, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (d3): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(144, 144, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=144, bias=False)
+        (5): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(144, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (1): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+        (5): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (2): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+        (5): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (d4a): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False)
+        (5): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (1): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+        (5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (2): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+        (5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (3): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+        (5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (d4b): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+        (5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(384, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (1): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (5): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (2): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (5): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (d5a): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(576, 576, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=576, bias=False)
+        (5): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(576, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (1): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
+        (5): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+    (2): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
+        (5): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (d5b): Sequential(
+    (0): InvertedResidual(
+      (block): Sequential(
+        (0): QATConv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU6(inplace=True)
+        (3): FakeQuantAct()
+        (4): QATConv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
+        (5): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): ReLU6(inplace=True)
+        (7): FakeQuantAct()
+        (8): QATConv2d(960, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (9): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (10): FakeQuantAct()
+      )
+    )
+  )
+  (c1): Sequential(
+    (0): QATConv2d(320, 1280, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU6(inplace=True)
+    (3): FakeQuantAct()
+  )
+  (upconv1): QATConvTranspose2d(1280, 96, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (upconv1_quant): FakeQuantAct()
+  (ir1): InvertedResidual(
+    (block): Sequential(
+      (0): QATConv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): FakeQuantAct()
+      (4): QATConv2d(1152, 1152, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1152, bias=False)
+      (5): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (6): ReLU6(inplace=True)
+      (7): FakeQuantAct()
+      (8): QATConv2d(1152, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (9): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (10): FakeQuantAct()
+    )
+  )
+  (upconv2): QATConvTranspose2d(96, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (upconv2_quant): FakeQuantAct()
+  (ir2): InvertedResidual(
+    (block): Sequential(
+      (0): QATConv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): FakeQuantAct()
+      (4): QATConv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (6): ReLU6(inplace=True)
+      (7): FakeQuantAct()
+      (8): QATConv2d(384, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (9): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (10): FakeQuantAct()
+    )
+  )
+  (upconv3): QATConvTranspose2d(32, 24, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (upconv3_quant): FakeQuantAct()
+  (ir3): InvertedResidual(
+    (block): Sequential(
+      (0): QATConv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): FakeQuantAct()
+      (4): QATConv2d(288, 288, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=288, bias=False)
+      (5): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (6): ReLU6(inplace=True)
+      (7): FakeQuantAct()
+      (8): QATConv2d(288, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (9): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (10): FakeQuantAct()
+    )
+  )
+  (upconv4): QATConvTranspose2d(24, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (upconv4_quant): FakeQuantAct()
+  (ir4): InvertedResidual(
+    (block): Sequential(
+      (0): QATConv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): FakeQuantAct()
+      (4): QATConv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+      (5): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (6): ReLU6(inplace=True)
+      (7): FakeQuantAct()
+      (8): QATConv2d(192, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (9): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (10): FakeQuantAct()
+    )
+  )
+  (upconv5): QATConvTranspose2d(16, 2, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+)
+============================================================================================================================================
+Layer (type (var_name))                  Input Shape          Output Shape         Param #              Param %              Trainable
+============================================================================================================================================
+UNet2D (UNet2D)                          [1, 4, 128, 128]     [1, 2, 128, 128]     --                        --              True
+├─Sequential (stem)                      [1, 4, 128, 128]     [1, 32, 64, 64]      --                        --              True
+│    └─QATConv2d (0)                     [1, 4, 128, 128]     [1, 32, 64, 64]      1,152                  0.02%              True
+│    └─BatchNorm2d (1)                   [1, 32, 64, 64]      [1, 32, 64, 64]      64                     0.00%              True
+│    └─ReLU6 (2)                         [1, 32, 64, 64]      [1, 32, 64, 64]      --                        --              --
+│    └─FakeQuantAct (3)                  [1, 32, 64, 64]      [1, 32, 64, 64]      --                        --              --
+├─Sequential (d1)                        [1, 32, 64, 64]      [1, 16, 64, 64]      --                        --              True
+│    └─InvertedResidual (0)              [1, 32, 64, 64]      [1, 16, 64, 64]      --                        --              True
+│    │    └─Sequential (block)           [1, 32, 64, 64]      [1, 16, 64, 64]      --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 32, 64, 64]      [1, 32, 64, 64]      1,024                  0.02%              True
+│    │    │    └─BatchNorm2d (1)         [1, 32, 64, 64]      [1, 32, 64, 64]      64                     0.00%              True
+│    │    │    └─ReLU6 (2)               [1, 32, 64, 64]      [1, 32, 64, 64]      --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 32, 64, 64]      [1, 32, 64, 64]      --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 32, 64, 64]      [1, 32, 64, 64]      288                    0.01%              True
+│    │    │    └─BatchNorm2d (5)         [1, 32, 64, 64]      [1, 32, 64, 64]      64                     0.00%              True
+│    │    │    └─ReLU6 (6)               [1, 32, 64, 64]      [1, 32, 64, 64]      --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 32, 64, 64]      [1, 32, 64, 64]      --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 32, 64, 64]      [1, 16, 64, 64]      512                    0.01%              True
+│    │    │    └─BatchNorm2d (9)         [1, 16, 64, 64]      [1, 16, 64, 64]      32                     0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 16, 64, 64]      [1, 16, 64, 64]      --                        --              --
+├─Sequential (d2)                        [1, 16, 64, 64]      [1, 24, 32, 32]      --                        --              True
+│    └─InvertedResidual (0)              [1, 16, 64, 64]      [1, 24, 32, 32]      --                        --              True
+│    │    └─Sequential (block)           [1, 16, 64, 64]      [1, 24, 32, 32]      --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 16, 64, 64]      [1, 96, 64, 64]      1,536                  0.03%              True
+│    │    │    └─BatchNorm2d (1)         [1, 96, 64, 64]      [1, 96, 64, 64]      192                    0.00%              True
+│    │    │    └─ReLU6 (2)               [1, 96, 64, 64]      [1, 96, 64, 64]      --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 96, 64, 64]      [1, 96, 64, 64]      --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 96, 64, 64]      [1, 96, 32, 32]      864                    0.02%              True
+│    │    │    └─BatchNorm2d (5)         [1, 96, 32, 32]      [1, 96, 32, 32]      192                    0.00%              True
+│    │    │    └─ReLU6 (6)               [1, 96, 32, 32]      [1, 96, 32, 32]      --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 96, 32, 32]      [1, 96, 32, 32]      --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 96, 32, 32]      [1, 24, 32, 32]      2,304                  0.05%              True
+│    │    │    └─BatchNorm2d (9)         [1, 24, 32, 32]      [1, 24, 32, 32]      48                     0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 24, 32, 32]      [1, 24, 32, 32]      --                        --              --
+│    └─InvertedResidual (1)              [1, 24, 32, 32]      [1, 24, 32, 32]      --                        --              True
+│    │    └─Sequential (block)           [1, 24, 32, 32]      [1, 24, 32, 32]      --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 24, 32, 32]      [1, 144, 32, 32]     3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (1)         [1, 144, 32, 32]     [1, 144, 32, 32]     288                    0.01%              True
+│    │    │    └─ReLU6 (2)               [1, 144, 32, 32]     [1, 144, 32, 32]     --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 144, 32, 32]     [1, 144, 32, 32]     --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 144, 32, 32]     [1, 144, 32, 32]     1,296                  0.03%              True
+│    │    │    └─BatchNorm2d (5)         [1, 144, 32, 32]     [1, 144, 32, 32]     288                    0.01%              True
+│    │    │    └─ReLU6 (6)               [1, 144, 32, 32]     [1, 144, 32, 32]     --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 144, 32, 32]     [1, 144, 32, 32]     --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 144, 32, 32]     [1, 24, 32, 32]      3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (9)         [1, 24, 32, 32]      [1, 24, 32, 32]      48                     0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 24, 32, 32]      [1, 24, 32, 32]      --                        --              --
+├─Sequential (d3)                        [1, 24, 32, 32]      [1, 32, 16, 16]      --                        --              True
+│    └─InvertedResidual (0)              [1, 24, 32, 32]      [1, 32, 16, 16]      --                        --              True
+│    │    └─Sequential (block)           [1, 24, 32, 32]      [1, 32, 16, 16]      --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 24, 32, 32]      [1, 144, 32, 32]     3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (1)         [1, 144, 32, 32]     [1, 144, 32, 32]     288                    0.01%              True
+│    │    │    └─ReLU6 (2)               [1, 144, 32, 32]     [1, 144, 32, 32]     --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 144, 32, 32]     [1, 144, 32, 32]     --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 144, 32, 32]     [1, 144, 16, 16]     1,296                  0.03%              True
+│    │    │    └─BatchNorm2d (5)         [1, 144, 16, 16]     [1, 144, 16, 16]     288                    0.01%              True
+│    │    │    └─ReLU6 (6)               [1, 144, 16, 16]     [1, 144, 16, 16]     --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 144, 16, 16]     [1, 144, 16, 16]     --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 144, 16, 16]     [1, 32, 16, 16]      4,608                  0.10%              True
+│    │    │    └─BatchNorm2d (9)         [1, 32, 16, 16]      [1, 32, 16, 16]      64                     0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              --
+│    └─InvertedResidual (1)              [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              True
+│    │    └─Sequential (block)           [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 32, 16, 16]      [1, 192, 16, 16]     6,144                  0.13%              True
+│    │    │    └─BatchNorm2d (1)         [1, 192, 16, 16]     [1, 192, 16, 16]     384                    0.01%              True
+│    │    │    └─ReLU6 (2)               [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 192, 16, 16]     [1, 192, 16, 16]     1,728                  0.04%              True
+│    │    │    └─BatchNorm2d (5)         [1, 192, 16, 16]     [1, 192, 16, 16]     384                    0.01%              True
+│    │    │    └─ReLU6 (6)               [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 192, 16, 16]     [1, 32, 16, 16]      6,144                  0.13%              True
+│    │    │    └─BatchNorm2d (9)         [1, 32, 16, 16]      [1, 32, 16, 16]      64                     0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              --
+│    └─InvertedResidual (2)              [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              True
+│    │    └─Sequential (block)           [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 32, 16, 16]      [1, 192, 16, 16]     6,144                  0.13%              True
+│    │    │    └─BatchNorm2d (1)         [1, 192, 16, 16]     [1, 192, 16, 16]     384                    0.01%              True
+│    │    │    └─ReLU6 (2)               [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 192, 16, 16]     [1, 192, 16, 16]     1,728                  0.04%              True
+│    │    │    └─BatchNorm2d (5)         [1, 192, 16, 16]     [1, 192, 16, 16]     384                    0.01%              True
+│    │    │    └─ReLU6 (6)               [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 192, 16, 16]     [1, 32, 16, 16]      6,144                  0.13%              True
+│    │    │    └─BatchNorm2d (9)         [1, 32, 16, 16]      [1, 32, 16, 16]      64                     0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              --
+├─Sequential (d4a)                       [1, 32, 16, 16]      [1, 64, 8, 8]        --                        --              True
+│    └─InvertedResidual (0)              [1, 32, 16, 16]      [1, 64, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 32, 16, 16]      [1, 64, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 32, 16, 16]      [1, 192, 16, 16]     6,144                  0.13%              True
+│    │    │    └─BatchNorm2d (1)         [1, 192, 16, 16]     [1, 192, 16, 16]     384                    0.01%              True
+│    │    │    └─ReLU6 (2)               [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 192, 16, 16]     [1, 192, 16, 16]     --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 192, 16, 16]     [1, 192, 8, 8]       1,728                  0.04%              True
+│    │    │    └─BatchNorm2d (5)         [1, 192, 8, 8]       [1, 192, 8, 8]       384                    0.01%              True
+│    │    │    └─ReLU6 (6)               [1, 192, 8, 8]       [1, 192, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 192, 8, 8]       [1, 192, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 192, 8, 8]       [1, 64, 8, 8]        12,288                 0.26%              True
+│    │    │    └─BatchNorm2d (9)         [1, 64, 8, 8]        [1, 64, 8, 8]        128                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              --
+│    └─InvertedResidual (1)              [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 64, 8, 8]        [1, 384, 8, 8]       24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (1)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 384, 8, 8]       [1, 384, 8, 8]       3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (5)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 384, 8, 8]       [1, 64, 8, 8]        24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (9)         [1, 64, 8, 8]        [1, 64, 8, 8]        128                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              --
+│    └─InvertedResidual (2)              [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 64, 8, 8]        [1, 384, 8, 8]       24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (1)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 384, 8, 8]       [1, 384, 8, 8]       3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (5)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 384, 8, 8]       [1, 64, 8, 8]        24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (9)         [1, 64, 8, 8]        [1, 64, 8, 8]        128                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              --
+│    └─InvertedResidual (3)              [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 64, 8, 8]        [1, 384, 8, 8]       24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (1)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 384, 8, 8]       [1, 384, 8, 8]       3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (5)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 384, 8, 8]       [1, 64, 8, 8]        24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (9)         [1, 64, 8, 8]        [1, 64, 8, 8]        128                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 64, 8, 8]        [1, 64, 8, 8]        --                        --              --
+├─Sequential (d4b)                       [1, 64, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    └─InvertedResidual (0)              [1, 64, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 64, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 64, 8, 8]        [1, 384, 8, 8]       24,576                 0.52%              True
+│    │    │    └─BatchNorm2d (1)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 384, 8, 8]       [1, 384, 8, 8]       3,456                  0.07%              True
+│    │    │    └─BatchNorm2d (5)         [1, 384, 8, 8]       [1, 384, 8, 8]       768                    0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 384, 8, 8]       [1, 384, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 384, 8, 8]       [1, 96, 8, 8]        36,864                 0.79%              True
+│    │    │    └─BatchNorm2d (9)         [1, 96, 8, 8]        [1, 96, 8, 8]        192                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              --
+│    └─InvertedResidual (1)              [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 96, 8, 8]        [1, 576, 8, 8]       55,296                 1.18%              True
+│    │    │    └─BatchNorm2d (1)         [1, 576, 8, 8]       [1, 576, 8, 8]       1,152                  0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 576, 8, 8]       [1, 576, 8, 8]       5,184                  0.11%              True
+│    │    │    └─BatchNorm2d (5)         [1, 576, 8, 8]       [1, 576, 8, 8]       1,152                  0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 576, 8, 8]       [1, 96, 8, 8]        55,296                 1.18%              True
+│    │    │    └─BatchNorm2d (9)         [1, 96, 8, 8]        [1, 96, 8, 8]        192                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              --
+│    └─InvertedResidual (2)              [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    │    └─Sequential (block)           [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 96, 8, 8]        [1, 576, 8, 8]       55,296                 1.18%              True
+│    │    │    └─BatchNorm2d (1)         [1, 576, 8, 8]       [1, 576, 8, 8]       1,152                  0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 576, 8, 8]       [1, 576, 8, 8]       5,184                  0.11%              True
+│    │    │    └─BatchNorm2d (5)         [1, 576, 8, 8]       [1, 576, 8, 8]       1,152                  0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 576, 8, 8]       [1, 96, 8, 8]        55,296                 1.18%              True
+│    │    │    └─BatchNorm2d (9)         [1, 96, 8, 8]        [1, 96, 8, 8]        192                    0.00%              True
+│    │    │    └─FakeQuantAct (10)       [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              --
+├─Sequential (d5a)                       [1, 96, 8, 8]        [1, 160, 4, 4]       --                        --              True
+│    └─InvertedResidual (0)              [1, 96, 8, 8]        [1, 160, 4, 4]       --                        --              True
+│    │    └─Sequential (block)           [1, 96, 8, 8]        [1, 160, 4, 4]       --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 96, 8, 8]        [1, 576, 8, 8]       55,296                 1.18%              True
+│    │    │    └─BatchNorm2d (1)         [1, 576, 8, 8]       [1, 576, 8, 8]       1,152                  0.02%              True
+│    │    │    └─ReLU6 (2)               [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 576, 8, 8]       [1, 576, 8, 8]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 576, 8, 8]       [1, 576, 4, 4]       5,184                  0.11%              True
+│    │    │    └─BatchNorm2d (5)         [1, 576, 4, 4]       [1, 576, 4, 4]       1,152                  0.02%              True
+│    │    │    └─ReLU6 (6)               [1, 576, 4, 4]       [1, 576, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 576, 4, 4]       [1, 576, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 576, 4, 4]       [1, 160, 4, 4]       92,160                 1.97%              True
+│    │    │    └─BatchNorm2d (9)         [1, 160, 4, 4]       [1, 160, 4, 4]       320                    0.01%              True
+│    │    │    └─FakeQuantAct (10)       [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              --
+│    └─InvertedResidual (1)              [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              True
+│    │    └─Sequential (block)           [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 160, 4, 4]       [1, 960, 4, 4]       153,600                3.28%              True
+│    │    │    └─BatchNorm2d (1)         [1, 960, 4, 4]       [1, 960, 4, 4]       1,920                  0.04%              True
+│    │    │    └─ReLU6 (2)               [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 960, 4, 4]       [1, 960, 4, 4]       8,640                  0.18%              True
+│    │    │    └─BatchNorm2d (5)         [1, 960, 4, 4]       [1, 960, 4, 4]       1,920                  0.04%              True
+│    │    │    └─ReLU6 (6)               [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 960, 4, 4]       [1, 160, 4, 4]       153,600                3.28%              True
+│    │    │    └─BatchNorm2d (9)         [1, 160, 4, 4]       [1, 160, 4, 4]       320                    0.01%              True
+│    │    │    └─FakeQuantAct (10)       [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              --
+│    └─InvertedResidual (2)              [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              True
+│    │    └─Sequential (block)           [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 160, 4, 4]       [1, 960, 4, 4]       153,600                3.28%              True
+│    │    │    └─BatchNorm2d (1)         [1, 960, 4, 4]       [1, 960, 4, 4]       1,920                  0.04%              True
+│    │    │    └─ReLU6 (2)               [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 960, 4, 4]       [1, 960, 4, 4]       8,640                  0.18%              True
+│    │    │    └─BatchNorm2d (5)         [1, 960, 4, 4]       [1, 960, 4, 4]       1,920                  0.04%              True
+│    │    │    └─ReLU6 (6)               [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 960, 4, 4]       [1, 160, 4, 4]       153,600                3.28%              True
+│    │    │    └─BatchNorm2d (9)         [1, 160, 4, 4]       [1, 160, 4, 4]       320                    0.01%              True
+│    │    │    └─FakeQuantAct (10)       [1, 160, 4, 4]       [1, 160, 4, 4]       --                        --              --
+├─Sequential (d5b)                       [1, 160, 4, 4]       [1, 320, 4, 4]       --                        --              True
+│    └─InvertedResidual (0)              [1, 160, 4, 4]       [1, 320, 4, 4]       --                        --              True
+│    │    └─Sequential (block)           [1, 160, 4, 4]       [1, 320, 4, 4]       --                        --              True
+│    │    │    └─QATConv2d (0)           [1, 160, 4, 4]       [1, 960, 4, 4]       153,600                3.28%              True
+│    │    │    └─BatchNorm2d (1)         [1, 960, 4, 4]       [1, 960, 4, 4]       1,920                  0.04%              True
+│    │    │    └─ReLU6 (2)               [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (3)        [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (4)           [1, 960, 4, 4]       [1, 960, 4, 4]       8,640                  0.18%              True
+│    │    │    └─BatchNorm2d (5)         [1, 960, 4, 4]       [1, 960, 4, 4]       1,920                  0.04%              True
+│    │    │    └─ReLU6 (6)               [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─FakeQuantAct (7)        [1, 960, 4, 4]       [1, 960, 4, 4]       --                        --              --
+│    │    │    └─QATConv2d (8)           [1, 960, 4, 4]       [1, 320, 4, 4]       307,200                6.56%              True
+│    │    │    └─BatchNorm2d (9)         [1, 320, 4, 4]       [1, 320, 4, 4]       640                    0.01%              True
+│    │    │    └─FakeQuantAct (10)       [1, 320, 4, 4]       [1, 320, 4, 4]       --                        --              --
+├─Sequential (c1)                        [1, 320, 4, 4]       [1, 1280, 4, 4]      --                        --              True
+│    └─QATConv2d (0)                     [1, 320, 4, 4]       [1, 1280, 4, 4]      409,600                8.74%              True
+│    └─BatchNorm2d (1)                   [1, 1280, 4, 4]      [1, 1280, 4, 4]      2,560                  0.05%              True
+│    └─ReLU6 (2)                         [1, 1280, 4, 4]      [1, 1280, 4, 4]      --                        --              --
+│    └─FakeQuantAct (3)                  [1, 1280, 4, 4]      [1, 1280, 4, 4]      --                        --              --
+├─QATConvTranspose2d (upconv1)           [1, 1280, 4, 4]      [1, 96, 8, 8]        1,966,176             41.97%              True
+├─FakeQuantAct (upconv1_quant)           [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              --
+├─InvertedResidual (ir1)                 [1, 192, 8, 8]       [1, 96, 8, 8]        --                        --              True
+│    └─Sequential (block)                [1, 192, 8, 8]       [1, 96, 8, 8]        --                        --              True
+│    │    └─QATConv2d (0)                [1, 192, 8, 8]       [1, 1152, 8, 8]      221,184                4.72%              True
+│    │    └─BatchNorm2d (1)              [1, 1152, 8, 8]      [1, 1152, 8, 8]      2,304                  0.05%              True
+│    │    └─ReLU6 (2)                    [1, 1152, 8, 8]      [1, 1152, 8, 8]      --                        --              --
+│    │    └─FakeQuantAct (3)             [1, 1152, 8, 8]      [1, 1152, 8, 8]      --                        --              --
+│    │    └─QATConv2d (4)                [1, 1152, 8, 8]      [1, 1152, 8, 8]      10,368                 0.22%              True
+│    │    └─BatchNorm2d (5)              [1, 1152, 8, 8]      [1, 1152, 8, 8]      2,304                  0.05%              True
+│    │    └─ReLU6 (6)                    [1, 1152, 8, 8]      [1, 1152, 8, 8]      --                        --              --
+│    │    └─FakeQuantAct (7)             [1, 1152, 8, 8]      [1, 1152, 8, 8]      --                        --              --
+│    │    └─QATConv2d (8)                [1, 1152, 8, 8]      [1, 96, 8, 8]        110,592                2.36%              True
+│    │    └─BatchNorm2d (9)              [1, 96, 8, 8]        [1, 96, 8, 8]        192                    0.00%              True
+│    │    └─FakeQuantAct (10)            [1, 96, 8, 8]        [1, 96, 8, 8]        --                        --              --
+├─QATConvTranspose2d (upconv2)           [1, 96, 8, 8]        [1, 32, 16, 16]      49,184                 1.05%              True
+├─FakeQuantAct (upconv2_quant)           [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              --
+├─InvertedResidual (ir2)                 [1, 64, 16, 16]      [1, 32, 16, 16]      --                        --              True
+│    └─Sequential (block)                [1, 64, 16, 16]      [1, 32, 16, 16]      --                        --              True
+│    │    └─QATConv2d (0)                [1, 64, 16, 16]      [1, 384, 16, 16]     24,576                 0.52%              True
+│    │    └─BatchNorm2d (1)              [1, 384, 16, 16]     [1, 384, 16, 16]     768                    0.02%              True
+│    │    └─ReLU6 (2)                    [1, 384, 16, 16]     [1, 384, 16, 16]     --                        --              --
+│    │    └─FakeQuantAct (3)             [1, 384, 16, 16]     [1, 384, 16, 16]     --                        --              --
+│    │    └─QATConv2d (4)                [1, 384, 16, 16]     [1, 384, 16, 16]     3,456                  0.07%              True
+│    │    └─BatchNorm2d (5)              [1, 384, 16, 16]     [1, 384, 16, 16]     768                    0.02%              True
+│    │    └─ReLU6 (6)                    [1, 384, 16, 16]     [1, 384, 16, 16]     --                        --              --
+│    │    └─FakeQuantAct (7)             [1, 384, 16, 16]     [1, 384, 16, 16]     --                        --              --
+│    │    └─QATConv2d (8)                [1, 384, 16, 16]     [1, 32, 16, 16]      12,288                 0.26%              True
+│    │    └─BatchNorm2d (9)              [1, 32, 16, 16]      [1, 32, 16, 16]      64                     0.00%              True
+│    │    └─FakeQuantAct (10)            [1, 32, 16, 16]      [1, 32, 16, 16]      --                        --              --
+├─QATConvTranspose2d (upconv3)           [1, 32, 16, 16]      [1, 24, 32, 32]      12,312                 0.26%              True
+├─FakeQuantAct (upconv3_quant)           [1, 24, 32, 32]      [1, 24, 32, 32]      --                        --              --
+├─InvertedResidual (ir3)                 [1, 48, 32, 32]      [1, 24, 32, 32]      --                        --              True
+│    └─Sequential (block)                [1, 48, 32, 32]      [1, 24, 32, 32]      --                        --              True
+│    │    └─QATConv2d (0)                [1, 48, 32, 32]      [1, 288, 32, 32]     13,824                 0.30%              True
+│    │    └─BatchNorm2d (1)              [1, 288, 32, 32]     [1, 288, 32, 32]     576                    0.01%              True
+│    │    └─ReLU6 (2)                    [1, 288, 32, 32]     [1, 288, 32, 32]     --                        --              --
+│    │    └─FakeQuantAct (3)             [1, 288, 32, 32]     [1, 288, 32, 32]     --                        --              --
+│    │    └─QATConv2d (4)                [1, 288, 32, 32]     [1, 288, 32, 32]     2,592                  0.06%              True
+│    │    └─BatchNorm2d (5)              [1, 288, 32, 32]     [1, 288, 32, 32]     576                    0.01%              True
+│    │    └─ReLU6 (6)                    [1, 288, 32, 32]     [1, 288, 32, 32]     --                        --              --
+│    │    └─FakeQuantAct (7)             [1, 288, 32, 32]     [1, 288, 32, 32]     --                        --              --
+│    │    └─QATConv2d (8)                [1, 288, 32, 32]     [1, 24, 32, 32]      6,912                  0.15%              True
+│    │    └─BatchNorm2d (9)              [1, 24, 32, 32]      [1, 24, 32, 32]      48                     0.00%              True
+│    │    └─FakeQuantAct (10)            [1, 24, 32, 32]      [1, 24, 32, 32]      --                        --              --
+├─QATConvTranspose2d (upconv4)           [1, 24, 32, 32]      [1, 16, 64, 64]      6,160                  0.13%              True
+├─FakeQuantAct (upconv4_quant)           [1, 16, 64, 64]      [1, 16, 64, 64]      --                        --              --
+├─InvertedResidual (ir4)                 [1, 32, 64, 64]      [1, 16, 64, 64]      --                        --              True
+│    └─Sequential (block)                [1, 32, 64, 64]      [1, 16, 64, 64]      --                        --              True
+│    │    └─QATConv2d (0)                [1, 32, 64, 64]      [1, 192, 64, 64]     6,144                  0.13%              True
+│    │    └─BatchNorm2d (1)              [1, 192, 64, 64]     [1, 192, 64, 64]     384                    0.01%              True
+│    │    └─ReLU6 (2)                    [1, 192, 64, 64]     [1, 192, 64, 64]     --                        --              --
+│    │    └─FakeQuantAct (3)             [1, 192, 64, 64]     [1, 192, 64, 64]     --                        --              --
+│    │    └─QATConv2d (4)                [1, 192, 64, 64]     [1, 192, 64, 64]     1,728                  0.04%              True
+│    │    └─BatchNorm2d (5)              [1, 192, 64, 64]     [1, 192, 64, 64]     384                    0.01%              True
+│    │    └─ReLU6 (6)                    [1, 192, 64, 64]     [1, 192, 64, 64]     --                        --              --
+│    │    └─FakeQuantAct (7)             [1, 192, 64, 64]     [1, 192, 64, 64]     --                        --              --
+│    │    └─QATConv2d (8)                [1, 192, 64, 64]     [1, 16, 64, 64]      3,072                  0.07%              True
+│    │    └─BatchNorm2d (9)              [1, 16, 64, 64]      [1, 16, 64, 64]      32                     0.00%              True
+│    │    └─FakeQuantAct (10)            [1, 16, 64, 64]      [1, 16, 64, 64]      --                        --              --
+├─QATConvTranspose2d (upconv5)           [1, 16, 64, 64]      [1, 2, 128, 128]     514                    0.01%              True
+============================================================================================================================================
+Total params: 4,684,730
+Trainable params: 4,684,730
+Non-trainable params: 0
+Total mult-adds (Units.MEGABYTES): 388.83
+============================================================================================================================================
+Input size (MB): 0.26
+Forward/backward pass size (MB): 79.86
+Params size (MB): 18.74
+Estimated Total Size (MB): 98.86
+============================================================================================================================================

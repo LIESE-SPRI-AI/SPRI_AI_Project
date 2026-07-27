@@ -3,12 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
-def calc_frac(max_abs_value, signed=True, total_bits=8):
-    avail_bits = (total_bits -1) if signed else total_bits
-    int_bits = max(0, math.ceil(math.log2(max_abs_value + 1e-8))) # ?
-    frac_bits = max(0, avail_bits - int_bits)
-    return frac_bits
-
 class FakeQuantSTE(torch.autograd.Function): # strainght-through estimator
     @staticmethod
     def forward(ctx, x, scale, qmin, qmax):
@@ -19,12 +13,15 @@ class FakeQuantSTE(torch.autograd.Function): # strainght-through estimator
         ctx.save_for_backward(mask)
         return x_q * scale
 
-    @staticmethod # magia negra de claude ???
+    @staticmethod 
     def backward(ctx, grad_output):
         (mask,) = ctx.saved_tensors
         grad_input = grad_output * mask.to(grad_output.dtype)
         return grad_input, None, None, None
-    
+# detach() pytorch calcula el grafo automaticamente pero hace mas operaciones
+# si se usa detach() el grad siempre es 1 
+# con autograd.Function se controla mejor que se guarda en ctx ???    
+
 def fake_quantize(x, int_bits=0, frac_bits=7, signed=True, total_bits=8):
     scale = 2.0 ** (-frac_bits)
     if signed:
@@ -101,73 +98,77 @@ def make_stage(in_channels, out_channels, expand_ratio, n, stride):
 class UNet2D(nn.Module):
     def __init__(self, in_channels=4, out_channels=2):
         super(UNet2D, self).__init__()
+
+        num = 16 # original dr adan 64, min 64 max 1024
+        a1, a2, a3, a4, a5 = num, num*2, num*4, num*8, num*16
+
+        # Encoder (Downsampling)
+        self.enc1 = InvertedResidual(in_channels, a1)
+        self.enc2 = InvertedResidual(a1, a2)
+        self.enc3 = InvertedResidual(a2, a3)
+        self.enc4 = InvertedResidual(a3, a4)
         
-        self.input_quant = FakeQuantAct(int_bits=0, frac_bits=8, signed=False)
-        self.stem = nn.Sequential(
-            QATConv2d(in_channels, 32, kernel_size=3, stride=2, padding=1, bias=False),
-            nn.BatchNorm2d(32),
-            nn.ReLU6(inplace=True),
-            FakeQuantAct(int_bits=3, frac_bits=4, signed=False)
-        ) # 32 64 64
-
-        #enconder de chava
-        self.d1 = make_stage(32, 16, expand_ratio=1, n=1, stride=1) # 16 64 64
-        self.d2 = make_stage(16, 24, expand_ratio=6, n=2, stride=2) # 24 32 32
-        self.d3 = make_stage(24, 32, expand_ratio=6, n=3, stride=2) # 32 16 16
-        self.d4a = make_stage(32, 64, expand_ratio=6, n=4, stride=2) # 64 8 8
-        self.d4b = make_stage(64, 96, expand_ratio=6, n=3, stride=1) # 96 8 8
-        self.d5a = make_stage(96, 160, expand_ratio=6, n=3, stride=2) # 160 4 4
-        self.d5b = make_stage(160, 320, expand_ratio=6, n=1, stride=1) # 320 4 4
-
-        #decoder de mujer
-        self.upconv1 = QATConvTranspose2d(320, 96, kernel_size=4, stride=2, padding=1)
-        self.upconv1_quant = FakeQuantAct(int_bits=4, frac_bits=3, signed=True)
-        self.ir1 = InvertedResidual(96 + 96, 96, expand_ratio=6, stride=1)
-
-        self.upconv2 = QATConvTranspose2d(96, 32, kernel_size=4, stride=2, padding=1)
-        self.upconv2_quant = FakeQuantAct(int_bits=4, frac_bits=3, signed=True)
-        self.ir2 = InvertedResidual(32 + 32, 32, expand_ratio=6, stride=1)
-
-        self.upconv3 = QATConvTranspose2d(32, 24, kernel_size=4, stride=2, padding=1)
-        self.upconv3_quant = FakeQuantAct(int_bits=4, frac_bits=3, signed=True)
-        self.ir3 = InvertedResidual(24 + 24, 24, expand_ratio=6, stride=1)
-
-        self.upconv4 = QATConvTranspose2d(24, 16, kernel_size=4, stride=2, padding=1)
-        self.upconv4_quant = FakeQuantAct(int_bits=4, frac_bits=3, signed=True)
-        self.ir4 = InvertedResidual(16 + 16, 16, expand_ratio=6, stride=1)
-
-        self.upconv5 = QATConvTranspose2d(16, out_channels, kernel_size=4, stride=2, padding=1)
+        self.pool = nn.MaxPool2d(2)
+        
+        # Bottleneck
+        self.bottleneck = InvertedResidual(a4, a5)
+        
+        # Decoder (Upsampling)
+        self.upconv4 = QATConvTranspose2d(a5, a4, kernel_size=2, stride=2)
+        self.dec4 = InvertedResidual(a5, a4)  # 512 + 512 = 1024
+        
+        self.upconv3 = QATConvTranspose2d(a4, a3, kernel_size=2, stride=2)
+        self.dec3 = InvertedResidual(a4, a3)   # 256 + 256 = 512
+        
+        self.upconv2 = QATConvTranspose2d(a3, a2, kernel_size=2, stride=2)
+        self.dec2 = InvertedResidual(a3, a2)   # 128 + 128 = 256
+        
+        self.upconv1 = QATConvTranspose2d(a2, a1, kernel_size=2, stride=2)
+        self.dec1 = InvertedResidual(a2, a1)    # 64 + 64 = 128
+        
+        # Output layer
+        self.out_conv = QATConv2d(a1, out_channels, kernel_size=1)
 
     def forward(self, x):
-        # encoder
-        x = self.stem(x) # 32 64 64
-        x1 = self.d1(x) # 16 64 64
-        x2 = self.d2(x1) # 24 32 32
-        x3 = self.d3(x2) # 32 16 16
-        x4 = self.d4b(self.d4a(x3)) # 96 8 8
-        x5 = self.d5b(self.d5a(x4)) # 320 4 4
-
-        # decoder con skip connections
-        l1 = self._match_and_cat(self.upconv1_quant(self.upconv1(x5)), x4)
-        l2 = self.ir1(l1) # 16x16x96
-        l3 = self._match_and_cat(self.upconv2_quant(self.upconv2(l2)), x3)
-        l4 = self.ir2(l3) # 32x32x32
-        l5 = self._match_and_cat(self.upconv3_quant(self.upconv3(l4)), x2)
-        l6 = self.ir3(l5) # 64x64x24
-        l7 = self._match_and_cat(self.upconv4_quant(self.upconv4(l6)), x1)
-        l8 = self.ir4(l7) # 128x128x16
-
-        out = self.upconv5(l8) # 256x256x2 
-
+        # Encoder
+        e1 = self.enc1(x)        # [B, 64, H, W]
+        e2 = self.enc2(self.pool(e1))  # [B, 128, H/2, W/2]
+        e3 = self.enc3(self.pool(e2))  # [B, 256, H/4, W/4]
+        e4 = self.enc4(self.pool(e3))  # [B, 512, H/8, W/8]
+        
+        # Bottleneck
+        bottleneck = self.bottleneck(self.pool(e4))  # [B, 1024, H/16, W/16]
+        
+        # Decoder with skip connections
+        d4 = self.upconv4(bottleneck)  # [B, 512, H/8, W/8]
+        # Asegurar que e4 y d4 tengan el mismo tamaño
+        if e4.size()[2:] != d4.size()[2:]:
+            d4 = F.interpolate(d4, size=e4.shape[2:], mode='bilinear', align_corners=True)
+        d4 = torch.cat([e4, d4], dim=1)  # [B, 1024, H/8, W/8]
+        d4 = self.dec4(d4)               # [B, 512, H/8, W/8]
+        
+        d3 = self.upconv3(d4)            # [B, 256, H/4, W/4]
+        if e3.size()[2:] != d3.size()[2:]:
+            d3 = F.interpolate(d3, size=e3.shape[2:], mode='bilinear', align_corners=True)
+        d3 = torch.cat([e3, d3], dim=1)  # [B, 512, H/4, W/4]
+        d3 = self.dec3(d3)               # [B, 256, H/4, W/4]
+        
+        d2 = self.upconv2(d3)            # [B, 128, H/2, W/2]
+        if e2.size()[2:] != d2.size()[2:]:
+            d2 = F.interpolate(d2, size=e2.shape[2:], mode='bilinear', align_corners=True)
+        d2 = torch.cat([e2, d2], dim=1)  # [B, 256, H/2, W/2]
+        d2 = self.dec2(d2)               # [B, 128, H/2, W/2]
+        
+        d1 = self.upconv1(d2)            # [B, 64, H, W]
+        if e1.size()[2:] != d1.size()[2:]:
+            d1 = F.interpolate(d1, size=e1.shape[2:], mode='bilinear', align_corners=True)
+        d1 = torch.cat([e1, d1], dim=1)  # [B, 128, H, W]
+        d1 = self.dec1(d1)               # [B, 64, H, W]
+        
+        # Output - asegurar que tenga el mismo tamaño espacial que la entrada
+        out = self.out_conv(d1)          # [B, 2, H, W]
+        
         return out
-    
-    @staticmethod # magia negra de claude
-    def _match_and_cat(up, skip):
-        if up.size()[2:] != skip.size()[2:]:
-            up = F.interpolate(up, size=skip.shape[2:], mode='bilinear', align_corners=True)
-        return torch.cat([up, skip], dim=1)
-    
+
 # Modelo principal a usar
 WildfireNet = UNet2D
-
-#funciones equis
