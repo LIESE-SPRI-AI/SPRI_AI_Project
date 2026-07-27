@@ -28,6 +28,9 @@ Crop_folders/
 .idea/
 *.onnx.data
 *.onnx
+<<<<<<< HEAD
+=======
 Datasets_generados/
 *.tif
 *.tiff
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
