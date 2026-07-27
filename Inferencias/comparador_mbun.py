@@ -39,9 +39,15 @@ import matplotlib.gridspec as gridspec
 #  CONFIGURACIÓN  ← edita estos valores
 # ═══════════════════════════════════════════════════════════════════
 DIR_BURNED      = Path("/home/liese2/SPRI_AI_project/Inferencias/Burned")  # ground truth _burned.tiff
+<<<<<<< HEAD
 DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_12")  # archivos _final.tif del modelo A
 DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_5")  # archivos _final.tif del modelo B
 DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados_UNvsMbUN")         # carpeta de salida
+=======
+DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_21_exp6")  # archivos _final.tif del modelo A
+DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_52")  # archivos _final.tif del modelo B
+DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados11_UNvsMbUN_ex6")         # carpeta de salida
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 NOMBRE_MODELO_A = "Mobile-UNet"    # Nombre para mostrar del modelo A
 NOMBRE_MODELO_B = "UNet"    # Nombre para mostrar del modelo B
@@ -380,7 +386,11 @@ def main():
         db = {'rgb': mascara_a_rgb(mascara_b), 'diff': imagen_diferencias(mascara_gt, mascara_b), 'm': mb}
 
         # Figura
+<<<<<<< HEAD
         ruta_fig = dir_salida / f"{nombrebase}_comparacion_mbun.png"
+=======
+        ruta_fig = dir_salida / f"{nombrebase}_comparacion_mbun_final.png"
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
         visualizar(
             nombrebase=nombrebase,
             rgb_burned=rgb_burned,

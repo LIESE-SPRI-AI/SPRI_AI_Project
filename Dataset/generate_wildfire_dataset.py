@@ -11,6 +11,7 @@ import time
 import gc
 
 # Configuración de rutas
+<<<<<<< HEAD
 input_directory = "/home/liese2/SPRI_AI_project/Dataset/Raw" 
 output_directory = input_directory
 temp_directory = input_directory
@@ -22,6 +23,14 @@ output_dir_mask = "/home/liese2/SPRI_AI_project/Dataset/Crops6/Mask"
 output_dir_img = "/home/liese2/SPRI_AI_project/Dataset/FivePercent/True"
 output_dir_mask = "/home/liese2/SPRI_AI_project/Dataset/FivePercent/Mask"
 >>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+input_directory = "/home/felix/SPRI_AI_Project/Dataset/Raw" 
+output_directory = input_directory
+temp_directory = input_directory
+
+output_dir_img = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5/True"
+output_dir_mask = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5/Mask"
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 # Configuración
 target_min = 0
@@ -30,12 +39,21 @@ new_data_type = "UInt16"
 final_format = "GTiff"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 UMBRAL_PORCENTAJE_ROJO = 0.035
 =======
 UMBRAL_PORCENTAJE_ROJO = 0.05
 >>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
 TAMANO_BLOQUE = 128
 OVERLAP = 64
+=======
+UMBRAL_PORCENTAJE_ROJO = 0.035
+TAMANO_BLOQUE = 128
+OVERLAP = 64
+
+Ruta_csv = os.path.join(output_directory, "pixeles_incendio.csv")
+registro_pixeles = []
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 os.makedirs(output_directory, exist_ok=True)
 os.makedirs(temp_directory, exist_ok=True)
@@ -328,6 +346,19 @@ def dividir_y_filtrar_imagen(ruta_imagen_true, ruta_imagen_mask, tamaño_bloque=
                     elif contador == 10:
                         print(f"      ... procesando más bloques ...")
                     
+<<<<<<< HEAD
+=======
+                    registro_pixeles.append({
+                        "zip": zip_name,
+                        "bloque": os.path.splitext(nombre_true)[0],
+                        "x": x,
+                        "y": y,
+                        "pixeles_incendio": int(pixeles_rojos),
+                        "total_pixeles_bloque": int(total_pixels_por_bloque),
+                        "porcentaje_incendio": round(float(porcentaje_rojo) * 100, 4)
+                    })
+                    
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
                     contador += 1
                 else:
                     descartadas += 1
@@ -507,6 +538,21 @@ def procesar_zip(zip_path, estadisticas_globales):
         # Forzar liberación de recursos
         gc.collect()
         time.sleep(0.5)  
+<<<<<<< HEAD
+=======
+
+import csv
+def guardar_conteo_px(registros, ruta_csv):
+    if not registros:
+        print(f"\nNo se generaron bloques jochis")
+        return
+    with open(ruta_csv, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            "zip", "bloque", "x", "y", "pixeles_incendio", "total_pixeles_bloque", "porcentaje_incendio"
+        ])
+        writer.writeheader()
+        writer.writerows(registros)
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 def mostrar_estadisticas_detalladas(estadisticas_globales, total_bloques):
     """Muestra estadísticas detalladas"""
@@ -571,6 +617,7 @@ def main():
         gc.collect()
     
     mostrar_estadisticas_detalladas(estadisticas_globales, total_bloques)
+    guardar_conteo_px(registro_pixeles, Ruta_csv)
     
     print(f"\n{'='*60}")
     print("PROCESO COMPLETADO")

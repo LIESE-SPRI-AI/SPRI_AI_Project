@@ -4,7 +4,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+<<<<<<< HEAD
 class DepthwiseConv)nn.Module):
+=======
+class DepthwiseConv(nn.Module):
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     def __init__(self, in_channels, out_channels):
         super().__init__()
         self.depthwise = nn.Conv2d(in_channels, in_channels, kernel_size=3, padding=1, groups=in_channels, bias=False)
@@ -28,7 +32,11 @@ class DoubleConv(nn.Module):
         )
 
     def forward(self, x):
+<<<<<<< HEAD
         return self.double_conv(x)
+=======
+        return self.block(x)
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 class UNet2D(nn.Module):
     def __init__(self, in_channels=4, out_channels=2):
@@ -103,4 +111,8 @@ class UNet2D(nn.Module):
         return out
 
 # Modelo principal a usar
+<<<<<<< HEAD
 WildfireNet = UNet2D
+=======
+WildfireNet = UNet2D
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e

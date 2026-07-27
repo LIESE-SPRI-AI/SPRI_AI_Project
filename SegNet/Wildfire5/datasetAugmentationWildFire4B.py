@@ -248,7 +248,14 @@ if __name__ == "__main__":
     objects_dataset = WildFireDataset(list_file=list_file_path,
                                        img_dir=img_dir,
                                        mask_dir=mask_dir,
+<<<<<<< HEAD
                                        size=128)
+=======
+                                       size=128,
+                                       augmentation=True,
+                                       niv=3,
+                                       )
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     
     # Calcular pesos de clase
     print("\n" + "="*50)
