@@ -27,3 +27,5 @@ Crop_folders/
 # Ignorar configuraciones del editor
 .vscode/
 .idea/
+*.onnx.data
+*.onnx

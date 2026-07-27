@@ -3,6 +3,10 @@ import shutil
 import random
 from pathlib import Path
 
+DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/twentyPercent" 
+DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+
 def procesar_dataset(
     dir_entrada,
     dir_salida_base,
@@ -24,9 +28,15 @@ def procesar_dataset(
     dir_mask = Path(dir_entrada) / "Mask"
     
     # Definir rutas de salida
+<<<<<<< HEAD
     dir_imagenes = Path(dir_salida_base) / "Wildfire5b1" / "Images"
     dir_segmentacion = Path(dir_salida_base) / "Wildfire5b1" / "SegmentationClass"
     dir_txts_completo = Path(dir_txts) / "Wildfire5b1" / "ImageSets" / "Segmentation"
+=======
+    dir_imagenes = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "Images"
+    dir_segmentacion = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "SegmentationClass"
+    dir_txts_completo = Path(dir_txts) / "Mobile-UNet_5" / "data" 
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
     
     # Crear directorios de salida si no existen
     dir_imagenes.mkdir(parents=True, exist_ok=True)
@@ -97,7 +107,11 @@ def procesar_dataset(
         )
         
         # Guardar nombre sin extensión
+<<<<<<< HEAD
         nombre_sin_ext = Path(archivo_true + "").stem
+=======
+        nombre_sin_ext = Path(archivo_true + ".tiff").stem
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
         nombres_entrenamiento.append(nombre_sin_ext)
     
     # Procesar archivos de validación
@@ -116,7 +130,11 @@ def procesar_dataset(
         )
         
         # Guardar nombre sin extensión
+<<<<<<< HEAD
         nombre_sin_ext = Path(archivo_true + "").stem
+=======
+        nombre_sin_ext = Path(archivo_true + ".tiff").stem
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
         nombres_validacion.append(nombre_sin_ext)
     
     # Escribir archivos txt
@@ -140,10 +158,13 @@ def procesar_dataset(
     print(f"  - Validación: {dir_txts_completo / 'valid.txt'} ({len(nombres_validacion)} archivos)")
     print("="*50)
 
+<<<<<<< HEAD
 DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Crops" 
 DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/SegNet" 
 DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/SegNet" 
 
+=======
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
 if __name__ == "__main__":
     # Configurar semilla para reproducibilidad (opcional)
     random.seed(42)  # Puedes eliminar esta línea si quieres aleatoriedad diferente cada vez
