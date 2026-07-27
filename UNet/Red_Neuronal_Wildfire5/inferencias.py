@@ -9,8 +9,11 @@ Convenciones de nombres:
   Salida  : <DIR_SALIDA>/<nombrebase>_MbUN_Out_<nombremodelo>.tif
 """
 
+<<<<<<< HEAD
+=======
 import csv
 import re
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 import subprocess
 import sys
 from pathlib import Path
@@ -18,6 +21,21 @@ from pathlib import Path
 # ─────────────────────────────────────────────
 #  CONFIGURACIÓN  ← edita estos tres valores
 # ─────────────────────────────────────────────
+<<<<<<< HEAD
+DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Inferencias/Input")       # directorio con los .tif de entrada
+DIR_MODELOS  = Path("/home/liese2/SPRI_AI_project/UNet/Red_Neuronal_Wildfire5/weights")        # directorio con los .pth
+DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_5")         # directorio donde se guardan los resultados
+PREDICT_PY   = Path("/home/liese2/SPRI_AI_project/UNet/Red_Neuronal_Wildfire5/predict_segmentation.py")            # ruta al script de inferencia
+# ─────────────────────────────────────────────
+
+
+def obtener_imagenes(directorio: Path) -> list[Path]:
+    """Devuelve todos los archivos que terminan en _Merged.tif."""
+    archivos = sorted(directorio.glob("*_Merged.tif"))
+    if not archivos:
+        print(f"[ADVERTENCIA] No se encontraron imágenes '*_Merged.tif' en: {directorio}")
+    return archivos
+=======
 DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_1/data/Images")       # directorio con los .tif de entrada
 DIR_MODELOS  = Path("weights")        # directorio con los .pth
 DIR_SALIDA   = Path("")         # directorio donde se guardan los resultados
@@ -106,6 +124,7 @@ def obtener_imagenes(directorio: Path, ruta_valid_txt: Path) -> list[Path]:
     return archivos
  
  
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 
 def obtener_modelos(directorio: Path) -> list[Path]:
@@ -125,14 +144,21 @@ def nombre_salida(imagen: Path, modelo: Path) -> Path:
     return DIR_SALIDA / f"{nombrebase}_{nombremodelo}.tif"
 
 
+<<<<<<< HEAD
+def ejecutar_inferencia(imagen: Path, modelo: Path, salida: Path) -> bool:
+=======
 def ejecutar_inferencia(imagen: Path, modelo: Path, salida: Path):
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     """Llama a predict.py y devuelve True si terminó sin errores."""
     cmd = [
         sys.executable, str(PREDICT_PY),
         "--image",  str(imagen),
         "--model",  str(modelo),
         "--output", str(salida),
+<<<<<<< HEAD
+=======
         "--guardar_imagen", "True" if GUARDAR_IMAGENES else "False"
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     ]
 
     print(f"\n{'─'*60}")
@@ -142,6 +168,17 @@ def ejecutar_inferencia(imagen: Path, modelo: Path, salida: Path):
     print(f"  Comando: {' '.join(cmd)}")
     print(f"{'─'*60}")
 
+<<<<<<< HEAD
+    resultado = subprocess.run(cmd, capture_output=False, text=True)
+
+    if resultado.returncode != 0:
+        print(f"[ERROR] predict.py terminó con código {resultado.returncode}")
+        return False
+
+    print(f"[OK] Inferencia completada → {salida}")
+    return True
+
+=======
     resultado = subprocess.run(cmd, capture_output=True, text=True)
     print(resultado.stdout)
     if resultado.stderr:
@@ -162,6 +199,7 @@ def ejecutar_inferencia(imagen: Path, modelo: Path, salida: Path):
 def ruta_csv_modelo(modelo: Path) -> Path:
     nombremodelo = modelo.stem.replace("model_", "")
     return DIR_SALIDA / f"prediccion_UN_pixeles_{nombremodelo}.csv"
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 def main():
     # Validaciones previas
@@ -179,14 +217,21 @@ def main():
 
     DIR_SALIDA.mkdir(parents=True, exist_ok=True)
 
+<<<<<<< HEAD
+    imagenes = obtener_imagenes(DIR_IMAGENES)
+=======
     imagenes = obtener_imagenes(DIR_IMAGENES, RUTA_VALID)
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     modelos  = obtener_modelos(DIR_MODELOS)
 
     if not imagenes or not modelos:
         sys.exit("[ERROR] No hay imágenes o modelos para procesar.")
 
+<<<<<<< HEAD
+=======
     combinaciones_existentes = cargar_combinaciones_existentes(RUTA_CSV_RESULTADOS)
 
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     total    = len(imagenes) * len(modelos)
     exitos   = 0
     errores  = 0
@@ -199,6 +244,24 @@ def main():
     print(f"  Salida               : {DIR_SALIDA}")
     print(f"{'═'*60}")
 
+<<<<<<< HEAD
+    for imagen in imagenes:
+        for modelo in modelos:
+            salida = nombre_salida(imagen, modelo)
+
+            # Omitir si la salida ya existe
+            if salida.exists():
+                print(f"\n[OMITIDO] Ya existe: {salida.name}")
+                omitidos += 1
+                continue
+
+            ok = ejecutar_inferencia(imagen, modelo, salida)
+            if ok:
+                exitos += 1
+            else:
+                errores += 1
+
+=======
     for modelo in modelos:
         ruta_csv = ruta_csv_modelo(modelo)
         combinaciones_existentes = cargar_combinaciones_existentes(ruta_csv)
@@ -225,6 +288,7 @@ def main():
             else:
                 errores += 1
  
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     # Resumen final
     print(f"\n{'═'*60}")
     print(f"  RESUMEN")
@@ -232,6 +296,15 @@ def main():
     print(f"  Errores     : {errores}")
     print(f"  Omitidas    : {omitidos}  (salida ya existía)")
     print(f"{'═'*60}\n")
+<<<<<<< HEAD
+
+    if errores:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
+=======
  
     if errores:
         sys.exit(1)
@@ -240,3 +313,4 @@ def main():
 if __name__ == "__main__":
     main()
  
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e

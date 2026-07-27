@@ -18,7 +18,15 @@ from PIL import Image
 # Configuración
 parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
 # Ruta fija al dataset
+<<<<<<< HEAD
+<<<<<<< HEAD
+DATA_PATH = '/home/liese2/SPRI_AI_project/UNET_Red_Neuronal/Red_Neuronal_Wildfire/data'
+=======
 DATA_PATH = '/home/liese2/SPRI_AI_project/Dataset/Entrada_firmas'
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+DATA_PATH = '/home/liese2/SPRI_AI_project/Dataset/Entrada_firmas'
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
 parser.add_argument('-b', '--batch-size', default=4, type=int, help='mini-batch size')

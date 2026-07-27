@@ -4,9 +4,15 @@ import shutil
 import random
 from pathlib import Path
 
+<<<<<<< HEAD
+DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/twentyPercent" 
+DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/Mobile-UNet" 
+=======
 DIRECTORIO_ENTRADA = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5" 
 DIRECTORIO_SALIDA_BASE = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
 DIRECTORIO_TXTS = "/home/felix/SPRI_AI_Project/Dataset/Dataset_3p5_separado" 
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 def procesar_dataset(
     dir_entrada,
@@ -34,9 +40,21 @@ def procesar_dataset(
     dir_mask = Path(dir_entrada) / "Mask"
     
     # Definir rutas de salida
+<<<<<<< HEAD
+<<<<<<< HEAD
+    dir_imagenes = Path(dir_salida_base) / "Wildfire5b1" / "Images"
+    dir_segmentacion = Path(dir_salida_base) / "Wildfire5b1" / "SegmentationClass"
+    dir_txts_completo = Path(dir_txts) / "Wildfire5b1" / "ImageSets" / "Segmentation"
+=======
     dir_imagenes = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "Images"
     dir_segmentacion = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "SegmentationClass"
     dir_txts_completo = Path(dir_txts) / "Mobile-UNet_5" / "data" 
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+    dir_imagenes = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "Images"
+    dir_segmentacion = Path(dir_salida_base) / "Mobile-UNet_5" / "data" / "SegmentationClass"
+    dir_txts_completo = Path(dir_txts) / "Mobile-UNet_5" / "data" 
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     
     # Crear directorios de salida si no existen
     dir_imagenes.mkdir(parents=True, exist_ok=True)
@@ -119,11 +137,50 @@ def procesar_dataset(
             
             registros.append((nombre_sin_ext, pixeles))
         
+<<<<<<< HEAD
+        # Copiar archivo Mask
+        shutil.copy2(
+            dir_mask / archivo_mask,
+            dir_segmentacion / archivo_mask
+        )
+        
+        # Guardar nombre sin extensión
+<<<<<<< HEAD
+        nombre_sin_ext = Path(archivo_true + "").stem
+=======
+        nombre_sin_ext = Path(archivo_true + ".tiff").stem
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+        nombres_entrenamiento.append(nombre_sin_ext)
+    
+    # Procesar archivos de validación
+    nombres_validacion = []
+    for archivo_true, archivo_mask in validacion:
+        # Copiar archivo True
+        shutil.copy2(
+            dir_true / archivo_true,
+            dir_imagenes / archivo_true
+        )
+        
+        # Copiar archivo Mask
+        shutil.copy2(
+            dir_mask / archivo_mask,
+            dir_segmentacion / archivo_mask
+        )
+        
+        # Guardar nombre sin extensión
+<<<<<<< HEAD
+        nombre_sin_ext = Path(archivo_true + "").stem
+=======
+        nombre_sin_ext = Path(archivo_true + ".tiff").stem
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+        nombres_validacion.append(nombre_sin_ext)
+=======
         return registros
     
     # Procesar archivos de entrenamiento y validación
     registros_entrenamiento = procesar_grupo(entrenamiento)
     registros_validacion = procesar_grupo(validacion)
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     
     # Ordenar por nombre para que train.txt / train_incendios.txt queden alineados línea a línea
     registros_entrenamiento.sort(key=lambda t: t[0])
@@ -166,6 +223,16 @@ def procesar_dataset(
     print(f"  - Validación: {dir_txts_completo / 'valid_incendios.txt'}")
     print("="*50)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+DIRECTORIO_ENTRADA = "/home/liese2/SPRI_AI_project/Dataset/Crops" 
+DIRECTORIO_SALIDA_BASE = "/home/liese2/SPRI_AI_project/SegNet" 
+DIRECTORIO_TXTS = "/home/liese2/SPRI_AI_project/SegNet" 
+
+=======
+>>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 if __name__ == "__main__":
     # Configurar semilla para reproducibilidad (opcional)
     random.seed(42)  # Puedes eliminar esta línea si quieres aleatoriedad diferente cada vez
@@ -184,4 +251,7 @@ if __name__ == "__main__":
         print("1. Las rutas especificadas sean correctas")
         print("2. La carpeta de entrada contenga las subcarpetas 'True' y 'Mask'")
         print("3. Ambos directorios tengan los mismos archivos (mismos nombres)")
+<<<<<<< HEAD
+=======
         print("4. El CSV de píxeles de incendio exista y tenga las columnas 'bloque' y 'pixeles_incendio'")
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e

@@ -1,0 +1,2 @@
+Epoch,IOU_Train,IOU_Val
+0,0.5311,0.5455

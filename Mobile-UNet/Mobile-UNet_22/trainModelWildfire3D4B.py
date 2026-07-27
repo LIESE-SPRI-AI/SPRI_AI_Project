@@ -3,6 +3,10 @@
 import argparse
 import os
 import tempfile
+<<<<<<< HEAD
+import shutil
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 import time
 import numpy as np
 import torch
@@ -13,6 +17,13 @@ from osgeo import gdal
 from Wildfire_models import UNet2D as WildfireNet
 import cv2
 from PIL import Image
+<<<<<<< HEAD
+
+# Configuración
+parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
+# Ruta fija al dataset
+DATA_PATH = '/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_2/data'
+=======
 import requests
 from dotenv import load_dotenv
 
@@ -26,6 +37,7 @@ if not BASE_DIR:
 parser = argparse.ArgumentParser(description='Wildfire Segmentation Training')
 DATA_PATH = os.path.join(BASE_DIR, "Mobile-UNet/Mobile-UNet_19/data")
 print(f"Ruta de datos: {DATA_PATH}")
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 parser.add_argument('--epochs', default=100, type=int, help='number of total epochs to run')
 parser.add_argument('-b', '--batch-size', default=4, type=int, help='mini-batch size')
@@ -33,6 +45,25 @@ parser.add_argument('--lr', '--learning-rate', default=0.001, type=float, help='
 parser.add_argument('--gpu', default="auto", type=str, help='use GPU: True/False/auto (auto detecta disponibilidad)')
 parser.add_argument('--image-size', default=128, type=int, help='target image size for resizing')
 parser.add_argument('--print-freq', default=10, type=int, help='print frequency')
+<<<<<<< HEAD
+
+best_iou = 0
+
+def check_gpu_availability():
+    """Verificar si CUDA está disponible y funcionando correctamente"""
+    print(f"PyTorch version: {torch.__version__}")
+    
+    if not torch.cuda.is_available():
+        print("⚠ CUDA no está disponible en este sistema")
+        return False
+    
+    try:
+        # Imprimir info sin causar error
+        print(f"CUDA disponible: Sí")
+        print(f"CUDA Version (PyTorch): {torch.version.cuda}")
+        
+        # Verificar si realmente podemos usar CUDA
+=======
 parser.add_argument('--resume', default='weights/checkpoint.pth', type=str, help='ruta a checkpoint por si falla training')
 parser.add_argument('--checkpoint-freq', default=5, type=int, help='guardar checkpoint')
 best_iou = 0
@@ -48,6 +79,7 @@ def check_gpu_availability():
         print(f"CUDA disponible: Sí")
         print(f"CUDA Version (PyTorch): {torch.version.cuda}")
         
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
         device_count = torch.cuda.device_count()
         print(f"Número de GPUs disponibles: {device_count}")
         
@@ -68,23 +100,38 @@ def check_gpu_availability():
                 print("⚠ Posible problema de compatibilidad CUDA/drivers")
                 return False
         else:
+<<<<<<< HEAD
+            print("⚠ No se detectaron GPUs")
+            return False
+            
+    except Exception as e:
+        print(f"⚠ Error inesperado: {e}")
+=======
             print("No se detectaron GPUs")
             return False
             
     except Exception as e:
         print(f"Error inesperado: {e}")
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
         return False
 
 def custom_collate_fn(batch):
     return batch
 
 class SegmentationDataset(Dataset):
+<<<<<<< HEAD
+    def __init__(self, images_dir, masks_dir, image_list, target_size=128):
+        self.images_dir = images_dir
+        self.masks_dir = masks_dir
+        self.target_size = target_size
+=======
     def __init__(self, images_dir, masks_dir, image_list, target_size=128, augment = False):
         self.images_dir = images_dir
         self.masks_dir = masks_dir
         self.target_size = target_size
         self.augment = augment
         self.augmentation = Augmentation() if augment else None
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
         with open(image_list, 'r') as f:
             self.images = [line.strip() for line in f if line.strip()]
@@ -116,8 +163,11 @@ class SegmentationDataset(Dataset):
         try:
             img = self.load_and_resize_image(img_path, self.target_size)
             mask = self.load_and_resize_mask(mask_path, self.target_size)
+<<<<<<< HEAD
+=======
             if self.augment:
                 img, mask = self.augmentation(img, mask)
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
             return img, mask
         except Exception as e:
             print(f"Error cargando {img_name}: {e}")
@@ -248,6 +298,10 @@ def check_class_balance(dataset, name="Dataset"):
         print(f"{name} - No se pudieron contar píxeles")
 
 def process_batch_train(model, batch, criterion, device, optimizer):
+<<<<<<< HEAD
+    """Procesar un batch para entrenamiento"""
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     batch_loss = 0
     batch_iou = 0
     n_samples = 0
@@ -281,7 +335,12 @@ def process_batch_train(model, batch, criterion, device, optimizer):
     return batch_loss / n_samples, batch_iou / n_samples if n_samples > 0 else 0
 
 def process_batch_validate(model, batch, device):
+<<<<<<< HEAD
+    """Procesar un batch para validación"""
+    batch_iou = 0
+=======
     batch_iou = 1
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     n_samples = 0
     
     for i, (input, target) in enumerate(batch):
@@ -346,6 +405,8 @@ class AverageMeter(object):
         self.count += n
         self.avg = self.sum / self.count
 
+<<<<<<< HEAD
+=======
 PUSHBULLET_API_TOKEN = os.getenv("PUSHBULLET_API_TOKEN")
 if not PUSHBULLET_API_TOKEN:
     print("Warning: PUSHBULLET_API_TOKEN is not set in the environment.")
@@ -398,6 +459,7 @@ class Augmentation:
             image = torch.clamp(image + noise, 0.0, 1.0)
         return image.contiguous(), mask.contiguous()
 
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 def main():
     global best_iou
     args = parser.parse_args()
@@ -458,8 +520,13 @@ def main():
         else:
             print(f"✓ {name}: {path}")
     
+<<<<<<< HEAD
+    train_dataset = SegmentationDataset(images_dir, masks_dir, train_list, args.image_size)
+    val_dataset = SegmentationDataset(images_dir, masks_dir, val_list, args.image_size)
+=======
     train_dataset = SegmentationDataset(images_dir, masks_dir, train_list, args.image_size, augment=True)
     val_dataset = SegmentationDataset(images_dir, masks_dir, val_list, args.image_size, augment=False)
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     
     print(f"\nImágenes de entrenamiento: {len(train_dataset)}")
     print(f"Imágenes de validación: {len(val_dataset)}")
@@ -501,6 +568,8 @@ def main():
     class_weights = torch.tensor([1.0, 5.0]).to(device)
     criterion = nn.CrossEntropyLoss(weight=class_weights)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
+<<<<<<< HEAD
+=======
 
     start_epoch = 0
     if args.resume:
@@ -514,6 +583,7 @@ def main():
             print(f"Reanudando training desde epoch {start_epoch}, best_iou: {best_iou:.4f}")
         else: 
             print(f"No se encontro checkpoint, carita triste.")
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     
     # Archivos de log
     timestamp = time.strftime("%Y%m%d_%H%M%S")
@@ -528,8 +598,12 @@ def main():
 
     training_start_time = time.time()
     
+<<<<<<< HEAD
+    for epoch in range(args.epochs):
+=======
     for epoch in range(start_epoch, args.epochs):
 
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
         start_time = time.time()
         
         train_loss, train_iou = train(train_loader, model, criterion, optimizer, epoch, device, args)
@@ -554,6 +628,9 @@ def main():
         
         if is_best:
             torch.save(model.state_dict(), os.path.join(weights_dir, 'model_best.pth'))
+<<<<<<< HEAD
+            print(f"Mejor modelo guardado - IOU Val: {best_iou:.4f}\n")
+=======
             print(f"Modelo mas mejor guardado - IOU Val: {best_iou:.4f}\n")
         
         if (epoch + 1) % args.checkpoint_freq == 0:
@@ -562,6 +639,7 @@ def main():
                         'optimizer_state_dict': optimizer.state_dict(),
                         'best_iou': best_iou,
                         }, os.path.join(weights_dir, 'checkpoint.pth'))
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
     
     log_file.close()
     iou_file.close()
@@ -579,7 +657,10 @@ def main():
     print(f"Tiempo total: {horas:02d}h {minutos:02d}m {segundos:02d}s")
     print("="*60)
 
+<<<<<<< HEAD
+=======
     enviar_notificacion(f"Entrenamiento Completado! Mejor IOU: {best_iou:.4f}, Tiempo: {horas:02d}h{minutos:02d}m")
 
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 if __name__ == '__main__':
     main()
