@@ -1,0 +1,5 @@
+outs:
+- md5: 7d010b7d5f52f0e133ac9ba279ff4304
+  size: 17106254
+  hash: md5
+  path: checkpoint.pth
