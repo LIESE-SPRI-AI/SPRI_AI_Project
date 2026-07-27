@@ -35,11 +35,9 @@ class DoubleConv(nn.Module):
         super(DoubleConv, self).__init__()
 
         self.block1 = InvertedResidual(in_channels, out_channels, expand_ratio)
-        self.block2 = InvertedResidual(out_channels, out_channels, expand_ratio)
 
     def forward(self, x):
         x = self.block1(x)
-        x = self.block2(x)
         return x
     
 
