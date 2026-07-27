@@ -6,7 +6,11 @@ sys.path.append("/home/liese2/SPRI_AI_project/Mobile-UNet")
 from Wildfire_models import UNet2D
 from torchinfo import summary
 
+<<<<<<< HEAD
 PTH_PATH = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_12/weights/model_final.pth"
+=======
+PTH_PATH = "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_13/weights/model_final.pth"
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 # Cargar modelo
 model = UNet2D(in_channels=4, out_channels=2)

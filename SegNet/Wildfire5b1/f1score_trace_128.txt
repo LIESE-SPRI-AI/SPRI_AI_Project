@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 1 R 0.937704 Acc 0.763425 P 0.50634 F1score 0.657593 Wildfire5b1_N__128__AUG_1 
 
 1 R 0.937015 Acc 0.772468 P 0.516768 F1score 0.666151 Wildfire5b1_N__128__AUG_1 
@@ -12001,6 +12002,8 @@
 
 5000 R 0.915666 Acc 0.951419 P 0.887394 F1score 0.901308 Wildfire5b1_N__128__AUG_1 
 =======
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 1 R 0.933133 Acc 0.762651 P 0.505495 F1score 0.655755 Wildfire5b1_N__128__AUG_1 
 
 2 R 0.796644 Acc 0.854181 P 0.666541 F1score 0.725808 Wildfire5b1_N__128__AUG_1 
@@ -42000,5 +42003,8 @@
 14999 R 0.920277 Acc 0.955628 P 0.898962 F1score 0.909494 Wildfire5b1_N__128__AUG_1 
 
 15000 R 0.928371 Acc 0.955606 P 0.892673 F1score 0.910172 Wildfire5b1_N__128__AUG_1 
+<<<<<<< HEAD
 >>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 

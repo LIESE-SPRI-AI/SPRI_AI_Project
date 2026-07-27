@@ -1,0 +1,2 @@
+Epoch,Loss,IOU_Train,IOU_Val,Time
+0,0.383931,0.5211,0.5492,24.65

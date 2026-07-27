@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 epoch 1 min_loss 0.5978323489427566 
 epoch 1 min_loss 0.5687921673059464 
 epoch 2 min_loss 0.38214987963438035 
@@ -326,6 +327,8 @@ epoch 4858 min_loss 0.11703872233629227
 epoch 4906 min_loss 0.11674602925777436 
 epoch 4985 min_loss 0.11667667850852012 
 =======
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 epoch 1 min_loss 0.598070353269577 
 epoch 2 min_loss 0.39457325637340546 
 epoch 3 min_loss 0.34480862468481066 
@@ -567,4 +570,7 @@ epoch 14804 min_loss 0.10250355936586857
 epoch 14853 min_loss 0.1024440299719572 
 epoch 14910 min_loss 0.10243223868310451 
 epoch 14974 min_loss 0.10175306648015976 
+<<<<<<< HEAD
 >>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e

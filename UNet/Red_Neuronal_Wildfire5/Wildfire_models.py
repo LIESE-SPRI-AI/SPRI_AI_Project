@@ -93,8 +93,11 @@ class UNet2D(nn.Module):
 
 # Modelo principal a usar
 <<<<<<< HEAD
+<<<<<<< HEAD
 WildfireNet = UNet2D
 =======
+=======
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 WildfireNet = UNet2D
 
 def test_operaciones_paso_a_paso():
@@ -321,5 +324,9 @@ if __name__ == "_main_":
     with torch.no_grad():
         y_test = model(x_test)
     print(f"   Shape de salida esperado: [1, 2, 128, 128]")
+<<<<<<< HEAD
     print(f"   Shape de salida obtenido: {list(y_test.shape)}")
 >>>>>>> e6fd7d80502d22914e846b575f4e01e3c8b19934
+=======
+    print(f"   Shape de salida obtenido: {list(y_test.shape)}")
+>>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
