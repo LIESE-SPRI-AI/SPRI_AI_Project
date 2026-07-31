@@ -33,7 +33,7 @@ class UNet2D(nn.Module):
     def __init__(self, in_channels=4, out_channels=2):
         super(UNet2D, self).__init__()
 
-        num = 64 # original dr adan 64
+        num = 16 # original dr adan 64
         a1, a2, a3, a4, a5 = num, num*2, num*4, num*8, num*16
 
         # Encoder (Downsampling)

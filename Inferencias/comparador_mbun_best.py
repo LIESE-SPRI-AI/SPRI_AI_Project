@@ -39,12 +39,12 @@ import matplotlib.gridspec as gridspec
 #  CONFIGURACIÓN  ← edita estos valores
 # ═══════════════════════════════════════════════════════════════════
 DIR_BURNED      = Path("/home/liese2/SPRI_AI_project/Inferencias/Burned")  # ground truth _burned.tiff
-DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_23")  # archivos _final.tif del modelo A
-DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_UNet/Output_UN_52")  # archivos _final.tif del modelo B
-DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados13_UNvsMbUN")         # carpeta de salida
+DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_24")  # archivos _final.tif del modelo A
+DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_25")  # archivos _final.tif del modelo B
+DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados14_MbUNpvsMbUNu")         # carpeta de salida
 
-NOMBRE_MODELO_A = "Mobile-UNet"    # Nombre para mostrar del modelo A
-NOMBRE_MODELO_B = "UNet"    # Nombre para mostrar del modelo B
+NOMBRE_MODELO_A = "Mobile-UNet encoder paper"    # Nombre para mostrar del modelo A
+NOMBRE_MODELO_B = "Mobile-UNet encoder UNet"    # Nombre para mostrar del modelo B
 UMBRAL_ROJO = 255               # umbral canal R para detectar incendios en ground truth
 # ═══════════════════════════════════════════════════════════════════
 

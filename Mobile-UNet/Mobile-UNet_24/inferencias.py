@@ -17,15 +17,10 @@ from pathlib import Path
 #  CONFIGURACIÓN  ← edita estos tres valores
 # ─────────────────────────────────────────────
 DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Inferencias/Input")       # directorio con los .tif de entrada
-<<<<<<< HEAD
-DIR_MODELOS  = Path("/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_12/weights")        # directorio con los .pth
-DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_12")         # directorio donde se guardan los resultados
-PREDICT_PY   = Path("/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_12/predict_segmentation.py")            # ruta al script de inferencia
-=======
 DIR_MODELOS  = Path("weights")        # directorio con los .pth
-DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_20_exp6")         # directorio donde se guardan los resultados
+print(f"directorio modelo: {DIR_MODELOS}")
+DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_24")         # directorio donde se guardan los resultados
 PREDICT_PY   = Path("predict_segmentation.py")            # ruta al script de inferencia
->>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 # ─────────────────────────────────────────────
 
 
@@ -51,11 +46,7 @@ def nombre_salida(imagen: Path, modelo: Path) -> Path:
     nombrebase = imagen.stem.replace("_Merged", "")
     # nombremodelo = lo que sigue después de 'model_' (sin extensión)
     nombremodelo = modelo.stem.replace("model_", "")
-<<<<<<< HEAD
-    return DIR_SALIDA / f"{nombrebase}_MbUN_Out_{nombremodelo}.tif"
-=======
     return DIR_SALIDA / f"{nombrebase}_{nombremodelo}.tif"
->>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
 
 
 def ejecutar_inferencia(imagen: Path, modelo: Path, salida: Path) -> bool:
@@ -147,8 +138,4 @@ def main():
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     main()
-=======
-    main()
->>>>>>> 92a01e3134d8de5c205c83efe0dba0ae3c76c94e
