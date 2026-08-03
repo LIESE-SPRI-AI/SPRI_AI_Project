@@ -3,63 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
-class FakeQuantSTE(torch.autograd.Function): # strainght-through estimator
-    @staticmethod
-    def forward(ctx, x, scale, qmin, qmax):
-        x_scaled = x / scale
-        x_clamped = torch.clamp(x_scaled, qmin, qmax)
-        x_q = torch.round(x_clamped)
-        mask = (x_scaled >= qmin) & (x_scaled <= qmax)
-        ctx.save_for_backward(mask)
-        return x_q * scale
-
-    @staticmethod 
-    def backward(ctx, grad_output):
-        (mask,) = ctx.saved_tensors
-        grad_input = grad_output * mask.to(grad_output.dtype)
-        return grad_input, None, None, None
-# detach() pytorch calcula el grafo automaticamente pero hace mas operaciones
-# si se usa detach() el grad siempre es 1 
-# con autograd.Function se controla mejor que se guarda en ctx ???    
-
-def fake_quantize(x, int_bits=0, frac_bits=7, signed=True, total_bits=8):
-    scale = 2.0 ** (-frac_bits)
-    if signed:
-        qmin, qmax = -(2 ** (total_bits -1)), 2 ** (total_bits -1) - 1
-    else:
-        qmin, qmax = 0, 2 ** total_bits - 1
-    return FakeQuantSTE.apply(x, scale, qmin, qmax)
-
-class FakeQuantAct(nn.Module): # cuantiza activaciones
-    def __init__(self, int_bits=0, frac_bits=7, signed=True):
-        super().__init__()
-        self.int_bits = int_bits
-        self.frac_bits = frac_bits
-        self.signed = signed
-
-    def forward(self, x):
-        return fake_quantize(x, int_bits=self.int_bits, frac_bits=self.frac_bits, signed=self.signed)
-
-class QATConv2d(nn.Conv2d):
-    def __init__(self, *args, weight_frac_bits=7, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.weight_frac_bits = weight_frac_bits
-
-    def forward(self, x):
-        w_q = fake_quantize(self.weight, frac_bits=self.weight_frac_bits, signed=True)
-        return F.conv2d(x, w_q, self.bias, self.stride, self.padding, self.dilation, self.groups)
-
-class QATConvTranspose2d(nn.ConvTranspose2d):
-    def __init__(self, *args, weight_frac_bits=7, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.weight_frac_bits = weight_frac_bits
-
-    def forward(self, x):
-        w_q = fake_quantize(self.weight, frac_bits=self.weight_frac_bits, signed=True)
-        return F.conv_transpose2d(x, w_q, self.bias, self.stride, self.padding, self.output_padding, self.groups, self.dilation)
-    
-
-
 class InvertedResidual(nn.Module):
     def __init__(self, in_channels, out_channels, expand_ratio=6, stride=1):
         super().__init__()
@@ -69,19 +12,16 @@ class InvertedResidual(nn.Module):
 
         self.block = nn.Sequential(
             # la pointwise
-            QATConv2d(in_channels, expanded_channels, kernel_size=1, bias=False), 
+            nn.Conv2d(in_channels, expanded_channels, kernel_size=1, bias=False), 
             nn.BatchNorm2d(expanded_channels),
             nn.ReLU6(inplace=True),
-            FakeQuantAct(int_bits=3, frac_bits=4, signed=False),
             # la depthwise
-            QATConv2d(expanded_channels, expanded_channels, kernel_size=3, stride=stride, padding=1, groups=expanded_channels, bias=False),
+            nn.Conv2d(expanded_channels, expanded_channels, kernel_size=3, stride=stride, padding=1, groups=expanded_channels, bias=False),
             nn.BatchNorm2d(expanded_channels),
             nn.ReLU6(inplace=True),
-            FakeQuantAct(int_bits=3, frac_bits=4, signed=False),
             # la otra pointwise
-            QATConv2d(expanded_channels, out_channels, kernel_size=1, bias=False),
+            nn.Conv2d(expanded_channels, out_channels, kernel_size=1, bias=False),
             nn.BatchNorm2d(out_channels),
-            FakeQuantAct(int_bits=2, frac_bits=5, signed=True)
         )
 
     def forward(self, x):
@@ -89,17 +29,11 @@ class InvertedResidual(nn.Module):
             return x + self.block(x)
         return self.block(x)
 
-def make_stage(in_channels, out_channels, expand_ratio, n, stride):
-    layers = [InvertedResidual(in_channels, out_channels, expand_ratio, stride)]
-    for _ in range(n - 1):
-        layers.append(InvertedResidual(out_channels, out_channels, expand_ratio, stride=1))
-    return nn.Sequential(*layers)
-
 class UNet2D(nn.Module):
     def __init__(self, in_channels=4, out_channels=2):
         super(UNet2D, self).__init__()
 
-        num = 24 # original dr adan 64, min 64 max 1024
+        num = 16 # original dr adan 64
         a1, a2, a3, a4, a5 = num, num*2, num*4, num*8, num*16
 
         # Encoder (Downsampling)
@@ -114,20 +48,20 @@ class UNet2D(nn.Module):
         self.bottleneck = InvertedResidual(a4, a5)
         
         # Decoder (Upsampling)
-        self.upconv4 = QATConvTranspose2d(a5, a4, kernel_size=2, stride=2)
+        self.upconv4 = nn.ConvTranspose2d(a5, a4, kernel_size=2, stride=2)
         self.dec4 = InvertedResidual(a5, a4)  # 512 + 512 = 1024
         
-        self.upconv3 = QATConvTranspose2d(a4, a3, kernel_size=2, stride=2)
+        self.upconv3 = nn.ConvTranspose2d(a4, a3, kernel_size=2, stride=2)
         self.dec3 = InvertedResidual(a4, a3)   # 256 + 256 = 512
         
-        self.upconv2 = QATConvTranspose2d(a3, a2, kernel_size=2, stride=2)
+        self.upconv2 = nn.ConvTranspose2d(a3, a2, kernel_size=2, stride=2)
         self.dec2 = InvertedResidual(a3, a2)   # 128 + 128 = 256
         
-        self.upconv1 = QATConvTranspose2d(a2, a1, kernel_size=2, stride=2)
+        self.upconv1 = nn.ConvTranspose2d(a2, a1, kernel_size=2, stride=2)
         self.dec1 = InvertedResidual(a2, a1)    # 64 + 64 = 128
         
         # Output layer
-        self.out_conv = QATConv2d(a1, out_channels, kernel_size=1)
+        self.out_conv = nn.Conv2d(a1, out_channels, kernel_size=1)
 
     def forward(self, x):
         # Encoder
@@ -172,3 +106,65 @@ class UNet2D(nn.Module):
 
 # Modelo principal a usar
 WildfireNet = UNet2D
+
+# class FakeQuantSTE(torch.autograd.Function): # strainght-through estimator
+#     @staticmethod
+#     def forward(ctx, x, scale, qmin, qmax):
+#         x_scaled = x / scale
+#         x_clamped = torch.clamp(x_scaled, qmin, qmax)
+#         x_q = torch.round(x_clamped)
+#         mask = (x_scaled >= qmin) & (x_scaled <= qmax)
+#         ctx.save_for_backward(mask)
+#         return x_q * scale
+
+#     @staticmethod 
+#     def backward(ctx, grad_output):
+#         (mask,) = ctx.saved_tensors
+#         grad_input = grad_output * mask.to(grad_output.dtype)
+#         return grad_input, None, None, None
+# # detach() pytorch calcula el grafo automaticamente pero hace mas operaciones
+# # si se usa detach() el grad siempre es 1 
+# # con autograd.Function se controla mejor que se guarda en ctx ???    
+
+# def fake_quantize(x, int_bits=0, frac_bits=7, signed=True, total_bits=8):
+#     scale = 2.0 ** (-frac_bits)
+#     if signed:
+#         qmin, qmax = -(2 ** (total_bits -1)), 2 ** (total_bits -1) - 1
+#     else:
+#         qmin, qmax = 0, 2 ** total_bits - 1
+#     return FakeQuantSTE.apply(x, scale, qmin, qmax)
+
+# class FakeQuantAct(nn.Module): # cuantiza activaciones
+#     def __init__(self, int_bits=0, frac_bits=7, signed=True):
+#         super().__init__()
+#         self.int_bits = int_bits
+#         self.frac_bits = frac_bits
+#         self.signed = signed
+
+#     def forward(self, x):
+#         return fake_quantize(x, int_bits=self.int_bits, frac_bits=self.frac_bits, signed=self.signed)
+
+# class QATConv2d(nn.Conv2d):
+#     def __init__(self, *args, weight_frac_bits=7, **kwargs):
+#         super().__init__(*args, **kwargs)
+#         self.weight_frac_bits = weight_frac_bits
+
+#     def forward(self, x):
+#         w_q = fake_quantize(self.weight, frac_bits=self.weight_frac_bits, signed=True)
+#         return F.conv2d(x, w_q, self.bias, self.stride, self.padding, self.dilation, self.groups)
+
+# class QATConvTranspose2d(nn.ConvTranspose2d):
+#     def __init__(self, *args, weight_frac_bits=7, **kwargs):
+#         super().__init__(*args, **kwargs)
+#         self.weight_frac_bits = weight_frac_bits
+
+#     def forward(self, x):
+#         w_q = fake_quantize(self.weight, frac_bits=self.weight_frac_bits, signed=True)
+#         return F.conv_transpose2d(x, w_q, self.bias, self.stride, self.padding, self.output_padding, self.groups, self.dilation)
+    
+
+# def make_stage(in_channels, out_channels, expand_ratio, n, stride):
+#     layers = [InvertedResidual(in_channels, out_channels, expand_ratio, stride)]
+#     for _ in range(n - 1):
+#         layers.append(InvertedResidual(out_channels, out_channels, expand_ratio, stride=1))
+#     return nn.Sequential(*layers)

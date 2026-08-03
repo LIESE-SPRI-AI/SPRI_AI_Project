@@ -1,0 +1,230 @@
+UNet2D(
+  (enc1): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(4, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=24, bias=False)
+      (4): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(24, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (enc2): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (enc3): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(768, 768, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=768, bias=False)
+      (4): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (enc4): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(256, 1536, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(1536, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(1536, 1536, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1536, bias=False)
+      (4): BatchNorm2d(1536, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(1536, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (bottleneck): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(512, 3072, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(3072, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(3072, 3072, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3072, bias=False)
+      (4): BatchNorm2d(3072, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(3072, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (upconv4): ConvTranspose2d(1024, 512, kernel_size=(2, 2), stride=(2, 2))
+  (dec4): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(1024, 6144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(6144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(6144, 6144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=6144, bias=False)
+      (4): BatchNorm2d(6144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(6144, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (upconv3): ConvTranspose2d(512, 256, kernel_size=(2, 2), stride=(2, 2))
+  (dec3): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(512, 3072, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(3072, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(3072, 3072, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3072, bias=False)
+      (4): BatchNorm2d(3072, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(3072, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (upconv2): ConvTranspose2d(256, 128, kernel_size=(2, 2), stride=(2, 2))
+  (dec2): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(256, 1536, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(1536, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(1536, 1536, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1536, bias=False)
+      (4): BatchNorm2d(1536, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(1536, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (upconv1): ConvTranspose2d(128, 64, kernel_size=(2, 2), stride=(2, 2))
+  (dec1): InvertedResidual(
+    (block): Sequential(
+      (0): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU6(inplace=True)
+      (3): Conv2d(768, 768, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=768, bias=False)
+      (4): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU6(inplace=True)
+      (6): Conv2d(768, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (out_conv): Conv2d(64, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+============================================================================================================================================
+Layer (type (var_name))                  Input Shape          Output Shape         Param #              Param %              Trainable
+============================================================================================================================================
+UNet2D (UNet2D)                          [1, 4, 128, 128]     [1, 2, 128, 128]     --                        --              True
+├─InvertedResidual (enc1)                [1, 4, 128, 128]     [1, 64, 128, 128]    --                        --              True
+│    └─Sequential (block)                [1, 4, 128, 128]     [1, 64, 128, 128]    --                        --              True
+│    │    └─Conv2d (0)                   [1, 4, 128, 128]     [1, 24, 128, 128]    96                     0.00%              True
+│    │    └─BatchNorm2d (1)              [1, 24, 128, 128]    [1, 24, 128, 128]    48                     0.00%              True
+│    │    └─ReLU6 (2)                    [1, 24, 128, 128]    [1, 24, 128, 128]    --                        --              --
+│    │    └─Conv2d (3)                   [1, 24, 128, 128]    [1, 24, 128, 128]    216                    0.00%              True
+│    │    └─BatchNorm2d (4)              [1, 24, 128, 128]    [1, 24, 128, 128]    48                     0.00%              True
+│    │    └─ReLU6 (5)                    [1, 24, 128, 128]    [1, 24, 128, 128]    --                        --              --
+│    │    └─Conv2d (6)                   [1, 24, 128, 128]    [1, 64, 128, 128]    1,536                  0.01%              True
+│    │    └─BatchNorm2d (7)              [1, 64, 128, 128]    [1, 64, 128, 128]    128                    0.00%              True
+├─MaxPool2d (pool)                       [1, 64, 128, 128]    [1, 64, 64, 64]      --                        --              --
+├─InvertedResidual (enc2)                [1, 64, 64, 64]      [1, 128, 64, 64]     --                        --              True
+│    └─Sequential (block)                [1, 64, 64, 64]      [1, 128, 64, 64]     --                        --              True
+│    │    └─Conv2d (0)                   [1, 64, 64, 64]      [1, 384, 64, 64]     24,576                 0.11%              True
+│    │    └─BatchNorm2d (1)              [1, 384, 64, 64]     [1, 384, 64, 64]     768                    0.00%              True
+│    │    └─ReLU6 (2)                    [1, 384, 64, 64]     [1, 384, 64, 64]     --                        --              --
+│    │    └─Conv2d (3)                   [1, 384, 64, 64]     [1, 384, 64, 64]     3,456                  0.02%              True
+│    │    └─BatchNorm2d (4)              [1, 384, 64, 64]     [1, 384, 64, 64]     768                    0.00%              True
+│    │    └─ReLU6 (5)                    [1, 384, 64, 64]     [1, 384, 64, 64]     --                        --              --
+│    │    └─Conv2d (6)                   [1, 384, 64, 64]     [1, 128, 64, 64]     49,152                 0.23%              True
+│    │    └─BatchNorm2d (7)              [1, 128, 64, 64]     [1, 128, 64, 64]     256                    0.00%              True
+├─MaxPool2d (pool)                       [1, 128, 64, 64]     [1, 128, 32, 32]     --                   (recursive)          --
+├─InvertedResidual (enc3)                [1, 128, 32, 32]     [1, 256, 32, 32]     --                        --              True
+│    └─Sequential (block)                [1, 128, 32, 32]     [1, 256, 32, 32]     --                        --              True
+│    │    └─Conv2d (0)                   [1, 128, 32, 32]     [1, 768, 32, 32]     98,304                 0.45%              True
+│    │    └─BatchNorm2d (1)              [1, 768, 32, 32]     [1, 768, 32, 32]     1,536                  0.01%              True
+│    │    └─ReLU6 (2)                    [1, 768, 32, 32]     [1, 768, 32, 32]     --                        --              --
+│    │    └─Conv2d (3)                   [1, 768, 32, 32]     [1, 768, 32, 32]     6,912                  0.03%              True
+│    │    └─BatchNorm2d (4)              [1, 768, 32, 32]     [1, 768, 32, 32]     1,536                  0.01%              True
+│    │    └─ReLU6 (5)                    [1, 768, 32, 32]     [1, 768, 32, 32]     --                        --              --
+│    │    └─Conv2d (6)                   [1, 768, 32, 32]     [1, 256, 32, 32]     196,608                0.90%              True
+│    │    └─BatchNorm2d (7)              [1, 256, 32, 32]     [1, 256, 32, 32]     512                    0.00%              True
+├─MaxPool2d (pool)                       [1, 256, 32, 32]     [1, 256, 16, 16]     --                   (recursive)          --
+├─InvertedResidual (enc4)                [1, 256, 16, 16]     [1, 512, 16, 16]     --                        --              True
+│    └─Sequential (block)                [1, 256, 16, 16]     [1, 512, 16, 16]     --                        --              True
+│    │    └─Conv2d (0)                   [1, 256, 16, 16]     [1, 1536, 16, 16]    393,216                1.80%              True
+│    │    └─BatchNorm2d (1)              [1, 1536, 16, 16]    [1, 1536, 16, 16]    3,072                  0.01%              True
+│    │    └─ReLU6 (2)                    [1, 1536, 16, 16]    [1, 1536, 16, 16]    --                        --              --
+│    │    └─Conv2d (3)                   [1, 1536, 16, 16]    [1, 1536, 16, 16]    13,824                 0.06%              True
+│    │    └─BatchNorm2d (4)              [1, 1536, 16, 16]    [1, 1536, 16, 16]    3,072                  0.01%              True
+│    │    └─ReLU6 (5)                    [1, 1536, 16, 16]    [1, 1536, 16, 16]    --                        --              --
+│    │    └─Conv2d (6)                   [1, 1536, 16, 16]    [1, 512, 16, 16]     786,432                3.60%              True
+│    │    └─BatchNorm2d (7)              [1, 512, 16, 16]     [1, 512, 16, 16]     1,024                  0.00%              True
+├─MaxPool2d (pool)                       [1, 512, 16, 16]     [1, 512, 8, 8]       --                   (recursive)          --
+├─InvertedResidual (bottleneck)          [1, 512, 8, 8]       [1, 1024, 8, 8]      --                        --              True
+│    └─Sequential (block)                [1, 512, 8, 8]       [1, 1024, 8, 8]      --                        --              True
+│    │    └─Conv2d (0)                   [1, 512, 8, 8]       [1, 3072, 8, 8]      1,572,864              7.21%              True
+│    │    └─BatchNorm2d (1)              [1, 3072, 8, 8]      [1, 3072, 8, 8]      6,144                  0.03%              True
+│    │    └─ReLU6 (2)                    [1, 3072, 8, 8]      [1, 3072, 8, 8]      --                        --              --
+│    │    └─Conv2d (3)                   [1, 3072, 8, 8]      [1, 3072, 8, 8]      27,648                 0.13%              True
+│    │    └─BatchNorm2d (4)              [1, 3072, 8, 8]      [1, 3072, 8, 8]      6,144                  0.03%              True
+│    │    └─ReLU6 (5)                    [1, 3072, 8, 8]      [1, 3072, 8, 8]      --                        --              --
+│    │    └─Conv2d (6)                   [1, 3072, 8, 8]      [1, 1024, 8, 8]      3,145,728             14.42%              True
+│    │    └─BatchNorm2d (7)              [1, 1024, 8, 8]      [1, 1024, 8, 8]      2,048                  0.01%              True
+├─ConvTranspose2d (upconv4)              [1, 1024, 8, 8]      [1, 512, 16, 16]     2,097,664              9.61%              True
+├─InvertedResidual (dec4)                [1, 1024, 16, 16]    [1, 512, 16, 16]     --                        --              True
+│    └─Sequential (block)                [1, 1024, 16, 16]    [1, 512, 16, 16]     --                        --              True
+│    │    └─Conv2d (0)                   [1, 1024, 16, 16]    [1, 6144, 16, 16]    6,291,456             28.83%              True
+│    │    └─BatchNorm2d (1)              [1, 6144, 16, 16]    [1, 6144, 16, 16]    12,288                 0.06%              True
+│    │    └─ReLU6 (2)                    [1, 6144, 16, 16]    [1, 6144, 16, 16]    --                        --              --
+│    │    └─Conv2d (3)                   [1, 6144, 16, 16]    [1, 6144, 16, 16]    55,296                 0.25%              True
+│    │    └─BatchNorm2d (4)              [1, 6144, 16, 16]    [1, 6144, 16, 16]    12,288                 0.06%              True
+│    │    └─ReLU6 (5)                    [1, 6144, 16, 16]    [1, 6144, 16, 16]    --                        --              --
+│    │    └─Conv2d (6)                   [1, 6144, 16, 16]    [1, 512, 16, 16]     3,145,728             14.42%              True
+│    │    └─BatchNorm2d (7)              [1, 512, 16, 16]     [1, 512, 16, 16]     1,024                  0.00%              True
+├─ConvTranspose2d (upconv3)              [1, 512, 16, 16]     [1, 256, 32, 32]     524,544                2.40%              True
+├─InvertedResidual (dec3)                [1, 512, 32, 32]     [1, 256, 32, 32]     --                        --              True
+│    └─Sequential (block)                [1, 512, 32, 32]     [1, 256, 32, 32]     --                        --              True
+│    │    └─Conv2d (0)                   [1, 512, 32, 32]     [1, 3072, 32, 32]    1,572,864              7.21%              True
+│    │    └─BatchNorm2d (1)              [1, 3072, 32, 32]    [1, 3072, 32, 32]    6,144                  0.03%              True
+│    │    └─ReLU6 (2)                    [1, 3072, 32, 32]    [1, 3072, 32, 32]    --                        --              --
+│    │    └─Conv2d (3)                   [1, 3072, 32, 32]    [1, 3072, 32, 32]    27,648                 0.13%              True
+│    │    └─BatchNorm2d (4)              [1, 3072, 32, 32]    [1, 3072, 32, 32]    6,144                  0.03%              True
+│    │    └─ReLU6 (5)                    [1, 3072, 32, 32]    [1, 3072, 32, 32]    --                        --              --
+│    │    └─Conv2d (6)                   [1, 3072, 32, 32]    [1, 256, 32, 32]     786,432                3.60%              True
+│    │    └─BatchNorm2d (7)              [1, 256, 32, 32]     [1, 256, 32, 32]     512                    0.00%              True
+├─ConvTranspose2d (upconv2)              [1, 256, 32, 32]     [1, 128, 64, 64]     131,200                0.60%              True
+├─InvertedResidual (dec2)                [1, 256, 64, 64]     [1, 128, 64, 64]     --                        --              True
+│    └─Sequential (block)                [1, 256, 64, 64]     [1, 128, 64, 64]     --                        --              True
+│    │    └─Conv2d (0)                   [1, 256, 64, 64]     [1, 1536, 64, 64]    393,216                1.80%              True
+│    │    └─BatchNorm2d (1)              [1, 1536, 64, 64]    [1, 1536, 64, 64]    3,072                  0.01%              True
+│    │    └─ReLU6 (2)                    [1, 1536, 64, 64]    [1, 1536, 64, 64]    --                        --              --
+│    │    └─Conv2d (3)                   [1, 1536, 64, 64]    [1, 1536, 64, 64]    13,824                 0.06%              True
+│    │    └─BatchNorm2d (4)              [1, 1536, 64, 64]    [1, 1536, 64, 64]    3,072                  0.01%              True
+│    │    └─ReLU6 (5)                    [1, 1536, 64, 64]    [1, 1536, 64, 64]    --                        --              --
+│    │    └─Conv2d (6)                   [1, 1536, 64, 64]    [1, 128, 64, 64]     196,608                0.90%              True
+│    │    └─BatchNorm2d (7)              [1, 128, 64, 64]     [1, 128, 64, 64]     256                    0.00%              True
+├─ConvTranspose2d (upconv1)              [1, 128, 64, 64]     [1, 64, 128, 128]    32,832                 0.15%              True
+├─InvertedResidual (dec1)                [1, 128, 128, 128]   [1, 64, 128, 128]    --                        --              True
+│    └─Sequential (block)                [1, 128, 128, 128]   [1, 64, 128, 128]    --                        --              True
+│    │    └─Conv2d (0)                   [1, 128, 128, 128]   [1, 768, 128, 128]   98,304                 0.45%              True
+│    │    └─BatchNorm2d (1)              [1, 768, 128, 128]   [1, 768, 128, 128]   1,536                  0.01%              True
+│    │    └─ReLU6 (2)                    [1, 768, 128, 128]   [1, 768, 128, 128]   --                        --              --
+│    │    └─Conv2d (3)                   [1, 768, 128, 128]   [1, 768, 128, 128]   6,912                  0.03%              True
+│    │    └─BatchNorm2d (4)              [1, 768, 128, 128]   [1, 768, 128, 128]   1,536                  0.01%              True
+│    │    └─ReLU6 (5)                    [1, 768, 128, 128]   [1, 768, 128, 128]   --                        --              --
+│    │    └─Conv2d (6)                   [1, 768, 128, 128]   [1, 64, 128, 128]    49,152                 0.23%              True
+│    │    └─BatchNorm2d (7)              [1, 64, 128, 128]    [1, 64, 128, 128]    128                    0.00%              True
+├─Conv2d (out_conv)                      [1, 64, 128, 128]    [1, 2, 128, 128]     130                    0.00%              True
+============================================================================================================================================
+Total params: 21,819,482
+Trainable params: 21,819,482
+Non-trainable params: 0
+Total mult-adds (G): 13.29
+============================================================================================================================================
+Input size (MB): 0.26
+Forward/backward pass size (MB): 941.88
+Params size (MB): 87.28
+Estimated Total Size (MB): 1029.42
+============================================================================================================================================
