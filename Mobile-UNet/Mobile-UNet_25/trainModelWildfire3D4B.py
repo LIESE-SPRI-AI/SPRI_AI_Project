@@ -460,7 +460,7 @@ def main():
         else:
             print(f"✓ {name}: {path}")
     
-    train_dataset = SegmentationDataset(images_dir, masks_dir, train_list, args.image_size, augment=False)
+    train_dataset = SegmentationDataset(images_dir, masks_dir, train_list, args.image_size, augment=True)
     val_dataset = SegmentationDataset(images_dir, masks_dir, val_list, args.image_size, augment=False)
     
     print(f"\nImágenes de entrenamiento: {len(train_dataset)}")
