@@ -16,7 +16,7 @@ from pathlib import Path
 # ─────────────────────────────────────────────
 #  CONFIGURACIÓN  ← edita estos tres valores
 # ─────────────────────────────────────────────
-DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Inferencias/Input")       # directorio con los .tif de entrada
+DIR_IMAGENES = Path("/home/liese2/SPRI_AI_project/Dataset/Datasets_generados/Dataset_csv/True")       # directorio con los .tif de entrada
 DIR_MODELOS  = Path("weights")        # directorio con los .pth
 print(f"directorio modelo: {DIR_MODELOS}")
 DIR_SALIDA   = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_25")         # directorio donde se guardan los resultados
@@ -26,7 +26,7 @@ PREDICT_PY   = Path("predict_segmentation.py")            # ruta al script de in
 
 def obtener_imagenes(directorio: Path) -> list[Path]:
     """Devuelve todos los archivos que terminan en _Merged.tif."""
-    archivos = sorted(directorio.glob("*_Merged.tif"))
+    archivos = sorted(directorio.glob("*.tiff"))
     if not archivos:
         print(f"[ADVERTENCIA] No se encontraron imágenes '*_Merged.tif' en: {directorio}")
     return archivos
