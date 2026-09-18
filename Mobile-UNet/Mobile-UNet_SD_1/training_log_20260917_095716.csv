@@ -1,0 +1,1 @@
+epoch,lr,train_loss,val_loss,train_miou,val_miou,val_iou_boat,val_prec_boat,val_rec_boat,val_f1_boat,val_iou_ship,val_prec_ship,val_rec_ship,val_f1_ship,seconds

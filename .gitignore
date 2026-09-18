@@ -31,3 +31,8 @@ Crop_folders/
 Datasets_generados/
 *.tif
 *.tiff
+*.tar.xz
+*.jpg
+*.png
+*.xml
+Vessels/
