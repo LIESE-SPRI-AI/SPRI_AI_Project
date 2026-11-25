@@ -1,0 +1,20 @@
+========================================================================
+REPORTE DE ZIPS (profundo) - 2026-10-15 19:54
+Carpeta: /home/liese2/SPRI_AI_project/Dataset/Raw
+========================================================================
+Zips encontrados: 179
+  ✓   179  con las 4 bandas, capa de quemado y ventanas positivas
+  => 179 zips con incendio utilizables
+
+Sitios (zips agrupados por ubicación; varias fechas del mismo lugar = 1 sitio):
+  totales:      88
+  disponibles:  88  (al menos un zip utilizable)
+  solo negativos: 0
+  24 sitios tienen más de un zip (máx. 28)
+
+Ventanas estimadas (128px, traslape 64px, mín. 3.5% quemado):
+  positivas: 6,670   negativas candidatas: 15,718
+  formato de bandas: 16bit_completo: 110, dn: 69
+
+Reporte en /home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_23_v2/reporte_zips  (6.1s)
+========================================================================

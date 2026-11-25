@@ -1,0 +1,183 @@
+{
+  "F": "<module 'torch.nn.functional' from '/home/liese2/.local/lib/python3.10/site-packages/torch/nn/functional.py'>",
+  "DATA_DIR": "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_27/data",
+  "IMAGES_SUBDIR": "Images",
+  "MASKS_SUBDIR": "SegmentationClass",
+  "TRAIN_LIST": "train.txt",
+  "VAL_LIST": "valid.txt",
+  "OUT_DIR": "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_27/runs",
+  "RUN_NAME": null,
+  "REANUDAR": "auto",
+  "PESOS_INICIALES": null,
+  "BANDAS_MODELO": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "INDICES": [
+    "NDVI",
+    "BAI"
+  ],
+  "IN_CHANNELS": 6,
+  "OUT_CHANNELS": 2,
+  "IMAGE_SIZE": 128,
+  "BASE_CHANNELS": 64,
+  "EXPAND_RATIO": 6,
+  "QUANT_ACTIVA": true,
+  "QUANT_BITS": 16,
+  "QUANT_REDONDEO": "half_up",
+  "Q_ENTRADA_FRAC": 12,
+  "Q_PESOS_FRAC": 13,
+  "Q_RELU_FRAC": 13,
+  "Q_LINEAL_FRAC": 11,
+  "Q_BIAS_FRAC": 11,
+  "EPOCHS": 1000,
+  "BATCH_SIZE": 8,
+  "LR": 0.001,
+  "WEIGHT_DECAY": 0.0001,
+  "WARMUP_EPOCHS": 3,
+  "GRAD_CLIP": 5.0,
+  "PATIENCE": 100,
+  "SEED": 42,
+  "GPU": "auto",
+  "WORKERS": 4,
+  "CACHE": false,
+  "PRINT_FREQ": 10,
+  "LOSS": "ce_dice",
+  "DICE_WEIGHT": 1.0,
+  "POS_WEIGHT": "auto",
+  "NORM": "div",
+  "NORM_DIV": 12500.0,
+  "AUGMENT": true,
+  "AUG_P_FLIP": 0.5,
+  "AUG_P_ROT90": 0.5,
+  "AUG_P_ESCALA": 0.3,
+  "AUG_ESCALA_RANGO": [
+    0.8,
+    1.25
+  ],
+  "AUG_P_BRILLO": 0.5,
+  "AUG_BRILLO_RANGO": 0.15,
+  "AUG_JITTER_BANDA": 0.05,
+  "AUG_P_BRUMA": 0.2,
+  "AUG_BRUMA_MAX_DN": 300.0,
+  "AUG_BRUMA_FACTOR": {
+    "B02": 1.0,
+    "B03": 0.7,
+    "B04": 0.5,
+    "B08": 0.2,
+    "B8A": 0.15,
+    "B11": 0.05,
+    "B12": 0.03
+  },
+  "AUG_P_RUIDO": 0.3,
+  "AUG_RUIDO_STD_DN": 60.0,
+  "AUG_P_DESENFOQUE": 0.15,
+  "AUG_DESENFOQUE_SIGMA": [
+    0.5,
+    1.2
+  ],
+  "UMBRALES": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "BANDAS_DATASET_VIEJO": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "CODIGO_ERROR_CONFIG": 2,
+  "modelo": "MbUNet2D",
+  "in_channels": 6,
+  "out_channels": 2,
+  "image_size": 128,
+  "bandas_modelo": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "indices": [
+    "NDVI",
+    "BAI"
+  ],
+  "canales": [
+    "B04",
+    "B03",
+    "B02",
+    "B08",
+    "NDVI",
+    "BAI"
+  ],
+  "orden_bandas": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "unidades_entrada": "DN = reflectancia*10000",
+  "arquitectura": {
+    "base_channels": 64,
+    "expand_ratio": 6
+  },
+  "quant": {
+    "redondeo": "half_up",
+    "entrada": {
+      "bits": 16,
+      "frac_bits": 12,
+      "signed": true
+    },
+    "pesos": {
+      "bits": 16,
+      "frac_bits": 13,
+      "signed": true
+    },
+    "bias": {
+      "bits": 16,
+      "frac_bits": 11,
+      "signed": true
+    },
+    "relu": {
+      "bits": 16,
+      "frac_bits": 13,
+      "signed": false
+    },
+    "lineal": {
+      "bits": 16,
+      "frac_bits": 11,
+      "signed": true
+    },
+    "residual": {
+      "bits": 16,
+      "frac_bits": 11,
+      "signed": true
+    },
+    "upconv": {
+      "bits": 16,
+      "frac_bits": 11,
+      "signed": true
+    },
+    "salida": {
+      "bits": 16,
+      "frac_bits": 11,
+      "signed": true
+    }
+  },
+  "norm": {
+    "tipo": "div",
+    "valor": 12500.0
+  },
+  "pos_weight": 1.909228864494557,
+  "n_train": 5436,
+  "n_val": 1553,
+  "porcentaje_quemado_train": 21.527807592655936
+}

@@ -39,9 +39,9 @@ import matplotlib.gridspec as gridspec
 #  CONFIGURACIÓN  ← edita estos valores
 # ═══════════════════════════════════════════════════════════════════
 DIR_BURNED      = Path("/home/liese2/SPRI_AI_project/Inferencias/Burned")  # ground truth _burned.tiff
-DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_24")  # archivos _final.tif del modelo A
-DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_25")  # archivos _final.tif del modelo B
-DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados14_MbUNpvsMbUNu")         # carpeta de salida
+DIR_INFERENCIAS_A = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_23")  # archivos _final.tif del modelo A
+DIR_INFERENCIAS_B = Path("/home/liese2/SPRI_AI_project/Inferencias/Output_Inferencias_Mobile-UNet/Output_MbUN_27")  # archivos _final.tif del modelo B
+DIR_SALIDA      = Path("/home/liese2/SPRI_AI_project/Inferencias/Resultados15_MbUNpvsMbUNu")         # carpeta de salida
 
 NOMBRE_MODELO_A = "Mobile-UNet encoder paper"    # Nombre para mostrar del modelo A
 NOMBRE_MODELO_B = "Mobile-UNet encoder UNet"    # Nombre para mostrar del modelo B
@@ -262,7 +262,7 @@ def buscar_inferencia(directorio: Path, nombrebase: str) -> Path | None:
     nombrebase es la parte antes de '_burned'.
     """
     patron = re.compile(
-        rf'^{re.escape(nombrebase)}_best\.tif$',
+        rf'^{re.escape(nombrebase)}*_best\.tif$',
         re.IGNORECASE
     )
     for f in directorio.iterdir():

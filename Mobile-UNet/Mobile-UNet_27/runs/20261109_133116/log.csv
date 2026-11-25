@@ -1,0 +1,2 @@
+epoch,lr,train_loss,train_iou,val_loss,val_iou,val_f1,val_precision,val_recall,mejor_umbral,iou_mejor_umbral,segundos
+1,0.001,0.67572,0.5869,0.53954,0.6452,0.7843,0.6732,0.9394,0.8,0.6816,79.9

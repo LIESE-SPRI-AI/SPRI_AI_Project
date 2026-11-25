@@ -1,0 +1,15 @@
+========================================================================
+REPORTE DE ZIPS (rápido) - 2026-11-23 07:47
+Carpeta: /home/liese2/SPRI_AI_project/Dataset/Raw
+========================================================================
+Zips encontrados: 179
+  ✓   179  con las 4 bandas y la capa de quemado legibles
+  => 179 zips utilizables (estructura completa; usa --profundo para verificar que tengan píxeles quemados)
+
+Sitios (zips agrupados por ubicación; varias fechas del mismo lugar = 1 sitio):
+  totales:      88
+  disponibles:  88  (al menos un zip utilizable)
+  24 sitios tienen más de un zip (máx. 28)
+
+Reporte en /home/liese2/SPRI_AI_project/Mobile-UNet/wildfire_proyecto_v28/reporte_zips  (0.2s)
+========================================================================

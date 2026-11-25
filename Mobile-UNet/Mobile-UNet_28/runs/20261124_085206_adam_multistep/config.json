@@ -1,0 +1,203 @@
+{
+  "F": "<module 'torch.nn.functional' from '/home/liese2/.local/lib/python3.10/site-packages/torch/nn/functional.py'>",
+  "DATA_DIR": "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_28/data",
+  "IMAGES_SUBDIR": "Images",
+  "MASKS_SUBDIR": "SegmentationClass",
+  "TRAIN_LIST": "train.txt",
+  "VAL_LIST": "valid.txt",
+  "OUT_DIR": "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_28/runs",
+  "RUN_NAME": null,
+  "REANUDAR": "auto",
+  "PESOS_INICIALES": null,
+  "BANDAS_MODELO": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "INDICES": [],
+  "OUT_CHANNELS": 2,
+  "IMAGE_SIZE": 128,
+  "BASE_CHANNELS": 16,
+  "EXPAND_RATIO": 6,
+  "QUANT": "base16",
+  "REDONDEO": null,
+  "EPOCHS": 100,
+  "BATCH_SIZE": 8,
+  "PATIENCE": 100,
+  "REINICIAR_PACIENCIA_AL_BAJAR_LR": true,
+  "SEED": 42,
+  "GPU": "auto",
+  "WORKERS": 4,
+  "CACHE": false,
+  "PRINT_FREQ": 10,
+  "OPTIMIZADOR": "adam",
+  "LR": 0.001,
+  "MOMENTUM": 0.9,
+  "NESTEROV": true,
+  "BETAS": [
+    0.9,
+    0.999
+  ],
+  "WEIGHT_DECAY": 0.01,
+  "DECAY_EN_BIAS_NORM": false,
+  "L1_LAMBDA": 0.0,
+  "LABEL_SMOOTHING": 0.0,
+  "DROPOUT_SALIDA": 0.1,
+  "GRAD_CLIP": 5.0,
+  "WARMUP_EPOCHS": 3,
+  "SCHEDULER": "multistep",
+  "LR_GAMMA": 0.2,
+  "LR_STEP_EPOCAS": 50,
+  "LR_HITOS": [
+    60,
+    120,
+    160
+  ],
+  "LR_PLATEAU_PACIENCIA": 10,
+  "LR_MIN": 1e-06,
+  "LOSS": "ce_dice",
+  "DICE_WEIGHT": 0.5,
+  "POS_WEIGHT": "1.0",
+  "NORM": "div",
+  "NORM_DIV": 12500.0,
+  "UMBRAL_MIN_PRECISION": 0.0,
+  "AUGMENT": true,
+  "AUG_P_FLIP": 0.5,
+  "AUG_P_ROT90": 0.5,
+  "AUG_P_ESCALA": 0.3,
+  "AUG_ESCALA_RANGO": [
+    0.8,
+    1.25
+  ],
+  "AUG_P_BRILLO": 0.5,
+  "AUG_BRILLO_RANGO": 0.15,
+  "AUG_JITTER_BANDA": 0.05,
+  "AUG_P_BRUMA": 0.2,
+  "AUG_BRUMA_MAX_DN": 300.0,
+  "AUG_BRUMA_FACTOR": {
+    "B02": 1.0,
+    "B03": 0.7,
+    "B04": 0.5,
+    "B08": 0.2,
+    "B8A": 0.15,
+    "B11": 0.05,
+    "B12": 0.03
+  },
+  "AUG_P_RUIDO": 0.3,
+  "AUG_RUIDO_STD_DN": 60.0,
+  "AUG_P_DESENFOQUE": 0.15,
+  "AUG_DESENFOQUE_SIGMA": [
+    0.5,
+    1.2
+  ],
+  "UMBRALES": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "BANDAS_DATASET_VIEJO": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "CODIGO_ERROR_CONFIG": 2,
+  "CODIGO_INTERRUMPIDO": 130,
+  "modelo": "MbUNet2D",
+  "in_channels": 4,
+  "out_channels": 2,
+  "image_size": 128,
+  "bandas_modelo": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "indices": [],
+  "canales": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "orden_bandas": [
+    "B04",
+    "B03",
+    "B02",
+    "B08"
+  ],
+  "unidades_entrada": "DN = reflectancia*10000",
+  "arquitectura": {
+    "base_channels": 16,
+    "expand_ratio": 6
+  },
+  "quant": {
+    "redondeo": "nearest_even",
+    "entrada": null,
+    "pesos": {
+      "bits": 16,
+      "frac_bits": 15,
+      "signed": true
+    },
+    "bias": null,
+    "relu": {
+      "bits": 16,
+      "frac_bits": 12,
+      "signed": false
+    },
+    "lineal": {
+      "bits": 16,
+      "frac_bits": 13,
+      "signed": true
+    },
+    "residual": null,
+    "upconv": null,
+    "salida": null
+  },
+  "quant_preset": "base16",
+  "entrenamiento": {
+    "optimizador": "adam",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "scheduler": "multistep",
+    "lr_gamma": 0.2,
+    "l1": 0.0,
+    "label_smoothing": 0.0,
+    "dropout_salida": 0.1,
+    "pos_weight": "1.0",
+    "loss": "ce_dice",
+    "dice_weight": 0.5,
+    "norm": "div",
+    "augment": true,
+    "data_dir": "/home/liese2/SPRI_AI_project/Mobile-UNet/Mobile-UNet_28/data"
+  },
+  "norm": {
+    "tipo": "div",
+    "valor": 12500.0
+  },
+  "pos_weight": 1.0,
+  "comando": [
+    "trainModelWildfire3D4B.py"
+  ],
+  "n_train": 23975,
+  "n_val": 2372,
+  "porcentaje_quemado_train": 3.8817857967035256,
+  "porcentaje_quemado_val": 4.7379440601940175
+}

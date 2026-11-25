@@ -1,0 +1,179 @@
+../../Dataset/Raw/10_24_Ciudad Madero_Tamaulipas.zip
+../../Dataset/Raw/10_24_Cuitzeo del Porvenir_Guanajuato.zip
+../../Dataset/Raw/10_24_Lago de Zumpango_Ciudad de México.zip
+../../Dataset/Raw/10_24_San Andrés Coyotitlán_Veracruz.zip
+../../Dataset/Raw/10_24_Santiago Matatlán_Oaxaca.zip
+../../Dataset/Raw/11_24_El Tabaje_Oaxaca.zip
+../../Dataset/Raw/11_24_San Antonio_Veracruz.zip
+../../Dataset/Raw/11_Zapopan_Jalisco.zip
+../../Dataset/Raw/12_24_Cuauhtémoc_Tamaulipas.zip
+../../Dataset/Raw/12_Balleza_Chihuahua.zip
+../../Dataset/Raw/12_LaConcordia_Chiapas.zip
+../../Dataset/Raw/13_24_Popocatépetl_México.zip
+../../Dataset/Raw/13_24_San Isidro_Veracruz.zip
+../../Dataset/Raw/14_24_La Concordia_Chiapas.zip
+../../Dataset/Raw/14_24_Llano Grande_Chiapas.zip
+../../Dataset/Raw/14_24_Villa Hidalgo_Chiapas.zip
+../../Dataset/Raw/14_Ejido de Vergel_Durango.zip
+../../Dataset/Raw/14_El Carmen_Querétaro.zip
+../../Dataset/Raw/14_El Ciruelo_Oaxaca.zip
+../../Dataset/Raw/14_La Cañada_Querétaro.zip
+../../Dataset/Raw/14_La Palma_Querétaro.zip
+../../Dataset/Raw/14_San Juanito_Durango.zip
+../../Dataset/Raw/14_San Nicolas Esquiros_Guanajuato.zip
+../../Dataset/Raw/14_SanPedroLagunillas_Nayarit.zip
+../../Dataset/Raw/14_Zinapecuaro_Michoacan.zip
+../../Dataset/Raw/15_24_Candelaria2_Campeche.zip
+../../Dataset/Raw/15_24_Candelaria_Campeche.zip
+../../Dataset/Raw/15_24_División del Norte_Campeche.zip
+../../Dataset/Raw/15_24_El Aguacatal_Campeche.zip
+../../Dataset/Raw/15_24_Emiliano Zapata_Ciudad de México.zip
+../../Dataset/Raw/15_24_Jonuta_Campeche.zip
+../../Dataset/Raw/15_24_La Trinitaria_Chiapas.zip
+../../Dataset/Raw/15_24_Venustiano Carranza_Chiapas.zip
+../../Dataset/Raw/15_Llano Grande_Chiapas.zip
+../../Dataset/Raw/15_Michoacán.zip
+../../Dataset/Raw/15_Tuxpan de Bolaños_Nayarit.zip
+../../Dataset/Raw/15_Xalisco_Nayarit.zip
+../../Dataset/Raw/16_24_Emiliano Zapata2_Ciudad de México.zip
+../../Dataset/Raw/16_24_Emiliano Zapata_Ciudad de México.zip
+../../Dataset/Raw/16_24_Las Choapas_Veracruz.zip
+../../Dataset/Raw/16_24_Santa Catarina Ayotzingo_Ciudad de México.zip
+../../Dataset/Raw/16_Cacalutla_Guerrero.zip
+../../Dataset/Raw/16_Dr Domingo Chanona_Chiapas.zip
+../../Dataset/Raw/16_El Lobo_Querétaro.zip
+../../Dataset/Raw/16_González2_Tamaulipas.zip
+../../Dataset/Raw/16_González_Tamaulipas.zip
+../../Dataset/Raw/16_Lomas del Real_Tamaulipas.zip
+../../Dataset/Raw/16_Nuevo Morelos_Tamaulipas.zip
+../../Dataset/Raw/16_Nuevo Morelos_Tamaulipas2.zip
+../../Dataset/Raw/16_Nuevo Morelos_Tamaulipas3.zip
+../../Dataset/Raw/16_Oaxaca_Oaxaca.zip
+../../Dataset/Raw/16_Quimicho_Tlaxcala.zip
+../../Dataset/Raw/16_San José de los Pozos_Jalisco.zip
+../../Dataset/Raw/16_San Miguel Coyutlán_Jalisco.zip
+../../Dataset/Raw/16_Santa Rosa_Jalisco.zip
+../../Dataset/Raw/16_Santo Domingo Aztacameca_Ciudad de México.zip
+../../Dataset/Raw/16_Tepechitlán_Zacatecas.zip
+../../Dataset/Raw/16_Tepechitlán_Zacatecas2.zip
+../../Dataset/Raw/16_Totatiche_Zacatecas.zip
+../../Dataset/Raw/16_Villa Manuel_Tamaulipas.zip
+../../Dataset/Raw/16_Xaltitla_Tlaxcala.zip
+../../Dataset/Raw/17_24_Cuajinicuilapa_Oaxaca.zip
+../../Dataset/Raw/17_24_Ometepec_Guerrero.zip
+../../Dataset/Raw/17_24_San Lucas Quilavini_Oaxaca.zip
+../../Dataset/Raw/17_24_San Pablo Guila_Oaxaca.zip
+../../Dataset/Raw/17_24_Santa Bárbara_Ciudad de México.zip
+../../Dataset/Raw/17_Arramberri_Nuevo_Leon.zip
+../../Dataset/Raw/17_Córdoba_Veracruz.zip
+../../Dataset/Raw/17_Huitzuca_de_Figueroa_Guerrero.zip
+../../Dataset/Raw/17_Zacapu_Michoacan.zip
+../../Dataset/Raw/18_24_Ciudad Guzmán_Jalisco.zip
+../../Dataset/Raw/18_24_El Sabino_Jalisco.zip
+../../Dataset/Raw/18_24_San Sebastián del Sur_Jalisco.zip
+../../Dataset/Raw/18_Arcelia_Guerrero.zip
+../../Dataset/Raw/18_Atenango_del_rio_Guerrero.zip
+../../Dataset/Raw/18_Jolalpan_Puebla.zip
+../../Dataset/Raw/18_Ocampo_Coahuila.zip
+../../Dataset/Raw/18_Tomatlan_Jalisco.zip
+../../Dataset/Raw/19_Bocoyna_Chihuahua.zip
+../../Dataset/Raw/19_Guadalupe_y_calvo_Chihuahua.zip
+../../Dataset/Raw/19_Guazapares_Chihuahua.zip
+../../Dataset/Raw/19_Huamuxtitlan.zip
+../../Dataset/Raw/19_Jala_Nayarit.zip
+../../Dataset/Raw/19_Monte_Escobedo2.zip
+../../Dataset/Raw/19_Monte_escobedo.zip
+../../Dataset/Raw/19_Rosario_Sinaloa.zip
+../../Dataset/Raw/19_Tequila_Jalisco.zip
+../../Dataset/Raw/20-Jiquipila-Chiapas.zip
+../../Dataset/Raw/20_Cotija_Michoacan.zip
+../../Dataset/Raw/20_Coyuya_de_Catalan_Guerrero.zip
+../../Dataset/Raw/20_Ensenada_Baja California.zip
+../../Dataset/Raw/20_Monte escobedo_Zacatecas.zip
+../../Dataset/Raw/20_Santa Catarina_Juquila.zip
+../../Dataset/Raw/20_Villa_jimenez_Michoacan.zip
+../../Dataset/Raw/21_Ajuchitlan_Guerrero.zip
+../../Dataset/Raw/21_Atoyac2_Jalisco.zip
+../../Dataset/Raw/21_Atoyac_Jalisco.zip
+../../Dataset/Raw/21_Balleza_Chihuahua1.zip
+../../Dataset/Raw/21_Balleza_Chihuahua2.zip
+../../Dataset/Raw/21_Bavispe_Sonora.zip
+../../Dataset/Raw/21_Bavispe_Sonora2.zip
+../../Dataset/Raw/21_Burgos_Nuevo León.zip
+../../Dataset/Raw/21_Camichin de Jauja_Nayarit.zip
+../../Dataset/Raw/21_Chilpancingo de lo bravo_Guerrero.zip
+../../Dataset/Raw/21_Durango_BuenosAires.zip
+../../Dataset/Raw/21_El Carmen_Queretaro.zip
+../../Dataset/Raw/21_El Tule_Estado de Mexico.zip
+../../Dataset/Raw/21_General Panfilo Natera_Zacatecas.zip
+../../Dataset/Raw/21_La Escondida_Tamaulipas.zip
+../../Dataset/Raw/21_Mezquitic_Jalisco.zip
+../../Dataset/Raw/21_Mezquitic_Jalisco2.zip
+../../Dataset/Raw/21_Palizada_Campeche.zip
+../../Dataset/Raw/21_Pesquería_Nuevo León.zip
+../../Dataset/Raw/21_Rosamorada_Nayarit.zip
+../../Dataset/Raw/21_Salinas Victoria_Nuevo León.zip
+../../Dataset/Raw/21_San Jose Agua Azul_Guanajuato.zip
+../../Dataset/Raw/21_San Martín de Bolaños_Jalisco.zip
+../../Dataset/Raw/21_San Nicolas Esquiros_Guanajuato.zip
+../../Dataset/Raw/21_Sauceda de la Borda_Zacatecas.zip
+../../Dataset/Raw/21_Tomatlán_Jalisco.zip
+../../Dataset/Raw/21_Villa Jiménez_Michoacán.zip
+../../Dataset/Raw/21_Villa de Cos_Zacatecas.zip
+../../Dataset/Raw/21_Zacualpan_Guerrero.zip
+../../Dataset/Raw/22_Badiraguato_Sinaloa.zip
+../../Dataset/Raw/22_Calsimiro_Castillo_Jalisco.zip
+../../Dataset/Raw/22_Casimiro Castillo_Jalisco.zip
+../../Dataset/Raw/22_Chihuahua_Guachochi.zip
+../../Dataset/Raw/22_Guachochi_Chihuahua.zip
+../../Dataset/Raw/22_Huamúchil_Oaxaca.zip
+../../Dataset/Raw/22_Jonuta_Campeche.zip
+../../Dataset/Raw/22_La Concordia_Sinaloa.zip
+../../Dataset/Raw/22_La Mesilla_Chiapas.zip
+../../Dataset/Raw/22_La_Yesca_Nayarit.zip
+../../Dataset/Raw/22_Mezquital 2_Durango.zip
+../../Dataset/Raw/22_Pueblo Nuevo2_Durango.zip
+../../Dataset/Raw/22_Pueblo_Nuevo_Durango.zip
+../../Dataset/Raw/22_San_DImas_Durango.zip
+../../Dataset/Raw/22_Santiago Papasquiaro_Durango.zip
+../../Dataset/Raw/22_Santiago_Papasquiaro_Durango.zip
+../../Dataset/Raw/22_Santo Domingo_Zacatecas.zip
+../../Dataset/Raw/22_Tlatenango_Aguascalientes.zip
+../../Dataset/Raw/22_Urique_Chihuahua.zip
+../../Dataset/Raw/22_Usmajac_Colima.zip
+../../Dataset/Raw/22_Zacapu_Michoacan.zip
+../../Dataset/Raw/22_Zacatecas_Tlaltenango.zip
+../../Dataset/Raw/23_Campeche_Campeche.zip
+../../Dataset/Raw/23_Centla_Tabasco.zip
+../../Dataset/Raw/23_Chihuahua_Guadalupe y calvo.zip
+../../Dataset/Raw/23_Chihuahua_Madera.zip
+../../Dataset/Raw/23_Chihuahua_Madera2.zip
+../../Dataset/Raw/23_Chihuhua_Madera.zip
+../../Dataset/Raw/23_Madera_Chihuahua.zip
+../../Dataset/Raw/23_Nacori_Chico_Sonora.zip
+../../Dataset/Raw/23_Nayarit_Acaponeta.zip
+../../Dataset/Raw/23_Nayarit_Del_Nayar.zip
+../../Dataset/Raw/23_Sinaloa_Choix.zip
+../../Dataset/Raw/23_Sonora_Arizpe.zip
+../../Dataset/Raw/23_Sonora_Nacori_Chico.zip
+../../Dataset/Raw/23_Tabasco_Centla.zip
+../../Dataset/Raw/23_Tabasco_Jonuta.zip
+../../Dataset/Raw/24_Chihuahua_Ocampo.zip
+../../Dataset/Raw/24_Durango_Mezquital.zip
+../../Dataset/Raw/24_Nayarit_Del_Nayar1.zip
+../../Dataset/Raw/24_Nayarit_Del_Nayar2.zip
+../../Dataset/Raw/24_Ocosingo_Chiapas.zip
+../../Dataset/Raw/24_Sonora_Quiriego.zip
+../../Dataset/Raw/24_Yecora_Sonora.zip
+../../Dataset/Raw/24_Yecora_Sonora2.zip
+../../Dataset/Raw/24_Yecora_Sonora3.zip
+../../Dataset/Raw/25_24_Nonoava.zip
+../../Dataset/Raw/25_Tabasco_Centla.zip
+../../Dataset/Raw/26_Durango_Tepehuanes.zip
+../../Dataset/Raw/26_Sonora_Agua_prieta.zip
+../../Dataset/Raw/28_Tecate_Baja California1.zip
+../../Dataset/Raw/28_Tecate_Baja_ California3.zip
+../../Dataset/Raw/29_Macuspana_Tabasco2.zip
+../../Dataset/Raw/35_Palizada_Campeche.zip
+../../Dataset/Raw/5_Ensenada_BajaCalifornia.zip
+../../Dataset/Raw/9_Tepic_Nayarit.zip
